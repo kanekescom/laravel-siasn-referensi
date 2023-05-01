@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Kanekes\SiasnReference\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class SiasnReferenceCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-siasn-reference';
 
     public $description = 'My command';
 
