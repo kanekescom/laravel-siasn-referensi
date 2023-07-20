@@ -1,84 +1,57 @@
-# Siasn Reference Laravel Package
+# Laravel SIASN Reference
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/kanekes/laravel-siasn-reference.svg?style=flat-square)](https://packagist.org/packages/kanekes/laravel-siasn-reference)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/kanekes/laravel-siasn-reference/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/kanekes/laravel-siasn-reference/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/kanekes/laravel-siasn-reference/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/kanekes/laravel-siasn-reference/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/kanekes/laravel-siasn-reference.svg?style=flat-square)](https://packagist.org/packages/kanekes/laravel-siasn-reference)
+[![Latest Version on Packagist][ico-version]][link-packagist]
+[![Total Downloads][ico-downloads]][link-downloads]
+[![Build Status][ico-travis]][link-travis]
+[![StyleCI][ico-styleci]][link-styleci]
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
-
-## Support us
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/laravel-siasn-reference.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/laravel-siasn-reference)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+Library for reference in SIASN BKN.
 
 ## Installation
 
-You can install the package via composer:
+Via Composer
 
-```bash
-composer require kanekes/laravel-siasn-reference
-```
-
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag="laravel-siasn-reference-migrations"
-php artisan migrate
-```
-
-You can publish the config file with:
-
-```bash
-php artisan vendor:publish --tag="laravel-siasn-reference-config"
-```
-
-This is the contents of the published config file:
-
-```php
-return [
-];
-```
-
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag="laravel-siasn-reference-views"
+``` bash
+$ composer require kanekescom/laravel-siasn-reference
 ```
 
 ## Usage
 
-```php
-$siasnReference = new Kanekes\SiasnReference();
-echo $siasnReference->echoPhrase('Hello, Kanekes!');
-```
+## Change log
+
+Please see the [changelog](CHANGELOG.md) for more information on what has changed recently.
 
 ## Testing
 
-```bash
-composer test
+``` bash
+$ composer test
 ```
-
-## Changelog
-
-Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
 
 ## Contributing
 
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
+Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details and a todolist.
 
-## Security Vulnerabilities
+## Security
 
-Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
+If you discover any security related issues, please email imachmadhadikurnia@gmail.com instead of using the issue tracker.
 
 ## Credits
 
-- [Achmad Hadi Kurnia](https://github.com/achmadhadikurnia)
-- [All Contributors](../../contributors)
+- [Achmad Hadi Kurnia][link-author]
+- [All Contributors][link-contributors]
 
 ## License
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+MIT. Please see the [license file](LICENSE) for more information.
+
+[ico-version]: https://img.shields.io/packagist/v/kanekescom/laravel-siasn-reference.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/kanekescom/laravel-siasn-reference.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/kanekescom/laravel-siasn-reference/master.svg?style=flat-square
+[ico-styleci]: https://styleci.io/repos/12345678/shield
+
+[link-packagist]: https://packagist.org/packages/kanekescom/laravel-siasn-reference
+[link-downloads]: https://packagist.org/packages/kanekescom/laravel-siasn-reference
+[link-travis]: https://travis-ci.org/kanekescom/laravel-siasn-reference
+[link-styleci]: https://styleci.io/repos/12345678
+[link-author]: https://github.com/kanekescom
+[link-contributors]: ../../contributors

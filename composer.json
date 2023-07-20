@@ -1,73 +1,44 @@
 {
-    "name": "kanekes/laravel-siasn-reference",
-    "description": "SiASN BKN Reference Laravel Package",
-    "keywords": [
-        "Kanekes",
-        "laravel",
-        "laravel-siasn-reference"
-    ],
-    "homepage": "https://github.com/kanekes/laravel-siasn-reference",
+    "name": "kanekescom/laravel-siasn-reference",
+    "description": "Library for reference in SIASN BKN",
+    "type": "library",
     "license": "MIT",
     "authors": [
         {
             "name": "Achmad Hadi Kurnia",
-            "email": "kangdiku@gmail.com",
-            "role": "Developer"
+            "email": "imachmadhadikurnia@gmail.com",
+            "homepage": "https://achmadhadikurnia.com"
         }
     ],
+    "homepage": "https://github.com/kanekescom/laravel-siasn-reference",
+    "keywords": [
+        "laravel",
+        "siasn",
+        "laravel-siasn-reference",
+        "reference"
+    ],
     "require": {
-        "php": "^8.1",
-        "spatie/laravel-package-tools": "^1.14.0",
-        "illuminate/contracts": "^10.0"
+        "illuminate/support": "^8.0|^9.0|^10.0"
     },
     "require-dev": {
-        "laravel/pint": "^1.0",
-        "nunomaduro/collision": "^7.9",
-        "nunomaduro/larastan": "^2.0.1",
-        "orchestra/testbench": "^8.0",
-        "pestphp/pest": "^2.0",
-        "pestphp/pest-plugin-arch": "^2.0",
-        "pestphp/pest-plugin-laravel": "^2.0",
-        "phpstan/extension-installer": "^1.1",
-        "phpstan/phpstan-deprecation-rules": "^1.0",
-        "phpstan/phpstan-phpunit": "^1.0",
-        "spatie/laravel-ray": "^1.26"
+        "phpunit/phpunit": "^9.6.10",
+        "orchestra/testbench": "^6.28.0"
     },
     "autoload": {
         "psr-4": {
-            "Kanekes\\SiasnReference\\": "src/",
-            "Kanekes\\SiasnReference\\Database\\Factories\\": "database/factories/"
+            "Kanekescom\\SiasnReference\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Kanekes\\SiasnReference\\Tests\\": "tests/"
-        }
-    },
-    "scripts": {
-        "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
-        "analyse": "vendor/bin/phpstan analyse",
-        "test": "vendor/bin/pest",
-        "test-coverage": "vendor/bin/pest --coverage",
-        "format": "vendor/bin/pint"
-    },
-    "config": {
-        "sort-packages": true,
-        "allow-plugins": {
-            "pestphp/pest-plugin": true,
-            "phpstan/extension-installer": true
+            "Kanekescom\\SiasnReference\\Tests\\": "tests"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Kanekes\\SiasnReference\\SiasnReferenceServiceProvider"
-            ],
-            "aliases": {
-                "SiasnReference": "Kanekes\\SiasnReference\\Facades\\SiasnReference"
-            }
+                "Kanekescom\\SiasnReference\\SiasnReferenceServiceProvider"
+            ]
         }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    }
 }
