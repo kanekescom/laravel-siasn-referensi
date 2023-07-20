@@ -59,9 +59,9 @@ class SiasnReferenceServiceProvider extends ServiceProvider
             return;
         }
 
-        // $this->publishes([
-        //     __DIR__ . '/../config/siasn-reference.php' => config_path('siasn-reference.php'),
-        // ], 'siasn-reference.config');
+        $this->publishes([
+            __DIR__ . '/../config/siasn-reference.php' => config_path('siasn-reference.php'),
+        ], 'siasn-reference.config');
     }
 
     /**
