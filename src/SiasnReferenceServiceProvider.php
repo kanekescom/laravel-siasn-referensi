@@ -2,6 +2,8 @@
 
 namespace Kanekescom\SiasnReference;
 
+use Illuminate\Filesystem\Filesystem;
+use Illuminate\Support\Collection;
 use Illuminate\Support\ServiceProvider;
 
 class SiasnReferenceServiceProvider extends ServiceProvider
@@ -40,7 +42,7 @@ class SiasnReferenceServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return ['Kanekescom\SiasnReference'];
+        return ['kanekescomSiasnReference'];
     }
 
     /**
@@ -62,6 +64,10 @@ class SiasnReferenceServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/../config/siasn-reference.php' => config_path('siasn-reference.php'),
         ], 'siasn-reference.config');
+
+        $this->publishes([
+            __DIR__ . '/../database/migrations/create_siasn_referensi_unor_tables.php.stub' => $this->getMigrationFileName('create_siasn_referensi_unor_tables.php'),
+        ], 'siasn_referensi_unor-migrations');
     }
 
     /**
@@ -76,5 +82,22 @@ class SiasnReferenceServiceProvider extends ServiceProvider
         }
 
         $this->commands([]);
+    }
+
+    /**
+     * Returns existing migration file if found, else uses the current timestamp.
+     */
+    protected function getMigrationFileName(string $migrationFileName): string
+    {
+        $timestamp = date('Y_m_d_His');
+
+        return Collection::make([$this->app->databasePath() . DIRECTORY_SEPARATOR . 'migrations' . DIRECTORY_SEPARATOR])
+            ->flatMap(function ($path) use ($migrationFileName) {
+                $filesystem = $this->app->make(Filesystem::class);
+
+                return $filesystem->glob($path . '*_' . $migrationFileName);
+            })
+            ->push($this->app->databasePath() . "/migrations/{$timestamp}_{$migrationFileName}")
+            ->first();
     }
 }

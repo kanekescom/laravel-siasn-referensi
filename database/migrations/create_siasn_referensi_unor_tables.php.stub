@@ -1,0 +1,33 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('siasn_referensi_unor', function (Blueprint $table) {
+            $table->string('id')->primary();
+            $table->string('namaUnor')->nullable();
+            $table->string('namaJabatan')->nullable();
+            $table->string('eselonId')->nullable();
+            $table->string('instansiId')->nullable();
+            $table->string('diatasanId')->nullable();
+            $table->timestamps();
+            $table->softDeletes();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('siasn_referensi_unor');
+    }
+};
