@@ -1,7 +1,8 @@
 <?php
 
-namespace Kanekes\SiasnReference;
+namespace Kanekescom\SiasnReference;
 
 class SiasnReference
 {
+    // Build wonderful things
 }
