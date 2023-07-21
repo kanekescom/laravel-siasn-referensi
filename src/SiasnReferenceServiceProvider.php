@@ -33,6 +33,8 @@ class SiasnReferenceServiceProvider extends ServiceProvider
         $this->app->singleton('siasn-reference', function ($app) {
             return new SiasnReference;
         });
+
+        $this->app->bind(\Kanekescom\SiasnReference\Repositories\UnorRepository::class, \Kanekescom\SiasnReference\Repositories\UnorRepositoryEloquent::class);
     }
 
     /**
@@ -81,7 +83,9 @@ class SiasnReferenceServiceProvider extends ServiceProvider
             return;
         }
 
-        $this->commands([]);
+        $this->commands([
+            Commands\UnorImport::class,
+        ]);
     }
 
     /**
