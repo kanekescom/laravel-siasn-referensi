@@ -5,7 +5,6 @@ namespace Kanekescom\SiasnReference\Commands;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
 use Kanekescom\Siasn\Requests\Referensi\RefUnor;
-use Kanekescom\SiasnReference\Models\Unor;
 use Kanekescom\SiasnReference\Repositories\UnorRepository;
 use Kanekescom\SiasnReference\Transformers\UnorTransformer;
 
