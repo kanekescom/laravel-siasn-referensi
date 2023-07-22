@@ -5,15 +5,12 @@ namespace Kanekescom\SiasnReference\Repositories;
 use Kanekescom\SiasnReference\Models\Unor;
 use Kanekescom\SiasnReference\Presenters\UnorPresenter;
 use Kanekescom\SiasnReference\Repositories\UnorRepository;
-use Kanekescom\SiasnReference\Traits\RepositoryTrait;
 use Kanekescom\SiasnReference\Validators\UnorValidator;
-use Prettus\Repository\Eloquent\BaseRepository;
+use Kanekescom\RepositoryPill\BaseRepository;
 use Prettus\Repository\Criteria\RequestCriteria;
 
 class UnorRepositoryEloquent extends BaseRepository implements UnorRepository
 {
-    use RepositoryTrait;
-
     /**
      * @var bool
      */
