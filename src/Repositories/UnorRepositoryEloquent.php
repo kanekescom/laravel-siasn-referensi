@@ -6,7 +6,7 @@ use Kanekescom\SiasnReference\Models\Unor;
 use Kanekescom\SiasnReference\Presenters\UnorPresenter;
 use Kanekescom\SiasnReference\Repositories\UnorRepository;
 use Kanekescom\SiasnReference\Validators\UnorValidator;
-use Kanekescom\RepositoryPill\BaseRepository;
+use Kanekescom\RepositoryEnhancer\BaseRepository;
 use Prettus\Repository\Criteria\RequestCriteria;
 
 class UnorRepositoryEloquent extends BaseRepository implements UnorRepository
