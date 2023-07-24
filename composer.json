@@ -36,6 +36,11 @@
             "Kanekescom\\SiasnReference\\Tests\\": "tests"
         }
     },
+    "suggest": {
+        "kanekescom/laravel-siasn": "Required for importing some data from SIASN API",
+        "kanekescom/laravel-repository-enhancer": "Required for repository enhancer",
+        "kanekescom/siasn-datasets": "Required for importing some data from CSV"
+    },
     "extra": {
         "laravel": {
             "providers": [
