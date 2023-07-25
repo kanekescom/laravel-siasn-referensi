@@ -1,6 +1,6 @@
 <?php
 
-namespace Kanekescom\SiasnReference\Validators;
+namespace Kanekescom\SiasnReferensi\Validators;
 
 use \Prettus\Validator\Contracts\ValidatorInterface;
 use \Prettus\Validator\LaravelValidator;

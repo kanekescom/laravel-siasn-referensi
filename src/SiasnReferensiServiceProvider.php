@@ -1,12 +1,12 @@
 <?php
 
-namespace Kanekescom\SiasnReference;
+namespace Kanekescom\SiasnReferensi;
 
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Collection;
 use Illuminate\Support\ServiceProvider;
 
-class SiasnReferenceServiceProvider extends ServiceProvider
+class SiasnReferensiServiceProvider extends ServiceProvider
 {
     /**
      * Perform post-registration booting of services.
@@ -27,14 +27,14 @@ class SiasnReferenceServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/siasn-reference.php', 'siasn-reference');
+        $this->mergeConfigFrom(__DIR__ . '/../config/siasn-referensi.php', 'siasn-referensi');
 
         // Register the service the package provides.
-        $this->app->singleton('siasn-reference', function ($app) {
-            return new SiasnReference;
+        $this->app->singleton('siasn-referensi', function ($app) {
+            return new SiasnReferensi;
         });
 
-        $this->app->bind(\Kanekescom\SiasnReference\Repositories\UnorRepository::class, \Kanekescom\SiasnReference\Repositories\UnorRepositoryEloquent::class);
+        $this->app->bind(\Kanekescom\SiasnReferensi\Repositories\UnorRepository::class, \Kanekescom\SiasnReferensi\Repositories\UnorRepositoryEloquent::class);
     }
 
     /**
@@ -44,7 +44,7 @@ class SiasnReferenceServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return ['kanekescomSiasnReference'];
+        return ['kanekescomSiasnReferensi'];
     }
 
     /**
@@ -64,8 +64,8 @@ class SiasnReferenceServiceProvider extends ServiceProvider
         }
 
         $this->publishes([
-            __DIR__ . '/../config/siasn-reference.php' => config_path('siasn-reference.php'),
-        ], 'siasn-reference.config');
+            __DIR__ . '/../config/siasn-referensi.php' => config_path('siasn-referensi.php'),
+        ], 'siasn-referensi.config');
 
         $this->publishes([
             __DIR__ . '/../database/migrations/create_siasn_referensi_unor_tables.php.stub' => $this->getMigrationFileName('create_siasn_referensi_unor_tables.php'),

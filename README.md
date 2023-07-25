@@ -1,4 +1,4 @@
-# Laravel SIASN Reference
+# Laravel SIASN Referensi
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
@@ -12,7 +12,7 @@ Library for reference in SIASN BKN.
 Via Composer
 
 ``` bash
-$ composer require kanekescom/laravel-siasn-reference
+$ composer require kanekescom/laravel-siasn-referensi
 ```
 
 ## Usage
@@ -44,14 +44,14 @@ If you discover any security related issues, please email imachmadhadikurnia@gma
 
 MIT. Please see the [license file](LICENSE) for more information.
 
-[ico-version]: https://img.shields.io/packagist/v/kanekescom/laravel-siasn-reference.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/kanekescom/laravel-siasn-reference.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/kanekescom/laravel-siasn-reference/master.svg?style=flat-square
+[ico-version]: https://img.shields.io/packagist/v/kanekescom/laravel-siasn-referensi.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/kanekescom/laravel-siasn-referensi.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/kanekescom/laravel-siasn-referensi/master.svg?style=flat-square
 [ico-styleci]: https://styleci.io/repos/12345678/shield
 
-[link-packagist]: https://packagist.org/packages/kanekescom/laravel-siasn-reference
-[link-downloads]: https://packagist.org/packages/kanekescom/laravel-siasn-reference
-[link-travis]: https://travis-ci.org/kanekescom/laravel-siasn-reference
+[link-packagist]: https://packagist.org/packages/kanekescom/laravel-siasn-referensi
+[link-downloads]: https://packagist.org/packages/kanekescom/laravel-siasn-referensi
+[link-travis]: https://travis-ci.org/kanekescom/laravel-siasn-referensi
 [link-styleci]: https://styleci.io/repos/12345678
 [link-author]: https://github.com/kanekescom
 [link-contributors]: ../../contributors

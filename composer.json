@@ -1,5 +1,5 @@
 {
-    "name": "kanekescom/laravel-siasn-reference",
+    "name": "kanekescom/laravel-siasn-referensi",
     "description": "Library for reference in SIASN BKN",
     "type": "library",
     "license": "MIT",
@@ -10,12 +10,13 @@
             "homepage": "https://achmadhadikurnia.com"
         }
     ],
-    "homepage": "https://github.com/kanekescom/laravel-siasn-reference",
+    "homepage": "https://github.com/kanekescom/laravel-siasn-referensi",
     "keywords": [
         "laravel",
         "siasn",
         "laravel-siasn-reference",
-        "reference"
+        "reference",
+        "referensi"
     ],
     "require": {
         "illuminate/support": "^8.0|^9.0|^10.0",
@@ -28,12 +29,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Kanekescom\\SiasnReference\\": "src/"
+            "Kanekescom\\SiasnReferensi\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Kanekescom\\SiasnReference\\Tests\\": "tests"
+            "Kanekescom\\SiasnReferensi\\Tests\\": "tests"
         }
     },
     "suggest": {
@@ -44,7 +45,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Kanekescom\\SiasnReference\\SiasnReferenceServiceProvider"
+                "Kanekescom\\SiasnReferensi\\SiasnReferensiServiceProvider"
             ]
         }
     }
