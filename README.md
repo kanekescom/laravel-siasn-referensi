@@ -9,10 +9,18 @@ Library for reference in SIASN BKN.
 
 ## Installation
 
-Via Composer
+You can install the package via composer:
 
 ``` bash
 $ composer require kanekescom/laravel-siasn-referensi
+```
+
+The package will automatically register itself.
+
+You can publish all stuff with:
+
+``` bash
+$ php artisan vendor:publish --provider="Kanekescom\SiasnReferensi\SiasnReferensiServiceProvider"
 ```
 
 ## Usage
