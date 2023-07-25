@@ -1,12 +1,12 @@
 <?php
 
-namespace Kanekescom\SiasnReference\Commands;
+namespace Kanekescom\SiasnReferensi\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
 use Kanekescom\Siasn\Facades\Siasn;
-use Kanekescom\SiasnReference\Repositories\UnorRepository;
-use Kanekescom\SiasnReference\Transformers\UnorTransformer;
+use Kanekescom\SiasnReferensi\Repositories\UnorRepository;
+use Kanekescom\SiasnReferensi\Transformers\UnorTransformer;
 
 class UnorImport extends Command
 {

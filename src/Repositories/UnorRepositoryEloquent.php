@@ -1,11 +1,11 @@
 <?php
 
-namespace Kanekescom\SiasnReference\Repositories;
+namespace Kanekescom\SiasnReferensi\Repositories;
 
-use Kanekescom\SiasnReference\Models\Unor;
-use Kanekescom\SiasnReference\Presenters\UnorPresenter;
-use Kanekescom\SiasnReference\Repositories\UnorRepository;
-use Kanekescom\SiasnReference\Validators\UnorValidator;
+use Kanekescom\SiasnReferensi\Models\Unor;
+use Kanekescom\SiasnReferensi\Presenters\UnorPresenter;
+use Kanekescom\SiasnReferensi\Repositories\UnorRepository;
+use Kanekescom\SiasnReferensi\Validators\UnorValidator;
 use Kanekescom\RepositoryEnhancer\BaseRepository;
 use Prettus\Repository\Criteria\RequestCriteria;
 
