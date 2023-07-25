@@ -31,6 +31,7 @@ class UnorTransformer extends TransformerAbstract
             // 'deleted_at' => $model->deleted_at,
         ];
     }
+
     /**
      * Transform data from API.
      *
