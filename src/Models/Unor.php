@@ -1,6 +1,6 @@
 <?php
 
-namespace Kanekescom\SiasnReference\Models;
+namespace Kanekescom\SiasnReferensi\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;

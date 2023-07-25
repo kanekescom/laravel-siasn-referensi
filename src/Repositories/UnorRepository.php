@@ -1,6 +1,6 @@
 <?php
 
-namespace Kanekescom\SiasnReference\Repositories;
+namespace Kanekescom\SiasnReferensi\Repositories;
 
 use Prettus\Repository\Contracts\RepositoryInterface;
 

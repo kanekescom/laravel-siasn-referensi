@@ -1,13 +1,12 @@
 <?php
 
-namespace Kanekescom\SiasnReference\Commands;
+namespace Kanekescom\SiasnReferensi\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
-use Kanekescom\Siasn\Requests\Referensi\RefUnor;
-use Kanekescom\SiasnReference\Models\Unor;
-use Kanekescom\SiasnReference\Repositories\UnorRepository;
-use Kanekescom\SiasnReference\Transformers\UnorTransformer;
+use Kanekescom\Siasn\Facades\Siasn;
+use Kanekescom\SiasnReferensi\Repositories\UnorRepository;
+use Kanekescom\SiasnReferensi\Transformers\UnorTransformer;
 
 class UnorImport extends Command
 {
@@ -16,7 +15,7 @@ class UnorImport extends Command
      *
      * @var string
      */
-    protected $signature = 'siasn-import:unor';
+    protected $signature = 'siasn-import:ref-unor';
 
     /**
      * The console command description.
@@ -33,7 +32,7 @@ class UnorImport extends Command
         $start = now();
         $repository = app(UnorRepository::class);
         $repository->deleteAll();
-        $request = (new RefUnor)->send()->collect();
+        $request = Siasn::getRefUnor()->collect();
 
         $data = collect($request->get('data'))->map(function ($item) {
             return UnorTransformer::transformFromApi($item);
@@ -45,10 +44,7 @@ class UnorImport extends Command
         DB::transaction(function () use ($data, $repository, $bar) {
             $data->chunk(1000)->each(function ($item) use ($repository, $bar) {
                 $repository->upsert($item->toArray(), 'id');
-
-                if (in_array('Illuminate\Database\Eloquent\SoftDeletes', class_uses($repository->model()))) {
-                    $repository->restoreById($item->pluck('id'));
-                }
+                $repository->restoreById($item->pluck('id'));
 
                 $bar->advance();
             });

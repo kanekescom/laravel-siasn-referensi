@@ -1,8 +1,8 @@
 <?php
 
-namespace Kanekescom\SiasnReference\Presenters;
+namespace Kanekescom\SiasnReferensi\Presenters;
 
-use Kanekescom\SiasnReference\Transformers\UnorTransformer;
+use Kanekescom\SiasnReferensi\Transformers\UnorTransformer;
 use Prettus\Repository\Presenter\FractalPresenter;
 
 class UnorPresenter extends FractalPresenter

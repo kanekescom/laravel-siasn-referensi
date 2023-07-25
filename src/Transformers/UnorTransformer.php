@@ -1,8 +1,8 @@
 <?php
 
-namespace Kanekescom\SiasnReference\Transformers;
+namespace Kanekescom\SiasnReferensi\Transformers;
 
-use Kanekescom\SiasnReference\Models\Unor;
+use Kanekescom\SiasnReferensi\Models\Unor;
 use League\Fractal\TransformerAbstract;
 
 class UnorTransformer extends TransformerAbstract
@@ -10,7 +10,7 @@ class UnorTransformer extends TransformerAbstract
     /**
      * Transform the Unor entity.
      *
-     * @param Kanekescom\SiasnReference\Entities\Unor $model
+     * @param Kanekescom\SiasnReferensi\Entities\Unor $model
      *
      * @return array
      */
