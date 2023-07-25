@@ -7,10 +7,10 @@ return [
     | Dataset Path
     |--------------------------------------------------------------------------
     |
-    | This option is for storing the refernsi dataset path.
+    | This option is for storing the referensi dataset path.
     |
     */
 
-    'path' => env('SIASN_REFERENSI_PATH', base_path('vendor/kanekescom/siasn-datasets/datasets/referensi')),
+    'dataset_path' => env('SIASN_REFERENSI_DATASET_PATH', base_path('vendor/kanekescom/siasn-datasets/datasets/referensi')),
 
 ];

@@ -34,6 +34,7 @@ class SiasnReferensiServiceProvider extends ServiceProvider
             return new SiasnReferensi;
         });
 
+        $this->app->bind(\Kanekescom\SiasnReferensi\Repositories\AgamaRepository::class, \Kanekescom\SiasnReferensi\Repositories\AgamaRepositoryEloquent::class);
         $this->app->bind(\Kanekescom\SiasnReferensi\Repositories\UnorRepository::class, \Kanekescom\SiasnReferensi\Repositories\UnorRepositoryEloquent::class);
     }
 
@@ -68,6 +69,10 @@ class SiasnReferensiServiceProvider extends ServiceProvider
         ], 'siasn-referensi.config');
 
         $this->publishes([
+            __DIR__ . '/../database/migrations/create_siasn_referensi_agama_tables.php.stub' => $this->getMigrationFileName('create_siasn_referensi_agama_tables.php'),
+        ], 'siasn_referensi_agama-migrations');
+
+        $this->publishes([
             __DIR__ . '/../database/migrations/create_siasn_referensi_unor_tables.php.stub' => $this->getMigrationFileName('create_siasn_referensi_unor_tables.php'),
         ], 'siasn_referensi_unor-migrations');
     }
@@ -84,6 +89,7 @@ class SiasnReferensiServiceProvider extends ServiceProvider
         }
 
         $this->commands([
+            Commands\AgamaImport::class,
             Commands\UnorImport::class,
         ]);
     }
