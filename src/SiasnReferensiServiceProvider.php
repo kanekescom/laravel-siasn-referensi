@@ -29,11 +29,6 @@ class SiasnReferensiServiceProvider extends ServiceProvider
     {
         $this->mergeConfigFrom(__DIR__ . '/../config/siasn-referensi.php', 'siasn-referensi');
 
-        // Register the service the package provides.
-        $this->app->singleton('siasn-referensi', function ($app) {
-            return new SiasnReferensi;
-        });
-
         $this->app->bind(\Kanekescom\SiasnReferensi\Repositories\AgamaRepository::class, \Kanekescom\SiasnReferensi\Repositories\AgamaRepositoryEloquent::class);
         $this->app->bind(\Kanekescom\SiasnReferensi\Repositories\AlasanHukdisRepository::class, \Kanekescom\SiasnReferensi\Repositories\AlasanHukdisRepositoryEloquent::class);
         $this->app->bind(\Kanekescom\SiasnReferensi\Repositories\CltnRepository::class, \Kanekescom\SiasnReferensi\Repositories\CltnRepositoryEloquent::class);
