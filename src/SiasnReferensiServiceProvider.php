@@ -105,171 +105,171 @@ class SiasnReferensiServiceProvider extends ServiceProvider
 
         $this->publishes([
             __DIR__ . '/../config/siasn-referensi.php' => config_path('siasn-referensi.php'),
-        ], 'siasn-referensi-config');
+        ], 'config');
 
         $this->publishes([
             __DIR__ . '/../database/migrations/create_siasn_referensi_agama_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_agama_table.php'),
-        ], 'siasn-referensi-migrations');
+        ], 'migrations');
 
         $this->publishes([
             __DIR__ . '/../database/migrations/create_siasn_referensi_alasan_hukdis_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_alasan_hukdis_table.php'),
-        ], 'siasn-referensi-migrations');
+        ], 'migrations');
 
         $this->publishes([
             __DIR__ . '/../database/migrations/create_siasn_referensi_cltn_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_cltn_table.php'),
-        ], 'siasn-referensi-migrations');
+        ], 'migrations');
 
         $this->publishes([
             __DIR__ . '/../database/migrations/create_siasn_referensi_diklat_struktural_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_diklat_struktural_table.php'),
-        ], 'siasn-referensi-migrations');
+        ], 'migrations');
 
         $this->publishes([
             __DIR__ . '/../database/migrations/create_siasn_referensi_dokumen_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_dokumen_table.php'),
-        ], 'siasn-referensi-migrations');
+        ], 'migrations');
 
         $this->publishes([
             __DIR__ . '/../database/migrations/create_siasn_referensi_eselon_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_eselon_table.php'),
-        ], 'siasn-referensi-migrations');
+        ], 'migrations');
 
         $this->publishes([
             __DIR__ . '/../database/migrations/create_siasn_referensi_golongan_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_golongan_table.php'),
-        ], 'siasn-referensi-migrations');
+        ], 'migrations');
 
         $this->publishes([
             __DIR__ . '/../database/migrations/create_siasn_referensi_instansi_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_instansi_table.php'),
-        ], 'siasn-referensi-migrations');
+        ], 'migrations');
 
         $this->publishes([
             __DIR__ . '/../database/migrations/create_siasn_referensi_jabatan_fungsional_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_jabatan_fungsional_table.php'),
-        ], 'siasn-referensi-migrations');
+        ], 'migrations');
 
         $this->publishes([
             __DIR__ . '/../database/migrations/create_siasn_referensi_jabatan_fungsional_umum_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_jabatan_fungsional_umum_table.php'),
-        ], 'siasn-referensi-migrations');
+        ], 'migrations');
 
         $this->publishes([
             __DIR__ . '/../database/migrations/create_siasn_referensi_jenis_diklat_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_jenis_diklat_table.php'),
-        ], 'siasn-referensi-migrations');
+        ], 'migrations');
 
         $this->publishes([
             __DIR__ . '/../database/migrations/create_siasn_referensi_jenis_hukuman_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_jenis_hukuman_table.php'),
-        ], 'siasn-referensi-migrations');
+        ], 'migrations');
 
         $this->publishes([
             __DIR__ . '/../database/migrations/create_siasn_referensi_jenis_id_dokumen_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_jenis_id_dokumen_table.php'),
-        ], 'siasn-referensi-migrations');
+        ], 'migrations');
 
         $this->publishes([
             __DIR__ . '/../database/migrations/create_siasn_referensi_jenis_jabatan_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_jenis_jabatan_table.php'),
-        ], 'siasn-referensi-migrations');
+        ], 'migrations');
 
         $this->publishes([
             __DIR__ . '/../database/migrations/create_siasn_referensi_jenis_kawin_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_jenis_kawin_table.php'),
-        ], 'siasn-referensi-migrations');
+        ], 'migrations');
 
         $this->publishes([
             __DIR__ . '/../database/migrations/create_siasn_referensi_jenis_kelamin_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_jenis_kelamin_table.php'),
-        ], 'siasn-referensi-migrations');
+        ], 'migrations');
 
         $this->publishes([
             __DIR__ . '/../database/migrations/create_siasn_referensi_jenis_kepanitiaan_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_jenis_kepanitiaan_table.php'),
-        ], 'siasn-referensi-migrations');
+        ], 'migrations');
 
         $this->publishes([
             __DIR__ . '/../database/migrations/create_siasn_referensi_jenis_kompetensi_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_jenis_kompetensi_table.php'),
-        ], 'siasn-referensi-migrations');
+        ], 'migrations');
 
         $this->publishes([
             __DIR__ . '/../database/migrations/create_siasn_referensi_jenis_kp_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_jenis_kp_table.php'),
-        ], 'siasn-referensi-migrations');
+        ], 'migrations');
 
         $this->publishes([
             __DIR__ . '/../database/migrations/create_siasn_referensi_jenis_kursus_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_jenis_kursus_table.php'),
-        ], 'siasn-referensi-migrations');
+        ], 'migrations');
 
         $this->publishes([
             __DIR__ . '/../database/migrations/create_siasn_referensi_jenis_pegawai_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_jenis_pegawai_table.php'),
-        ], 'siasn-referensi-migrations');
+        ], 'migrations');
 
         $this->publishes([
             __DIR__ . '/../database/migrations/create_siasn_referensi_jenis_pemberhentian_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_jenis_pemberhentian_table.php'),
-        ], 'siasn-referensi-migrations');
+        ], 'migrations');
 
         $this->publishes([
             __DIR__ . '/../database/migrations/create_siasn_referensi_jenis_pengadaan_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_jenis_pengadaan_table.php'),
-        ], 'siasn-referensi-migrations');
+        ], 'migrations');
 
         $this->publishes([
             __DIR__ . '/../database/migrations/create_siasn_referensi_jenis_pensiun_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_jenis_pensiun_table.php'),
-        ], 'siasn-referensi-migrations');
+        ], 'migrations');
 
         $this->publishes([
             __DIR__ . '/../database/migrations/create_siasn_referensi_jenis_riwayat_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_jenis_riwayat_table.php'),
-        ], 'siasn-referensi-migrations');
+        ], 'migrations');
 
         $this->publishes([
             __DIR__ . '/../database/migrations/create_siasn_referensi_jenis_unor_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_jenis_unor_table.php'),
-        ], 'siasn-referensi-migrations');
+        ], 'migrations');
 
         $this->publishes([
             __DIR__ . '/../database/migrations/create_siasn_referensi_kabupaten_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_kabupaten_table.php'),
-        ], 'siasn-referensi-migrations');
+        ], 'migrations');
 
         $this->publishes([
             __DIR__ . '/../database/migrations/create_siasn_referensi_kanreg_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_kanreg_table.php'),
-        ], 'siasn-referensi-migrations');
+        ], 'migrations');
 
         $this->publishes([
             __DIR__ . '/../database/migrations/create_siasn_referensi_kedudukan_hukum_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_kedudukan_hukum_table.php'),
-        ], 'siasn-referensi-migrations');
+        ], 'migrations');
 
         $this->publishes([
             __DIR__ . '/../database/migrations/create_siasn_referensi_kelompok_jabatan_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_kelompok_jabatan_table.php'),
-        ], 'siasn-referensi-migrations');
+        ], 'migrations');
 
         $this->publishes([
             __DIR__ . '/../database/migrations/create_siasn_referensi_kpkn_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_kpkn_table.php'),
-        ], 'siasn-referensi-migrations');
+        ], 'migrations');
 
         $this->publishes([
             __DIR__ . '/../database/migrations/create_siasn_referensi_lokasi_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_lokasi_table.php'),
-        ], 'siasn-referensi-migrations');
+        ], 'migrations');
 
         $this->publishes([
             __DIR__ . '/../database/migrations/create_siasn_referensi_pendidikan_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_pendidikan_table.php'),
-        ], 'siasn-referensi-migrations');
+        ], 'migrations');
 
         $this->publishes([
             __DIR__ . '/../database/migrations/create_siasn_referensi_penghargaan_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_penghargaan_table.php'),
-        ], 'siasn-referensi-migrations');
+        ], 'migrations');
 
         $this->publishes([
             __DIR__ . '/../database/migrations/create_siasn_referensi_profesi_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_profesi_table.php'),
-        ], 'siasn-referensi-migrations');
+        ], 'migrations');
 
         $this->publishes([
             __DIR__ . '/../database/migrations/create_siasn_referensi_rumpun_jabatan_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_rumpun_jabatan_table.php'),
-        ], 'siasn-referensi-migrations');
+        ], 'migrations');
 
         $this->publishes([
             __DIR__ . '/../database/migrations/create_siasn_referensi_satuan_kerja_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_satuan_kerja_table.php'),
-        ], 'siasn-referensi-migrations');
+        ], 'migrations');
 
         $this->publishes([
             __DIR__ . '/../database/migrations/create_siasn_referensi_taspen_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_taspen_table.php'),
-        ], 'siasn-referensi-migrations');
+        ], 'migrations');
 
         $this->publishes([
             __DIR__ . '/../database/migrations/create_siasn_referensi_tingkat_hukuman_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_tingkat_hukuman_table.php'),
-        ], 'siasn-referensi-migrations');
+        ], 'migrations');
 
         $this->publishes([
             __DIR__ . '/../database/migrations/create_siasn_referensi_tingkat_pendidikan_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_tingkat_pendidikan_table.php'),
-        ], 'siasn-referensi-migrations');
+        ], 'migrations');
 
         $this->publishes([
             __DIR__ . '/../database/migrations/create_siasn_referensi_unor_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_unor_table.php'),
-        ], 'siasn-referensi-migrations');
+        ], 'migrations');
     }
 
     /**

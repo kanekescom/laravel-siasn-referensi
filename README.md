@@ -17,10 +17,16 @@ $ composer require kanekescom/laravel-siasn-referensi
 
 The package will automatically register itself.
 
-You can publish all stuff with:
+You can publish the config file with:
 
 ``` bash
-$ php artisan vendor:publish --provider="Kanekescom\SiasnReferensi\SiasnReferensiServiceProvider"
+$ php artisan vendor:publish --provider="Kanekescom\SiasnReferensi\SiasnReferensiServiceProvider" --tag="config"
+```
+
+You can publish the migration with:
+
+``` bash
+$ php artisan vendor:publish --provider="Kanekescom\SiasnReferensi\SiasnReferensiServiceProvider" --tag="migrations"
 ```
 
 ## Usage
