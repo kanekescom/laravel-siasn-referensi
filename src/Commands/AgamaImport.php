@@ -14,7 +14,7 @@ class AgamaImport extends Command
      *
      * @var string
      */
-    protected $signature = 'siasn-import:ref-agama';
+    protected $signature = 'siasn-import:agama-ref';
 
     /**
      * The console command description.

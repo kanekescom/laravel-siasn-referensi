@@ -15,7 +15,7 @@ class UnorImport extends Command
      *
      * @var string
      */
-    protected $signature = 'siasn-import:ref-unor';
+    protected $signature = 'siasn-import:unor-ref';
 
     /**
      * The console command description.

@@ -14,7 +14,7 @@ class JabatanFungsionalUmumImport extends Command
      *
      * @var string
      */
-    protected $signature = 'siasn-import:ref-jabatan-fungsional-umum';
+    protected $signature = 'siasn-import:jabatan-fungsional-umum-ref';
 
     /**
      * The console command description.
