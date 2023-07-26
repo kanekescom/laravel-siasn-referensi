@@ -94,6 +94,8 @@ class SiasnReferensiServiceProvider extends ServiceProvider
         }
 
         $this->commands([
+            Commands\BulkImport::class,
+
             Commands\AgamaImport::class,
             Commands\JabatanFungsionalUmumImport::class,
             Commands\UnorImport::class,
