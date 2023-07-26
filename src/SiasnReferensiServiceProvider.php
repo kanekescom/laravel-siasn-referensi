@@ -73,16 +73,6 @@ class SiasnReferensiServiceProvider extends ServiceProvider
     }
 
     /**
-     * Get the services provided by the provider.
-     *
-     * @return array
-     */
-    public function provides()
-    {
-        return ['kanekescomSiasnReferensi'];
-    }
-
-    /**
      * Offer publishing.
      *
      * @return void
