@@ -52,39 +52,39 @@ class ReferensiServiceProvider extends ServiceProvider
      */
     protected function offerPublishing(): void
     {
-        if (!$this->app->runningInConsole()) {
+        if (! $this->app->runningInConsole()) {
             return;
         }
 
-        if (!function_exists('config_path')) {
+        if (! function_exists('config_path')) {
             // function not available and 'publish' not relevant in Lumen
             return;
         }
 
         $this->publishes([
-            __DIR__ . '/../database/migrations/create_siasn_referensi_agama_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_agama_table.php'),
-            __DIR__ . '/../database/migrations/create_siasn_referensi_alasan_hukuman_disiplin_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_alasan_hukuman_disiplin_table.php'),
-            __DIR__ . '/../database/migrations/create_siasn_referensi_asn_jenis_jabatan_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_asn_jenis_jabatan_table.php'),
-            __DIR__ . '/../database/migrations/create_siasn_referensi_asn_jenjang_jabatan_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_asn_jenjang_jabatan_table.php'),
-            __DIR__ . '/../database/migrations/create_siasn_referensi_eselon_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_eselon_table.php'),
-            __DIR__ . '/../database/migrations/create_siasn_referensi_golongan_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_golongan_table.php'),
-            __DIR__ . '/../database/migrations/create_siasn_referensi_instansi_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_instansi_table.php'),
-            __DIR__ . '/../database/migrations/create_siasn_referensi_jabatan_fungsional_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_jabatan_fungsional_table.php'),
-            __DIR__ . '/../database/migrations/create_siasn_referensi_jabatan_fungsional_umum_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_jabatan_fungsional_umum_table.php'),
-            __DIR__ . '/../database/migrations/create_siasn_referensi_jenis_anak_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_jenis_anak_table.php'),
-            __DIR__ . '/../database/migrations/create_siasn_referensi_jenis_diklat_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_jenis_diklat_table.php'),
-            __DIR__ . '/../database/migrations/create_siasn_referensi_jenis_hukuman_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_jenis_hukuman_table.php'),
-            __DIR__ . '/../database/migrations/create_siasn_referensi_jenis_jabatan_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_jenis_jabatan_table.php'),
-            __DIR__ . '/../database/migrations/create_siasn_referensi_kanreg_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_kanreg_table.php'),
-            __DIR__ . '/../database/migrations/create_siasn_referensi_kedudukan_hukum_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_kedudukan_hukum_table.php'),
-            __DIR__ . '/../database/migrations/create_siasn_referensi_kel_jabatan_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_kel_jabatan_table.php'),
-            __DIR__ . '/../database/migrations/create_siasn_referensi_latihan_struktural_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_latihan_struktural_table.php'),
-            __DIR__ . '/../database/migrations/create_siasn_referensi_lokasi_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_lokasi_table.php'),
-            __DIR__ . '/../database/migrations/create_siasn_referensi_pendidikan_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_pendidikan_table.php'),
-            __DIR__ . '/../database/migrations/create_siasn_referensi_ref_dokumen_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_ref_dokumen_table.php'),
-            __DIR__ . '/../database/migrations/create_siasn_referensi_ref_jenjang_jf_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_ref_jenjang_jf_table.php'),
-            __DIR__ . '/../database/migrations/create_siasn_referensi_satuan_kerja_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_satuan_kerja_table.php'),
-            __DIR__ . '/../database/migrations/create_siasn_referensi_tingkat_pendidikan_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_tingkat_pendidikan_table.php'),
+            __DIR__.'/../database/migrations/create_siasn_referensi_agama_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_agama_table.php'),
+            __DIR__.'/../database/migrations/create_siasn_referensi_alasan_hukuman_disiplin_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_alasan_hukuman_disiplin_table.php'),
+            __DIR__.'/../database/migrations/create_siasn_referensi_asn_jenis_jabatan_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_asn_jenis_jabatan_table.php'),
+            __DIR__.'/../database/migrations/create_siasn_referensi_asn_jenjang_jabatan_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_asn_jenjang_jabatan_table.php'),
+            __DIR__.'/../database/migrations/create_siasn_referensi_eselon_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_eselon_table.php'),
+            __DIR__.'/../database/migrations/create_siasn_referensi_golongan_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_golongan_table.php'),
+            __DIR__.'/../database/migrations/create_siasn_referensi_instansi_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_instansi_table.php'),
+            __DIR__.'/../database/migrations/create_siasn_referensi_jabatan_fungsional_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_jabatan_fungsional_table.php'),
+            __DIR__.'/../database/migrations/create_siasn_referensi_jabatan_fungsional_umum_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_jabatan_fungsional_umum_table.php'),
+            __DIR__.'/../database/migrations/create_siasn_referensi_jenis_anak_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_jenis_anak_table.php'),
+            __DIR__.'/../database/migrations/create_siasn_referensi_jenis_diklat_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_jenis_diklat_table.php'),
+            __DIR__.'/../database/migrations/create_siasn_referensi_jenis_hukuman_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_jenis_hukuman_table.php'),
+            __DIR__.'/../database/migrations/create_siasn_referensi_jenis_jabatan_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_jenis_jabatan_table.php'),
+            __DIR__.'/../database/migrations/create_siasn_referensi_kanreg_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_kanreg_table.php'),
+            __DIR__.'/../database/migrations/create_siasn_referensi_kedudukan_hukum_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_kedudukan_hukum_table.php'),
+            __DIR__.'/../database/migrations/create_siasn_referensi_kel_jabatan_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_kel_jabatan_table.php'),
+            __DIR__.'/../database/migrations/create_siasn_referensi_latihan_struktural_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_latihan_struktural_table.php'),
+            __DIR__.'/../database/migrations/create_siasn_referensi_lokasi_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_lokasi_table.php'),
+            __DIR__.'/../database/migrations/create_siasn_referensi_pendidikan_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_pendidikan_table.php'),
+            __DIR__.'/../database/migrations/create_siasn_referensi_ref_dokumen_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_ref_dokumen_table.php'),
+            __DIR__.'/../database/migrations/create_siasn_referensi_ref_jenjang_jf_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_ref_jenjang_jf_table.php'),
+            __DIR__.'/../database/migrations/create_siasn_referensi_satuan_kerja_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_satuan_kerja_table.php'),
+            __DIR__.'/../database/migrations/create_siasn_referensi_tingkat_pendidikan_table.php.stub' => $this->getMigrationFileName('create_siasn_referensi_tingkat_pendidikan_table.php'),
         ], 'migrations');
     }
 
@@ -93,7 +93,7 @@ class ReferensiServiceProvider extends ServiceProvider
      */
     protected function registerCommands(): void
     {
-        if (!$this->app->runningInConsole()) {
+        if (! $this->app->runningInConsole()) {
             return;
         }
 
@@ -109,13 +109,13 @@ class ReferensiServiceProvider extends ServiceProvider
     {
         $timestamp = date('Y_m_d_His');
 
-        return collect([$this->app->databasePath() . DIRECTORY_SEPARATOR . 'migrations' . DIRECTORY_SEPARATOR])
+        return collect([$this->app->databasePath().DIRECTORY_SEPARATOR.'migrations'.DIRECTORY_SEPARATOR])
             ->flatMap(function ($path) use ($migrationFileName) {
                 $filesystem = $this->app->make(Filesystem::class);
 
-                return $filesystem->glob($path . '*_' . $migrationFileName);
+                return $filesystem->glob($path.'*_'.$migrationFileName);
             })
-            ->push($this->app->databasePath() . "/migrations/{$timestamp}_{$migrationFileName}")
+            ->push($this->app->databasePath()."/migrations/{$timestamp}_{$migrationFileName}")
             ->first();
     }
 }

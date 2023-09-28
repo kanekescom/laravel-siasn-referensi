@@ -89,8 +89,8 @@ class PullReferensi extends Command
         $endpoints->each(function ($endpoint) use ($endpointCount, &$i) {
             $i++;
             $endpointClass = Str::studly($endpoint);
-            $modelClass = 'Kanekescom\Siasn\Api\Referensi\Models\\' . $endpointClass;
-            $repositoryClass = 'Kanekescom\Siasn\Referensi\Repositories\\' . $endpointClass . 'Repository';
+            $modelClass = 'Kanekescom\Siasn\Api\Referensi\Models\\'.$endpointClass;
+            $repositoryClass = 'Kanekescom\Siasn\Referensi\Repositories\\'.$endpointClass.'Repository';
             $repository = app($repositoryClass);
 
             try {

@@ -3,7 +3,6 @@
 namespace Kanekescom\Siasn\Referensi\Tests;
 
 use Kanekescom\Siasn\Referensi\Facades\Referensi;
-use Kanekescom\Siasn\Referensi\Models\Agama;
 use Kanekescom\Siasn\Referensi\Models\AlasanHukumanDisiplin;
 use Kanekescom\Siasn\Referensi\Models\AsnJenisJabatan;
 use Kanekescom\Siasn\Referensi\Models\AsnJenjangJabatan;
