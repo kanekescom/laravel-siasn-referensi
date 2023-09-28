@@ -1,0 +1,40 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('siasn_referensi_jabatan_fungsional_umum', function (Blueprint $table) {
+            $table->string('id')->primary();
+            $table->string('nama')->nullable();
+            $table->string('cepat_kode')->nullable()->index('cepat_kode');
+            $table->string('wajib_ganti_tertentu')->nullable()->index('wajib_ganti_tertentu');
+            $table->string('jenis_jabatan_umum_id')->nullable()->index('jenis_jabatan_umum_id');
+            $table->string('merger_cepat_kode')->nullable()->index('merger_cepat_kode');
+            $table->string('nama_asli')->nullable();
+            $table->string('kode_menpan')->nullable()->index('kode_menpan');
+            $table->string('instansi_id')->nullable()->index('instansi_id');
+            $table->string('status')->nullable()->index('status'); // ? From int
+            $table->string('asal_peraturan_id')->nullable()->index('asal_peraturan_id'); // ? From int
+            $table->string('jfu_urusan_pemerintahan')->nullable(); // ? From int
+            $table->timestamps();
+            $table->softDeletes();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('siasn_referensi_jabatan_fungsional_umum');
+    }
+};

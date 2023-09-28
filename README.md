@@ -5,14 +5,22 @@
 [![Build Status][ico-travis]][link-travis]
 [![StyleCI][ico-styleci]][link-styleci]
 
-Library for reference in SIASN BKN.
+This library is the abstraction of SIASN Referensi for access from applications written with Laravel PHP Framework.
 
 ## Installation
 
-Via Composer
+You can install the package via composer:
 
 ``` bash
 $ composer require kanekescom/laravel-siasn-referensi
+```
+
+The package will automatically register itself.
+
+You can publish the migration with:
+
+``` bash
+$ php artisan vendor:publish --provider="Kanekescom\Siasn\Referensi\ReferensiServiceProvider" --tag="migrations"
 ```
 
 ## Usage

@@ -1,0 +1,46 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('siasn_referensi_jabatan_fungsional', function (Blueprint $table) {
+            $table->string('id')->primary();
+            $table->string('min_golongan_id')->nullable()->index('min_golongan_id');
+            $table->string('max_golongan_id')->nullable()->index('max_golongan_id');
+            $table->string('nama')->nullable();
+            $table->string('bup_usia')->nullable(); // ? From int
+            $table->string('tunjangan_jabatan')->nullable(); // ? From int
+            $table->string('bobot')->nullable(); // ? From int
+            $table->string('kelompok_jabatan_id')->nullable()->index('kelompok_jabatan_id');
+            $table->string('cepat_kode')->nullable()->index('cepat_kode');
+            $table->string('merger_cepat_kode')->nullable()->index('merger_cepat_kode');
+            $table->string('jenis')->nullable()->index('jenis');
+            $table->string('cepat_kode_new')->nullable()->index('cepat_kode_new');
+            $table->string('status')->nullable()->index('status');
+            $table->string('jumlah_formasi')->nullable(); // ? From int
+            $table->string('nama_asli')->nullable();
+            $table->string('jenjang')->nullable()->index('jenjang');
+            $table->string('jf_ex_medis')->nullable(); // ? From int
+            $table->string('is_syarat_jabatan')->nullable(); // ? Confused about adding index
+            $table->timestamps();
+            $table->softDeletes();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('siasn_referensi_jabatan_fungsional');
+    }
+};
