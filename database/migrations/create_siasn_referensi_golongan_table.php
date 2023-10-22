@@ -2,7 +2,6 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
@@ -12,9 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        // TODO: Recheck on API.
-        Schema::create('siasn_referensi_kel_jabatan', function (Blueprint $table) {
+        Schema::create('siasn_referensi_golongan', function (Blueprint $table) {
             $table->string('id')->primary();
+            $table->string('nama')->nullable();
+            $table->string('nama_pangkat')->nullable();
+            $table->string('fungsi_kredit_utama')->nullable();
+            $table->string('fungsi_kredit_tambahan')->nullable();
+            $table->string('fungsi_kredit_total')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
@@ -25,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('siasn_referensi_kel_jabatan');
+        Schema::dropIfExists('siasn_referensi_golongan');
     }
 };
