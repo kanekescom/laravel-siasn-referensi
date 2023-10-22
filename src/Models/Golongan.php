@@ -5,14 +5,11 @@ namespace Kanekescom\Siasn\Referensi\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
 
-class Golongan extends Model implements Transformable
+class Golongan extends Model
 {
     use HasFactory;
     use SoftDeletes;
-    use TransformableTrait;
 
     /**
      * The table associated with the model.
@@ -33,12 +30,12 @@ class Golongan extends Model implements Transformable
      *
      * @var array
      */
-    protected $fillable = [
-        'id',
-        'nama',
-        'nama_pangkat',
-        'fungsi_kredit_utama',
-        'fungsi_kredit_tambahan',
-        'fungsi_kredit_total',
-    ];
+    // protected $fillable = [
+    //     'id',
+    //     'nama',
+    //     'nama_pangkat',
+    //     'fungsi_kredit_utama',
+    //     'fungsi_kredit_tambahan',
+    //     'fungsi_kredit_total',
+    // ];
 }

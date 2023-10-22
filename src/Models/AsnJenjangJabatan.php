@@ -5,14 +5,11 @@ namespace Kanekescom\Siasn\Referensi\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
 
-class AsnJenjangJabatan extends Model implements Transformable
+class AsnJenjangJabatan extends Model
 {
     use HasFactory;
     use SoftDeletes;
-    use TransformableTrait;
 
     /**
      * The table associated with the model.
@@ -33,9 +30,9 @@ class AsnJenjangJabatan extends Model implements Transformable
      *
      * @var array
      */
-    protected $fillable = [
-        'id',
-        'nama',
-        'asn_jenis_jabatan_id',
-    ];
+    // protected $fillable = [
+    //     'id',
+    //     'nama',
+    //     'asn_jenis_jabatan_id',
+    // ];
 }

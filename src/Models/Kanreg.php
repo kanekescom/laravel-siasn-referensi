@@ -5,14 +5,11 @@ namespace Kanekescom\Siasn\Referensi\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
 
-class Kanreg extends Model implements Transformable
+class Kanreg extends Model
 {
     use HasFactory;
     use SoftDeletes;
-    use TransformableTrait;
 
     /**
      * The table associated with the model.
@@ -33,13 +30,12 @@ class Kanreg extends Model implements Transformable
      *
      * @var array
      */
-    protected $fillable = [
-        'id',
-        'regional_kota',
-        'nama',
-        'pengenal',
-        'satuan_kerja_id',
-        'tanggal_jorge',
-        'tanggal_jorge__formatted',
-    ];
+    // protected $fillable = [
+    //     'id',
+    //     'regional_kota',
+    //     'nama',
+    //     'pengenal',
+    //     'satuan_kerja_id',
+    //     'tanggal_jorge',
+    // ];
 }

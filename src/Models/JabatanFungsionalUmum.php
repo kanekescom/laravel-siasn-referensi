@@ -5,14 +5,11 @@ namespace Kanekescom\Siasn\Referensi\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
 
-class JabatanFungsionalUmum extends Model implements Transformable
+class JabatanFungsionalUmum extends Model
 {
     use HasFactory;
     use SoftDeletes;
-    use TransformableTrait;
 
     /**
      * The table associated with the model.
@@ -33,18 +30,18 @@ class JabatanFungsionalUmum extends Model implements Transformable
      *
      * @var array
      */
-    protected $fillable = [
-        'id',
-        'nama',
-        'cepat_kode',
-        'wajib_ganti_tertentu',
-        'jenis_jabatan_umum_id',
-        'merger_cepat_kode',
-        'nama_asli',
-        'kode_menpan',
-        'instansi_id',
-        'status',
-        'asal_peraturan_id',
-        'jfu_urusan_pemerintahan',
-    ];
+    // protected $fillable = [
+    //     'id',
+    //     'nama',
+    //     'kode_cepat',
+    //     'wajib_ganti_tertentu',
+    //     'jenis_jabatan_umum_id',
+    //     'kode_cepat_merger',
+    //     'nama_asli',
+    //     'kode_menpan',
+    //     'instansi_id',
+    //     'status',
+    //     'asal_peraturan_id',
+    //     'jfu_urusan_pemerintahan',
+    // ];
 }

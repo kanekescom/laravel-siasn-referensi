@@ -5,14 +5,11 @@ namespace Kanekescom\Siasn\Referensi\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
 
-class RefDokumen extends Model implements Transformable
+class RefDokumen extends Model
 {
     use HasFactory;
     use SoftDeletes;
-    use TransformableTrait;
 
     /**
      * The table associated with the model.
@@ -32,9 +29,19 @@ class RefDokumen extends Model implements Transformable
      * The attributes that are mass assignable.
      *
      * @var array
-     * // TODO: Recheck on API.
      */
-    protected $fillable = [
-        'id',
-    ];
+    // protected $fillable = [
+    //     'id',
+    //     'layanan_id',
+    //     'layanan_nama',
+    //     'sub_layanan_id',
+    //     'sub_layanan_nama',
+    //     'detail_layanan_id',
+    //     'detail_layanan_nama',
+    //     'document',
+    //     'jenis_dokumen',
+    //     'file_type',
+    //     'link_proses',
+    //     'mandatory',
+    // ];
 }

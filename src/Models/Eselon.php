@@ -5,14 +5,11 @@ namespace Kanekescom\Siasn\Referensi\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
 
-class Eselon extends Model implements Transformable
+class Eselon extends Model
 {
     use HasFactory;
     use SoftDeletes;
-    use TransformableTrait;
 
     /**
      * The table associated with the model.
@@ -33,13 +30,13 @@ class Eselon extends Model implements Transformable
      *
      * @var array
      */
-    protected $fillable = [
-        'id',
-        'nama',
-        'golongan_terendah_id',
-        'golongan_tertinggi_id',
-        'eselon_level_id',
-        'asn_jenjang_jabatan_id',
-        'jabatan_asn',
-    ];
+    // protected $fillable = [
+    //     'id',
+    //     'nama',
+    //     'golongan_terendah_id',
+    //     'golongan_tertinggi_id',
+    //     'eselon_level_id',
+    //     'asn_jenjang_jabatan_id',
+    //     'jabatan_asn',
+    // ];
 }

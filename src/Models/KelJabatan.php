@@ -5,14 +5,11 @@ namespace Kanekescom\Siasn\Referensi\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
 
-class KelJabatan extends Model implements Transformable
+class KelJabatan extends Model
 {
     use HasFactory;
     use SoftDeletes;
-    use TransformableTrait;
 
     /**
      * The table associated with the model.
@@ -32,9 +29,20 @@ class KelJabatan extends Model implements Transformable
      * The attributes that are mass assignable.
      *
      * @var array
-        // TODO: Recheck on API.
      */
-    protected $fillable = [
-        'id',
-    ];
+    // protected $fillable = [
+    //     'id',
+    //     'rumpun_jabatan_id',
+    //     'nama',
+    //     'lingkup',
+    //     'tugas_pokok',
+    //     'pejabat_pak',
+    //     'pembina_id',
+    //     'jenis_jabatan_umum_id',
+    //     'status',
+    //     'kode_rumpun',
+    //     'kode_kelompok',
+    //     'jenis_jabatan_umum_baru_id',
+    //     'kesehatan_nonmedis',
+    // ];
 }

@@ -5,14 +5,11 @@ namespace Kanekescom\Siasn\Referensi\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
 
-class Instansi extends Model implements Transformable
+class Instansi extends Model
 {
     use HasFactory;
     use SoftDeletes;
-    use TransformableTrait;
 
     /**
      * The table associated with the model.
@@ -33,19 +30,19 @@ class Instansi extends Model implements Transformable
      *
      * @var array
      */
-    protected $fillable = [
-        'id',
-        'lokasi_id',
-        'nama',
-        'jenis',
-        'cepat_kode',
-        'proses_berkas_dipusat',
-        'merger_cepat_kode',
-        'status',
-        'cepat_kode5',
-        'cepat_kode5_lama',
-        'nama_baru',
-        'nama_jabatan',
-        'jenis_instansi_id',
-    ];
+    // protected $fillable = [
+    //     'id',
+    //     'lokasi_id',
+    //     'nama',
+    //     'jenis',
+    //     'kode_cepat',
+    //     'proses_berkas_dipusat',
+    //     'kode_cepat_merger',
+    //     'status',
+    //     'kode_cepat5',
+    //     'kode_cepat5_lama',
+    //     'nama_baru',
+    //     'nama_jabatan',
+    //     'jenis_instansi_id',
+    // ];
 }
