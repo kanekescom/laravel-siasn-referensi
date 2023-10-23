@@ -31,19 +31,4 @@ class Eselon extends Model
      * @var array
      */
     protected $guarded = [];
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    // protected $fillable = [
-    //     'id',
-    //     'nama',
-    //     'golongan_terendah_id',
-    //     'golongan_tertinggi_id',
-    //     'eselon_level_id',
-    //     'asn_jenjang_jabatan_id',
-    //     'jabatan_asn',
-    // ];
 }

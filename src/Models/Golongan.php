@@ -31,18 +31,4 @@ class Golongan extends Model
      * @var array
      */
     protected $guarded = [];
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    // protected $fillable = [
-    //     'id',
-    //     'nama',
-    //     'nama_pangkat',
-    //     'fungsi_kredit_utama',
-    //     'fungsi_kredit_tambahan',
-    //     'fungsi_kredit_total',
-    // ];
 }

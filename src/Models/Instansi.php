@@ -31,25 +31,4 @@ class Instansi extends Model
      * @var array
      */
     protected $guarded = [];
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    // protected $fillable = [
-    //     'id',
-    //     'lokasi_id',
-    //     'nama',
-    //     'jenis',
-    //     'kode_cepat',
-    //     'proses_berkas_dipusat',
-    //     'kode_cepat_merger',
-    //     'status',
-    //     'kode_cepat5',
-    //     'kode_cepat5_lama',
-    //     'nama_baru',
-    //     'nama_jabatan',
-    //     'jenis_instansi_id',
-    // ];
 }

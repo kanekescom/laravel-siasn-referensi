@@ -31,30 +31,4 @@ class JabatanFungsional extends Model
      * @var array
      */
     protected $guarded = [];
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    // protected $fillable = [
-    //     'id',
-    //     'min_golongan_id',
-    //     'max_golongan_id',
-    //     'nama',
-    //     'usia_bup',
-    //     'tunjangan_jabatan',
-    //     'bobot',
-    //     'kel_jabatan_id',
-    //     'kode_cepat',
-    //     'kode_cepat_merger',
-    //     'jenis',
-    //     'kode_cepat_new',
-    //     'status',
-    //     'jumlah_formasi',
-    //     'nama_asli',
-    //     'jenjang',
-    //     'jf_ex_medis',
-    //     'is_syarat_jabatan',
-    // ];
 }

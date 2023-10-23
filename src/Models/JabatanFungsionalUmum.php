@@ -31,24 +31,4 @@ class JabatanFungsionalUmum extends Model
      * @var array
      */
     protected $guarded = [];
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    // protected $fillable = [
-    //     'id',
-    //     'nama',
-    //     'kode_cepat',
-    //     'wajib_ganti_tertentu',
-    //     'jenis_jabatan_umum_id',
-    //     'kode_cepat_merger',
-    //     'nama_asli',
-    //     'kode_menpan',
-    //     'instansi_id',
-    //     'status',
-    //     'asal_peraturan_id',
-    //     'jfu_urusan_pemerintahan',
-    // ];
 }

@@ -31,14 +31,4 @@ class AsnJenisJabatan extends Model
      * @var array
      */
     protected $guarded = [];
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     * // TODO: Recheck on API.
-     */
-    // protected $fillable = [
-    //     'id',
-    // ];
 }

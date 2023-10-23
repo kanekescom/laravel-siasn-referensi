@@ -31,20 +31,4 @@ class SatuanKerja extends Model
      * @var array
      */
     protected $guarded = [];
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    // protected $fillable = [
-    //     'id',
-    //     'kanreg_id',
-    //     'lokasi_id',
-    //     'instansi_id',
-    //     'nama',
-    //     'parent_id',
-    //     'jenis_satuan_kerja_id',
-    //     'unblock_code',
-    // ];
 }

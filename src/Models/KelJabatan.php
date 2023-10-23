@@ -31,25 +31,4 @@ class KelJabatan extends Model
      * @var array
      */
     protected $guarded = [];
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    // protected $fillable = [
-    //     'id',
-    //     'rumpun_jabatan_id',
-    //     'nama',
-    //     'lingkup',
-    //     'tugas_pokok',
-    //     'pejabat_pak',
-    //     'pembina_id',
-    //     'jenis_jabatan_umum_id',
-    //     'status',
-    //     'kode_rumpun',
-    //     'kode_kelompok',
-    //     'jenis_jabatan_umum_baru_id',
-    //     'kesehatan_nonmedis',
-    // ];
 }

@@ -31,22 +31,4 @@ class Pendidikan extends Model
      * @var array
      */
     protected $guarded = [];
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    // protected $fillable = [
-    //     'id',
-    //     'tingkat_pendidikan_id',
-    //     'nama',
-    //     'kode_cepat',
-    //     'kode_cepat_merger',
-    //     'nama_asli',
-    //     'status',
-    //     'sub_rumpun_prog_id',
-    //     'kode_cepat_induk',
-    //     'sub_rumpun_prog_kode',
-    // ];
 }

@@ -31,24 +31,4 @@ class Lokasi extends Model
      * @var array
      */
     protected $guarded = [];
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    // protected $fillable = [
-    //     'id',
-    //     'kanreg_id',
-    //     'lokasi_id',
-    //     'nama',
-    //     'kode_cepat',
-    //     'jenis',
-    //     'jenis_kabupaten',
-    //     'removal_date',
-    //     'jenis_desa',
-    //     'tanggal_jorge',
-    //     'kode_cepat_merger',
-    //     'ibu_kota',
-    // ];
 }

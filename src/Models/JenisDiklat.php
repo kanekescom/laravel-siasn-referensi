@@ -31,14 +31,4 @@ class JenisDiklat extends Model
      * @var array
      */
     protected $guarded = [];
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    // protected $fillable = [
-    //     'id',
-    //     'jenis_diklat',
-    // ];
 }

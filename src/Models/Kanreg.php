@@ -31,18 +31,4 @@ class Kanreg extends Model
      * @var array
      */
     protected $guarded = [];
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    // protected $fillable = [
-    //     'id',
-    //     'regional_kota',
-    //     'nama',
-    //     'pengenal',
-    //     'satuan_kerja_id',
-    //     'tanggal_jorge',
-    // ];
 }

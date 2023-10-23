@@ -31,15 +31,4 @@ class JenisHukuman extends Model
      * @var array
      */
     protected $guarded = [];
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    // protected $fillable = [
-    //     'id',
-    //     'nama',
-    //     'jenis_tingkat_hukuman_id',
-    // ];
 }

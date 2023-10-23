@@ -31,24 +31,4 @@ class RefDokumen extends Model
      * @var array
      */
     protected $guarded = [];
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    // protected $fillable = [
-    //     'id',
-    //     'layanan_id',
-    //     'layanan_nama',
-    //     'sub_layanan_id',
-    //     'sub_layanan_nama',
-    //     'detail_layanan_id',
-    //     'detail_layanan_nama',
-    //     'document',
-    //     'jenis_dokumen',
-    //     'file_type',
-    //     'link_proses',
-    //     'mandatory',
-    // ];
 }
