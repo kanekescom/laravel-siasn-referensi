@@ -26,6 +26,13 @@ class Instansi extends Model
     protected $keyType = 'string';
 
     /**
+     * The attributes that aren't mass assignable.
+     *
+     * @var array
+     */
+    protected $guarded = [];
+
+    /**
      * The attributes that are mass assignable.
      *
      * @var array
