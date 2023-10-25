@@ -2,32 +2,25 @@
 
 namespace Kanekescom\Siasn\Referensi\Transformers;
 
-use Kanekescom\Siasn\Referensi\Models\TingkatPendidikan;
 use League\Fractal\TransformerAbstract;
 
 class TingkatPendidikanTransformer extends TransformerAbstract
 {
     /**
-     * Transform the TingkatPendidikan model.
+     * A Fractal transformer.
      *
-     * @param  Kanekescom\Siasn\Referensi\Models\TingkatPendidikan  $model
+     * @return array
      */
-    public function transform(TingkatPendidikan $model): array
+    public function transform(array $item)
     {
         return [
-            'id' => $model->id,
-
-            /* place your other model properties here */
-            'golongan_id' => $model->golongan_id,
-            'nama' => $model->nama,
-            'golongan_awal_id' => $model->golongan_awal_id,
-            'id_lama' => $model->id_lama,
-            'group_tingkat_penddidikan_id' => $model->group_tingkat_penddidikan_id,
-            'group_tingkat_penddidikan_nama' => $model->group_tingkat_penddidikan_nama,
-
-            // 'created_at' => $model->created_at,
-            // 'updated_at' => $model->updated_at,
-            // 'deleted_at' => $model->deleted_at,
+            'id' => $item['id'],
+            'golongan_id' => $item['golongan_id'],
+            'nama' => $item['nama'],
+            'golongan_awal_id' => $item['golongan_awal_id'],
+            'id_lama' => $item['id_lama'],
+            'group_tingkat_penddidikan_id' => $item['group_tk_pend_id'],
+            'group_tingkat_penddidikan_nama' => $item['group_tk_pend_nm'],
         ];
     }
 }

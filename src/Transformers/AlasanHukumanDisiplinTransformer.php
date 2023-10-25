@@ -2,28 +2,21 @@
 
 namespace Kanekescom\Siasn\Referensi\Transformers;
 
-use Kanekescom\Siasn\Referensi\Models\AlasanHukumanDisiplin;
 use League\Fractal\TransformerAbstract;
 
 class AlasanHukumanDisiplinTransformer extends TransformerAbstract
 {
     /**
-     * Transform the AlasanHukumanDisiplin model.
+     * A Fractal transformer.
      *
-     * @param  Kanekescom\Siasn\Referensi\Models\AlasanHukumanDisiplin  $model
+     * @return array
      */
-    public function transform(AlasanHukumanDisiplin $model): array
+    public function transform(array $item)
     {
         return [
-            'id' => $model->id,
-
-            /* place your other model properties here */
-            'nama' => $model->nama,
-            'keterangan' => $model->keterangan,
-
-            // 'created_at' => $model->created_at,
-            // 'updated_at' => $model->updated_at,
-            // 'deleted_at' => $model->deleted_at,
+            'id' => $item['id'],
+            'nama' => $item['nama'],
+            'keterangan' => $item['keterangan'],
         ];
     }
 }

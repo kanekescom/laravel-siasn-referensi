@@ -2,27 +2,30 @@
 
 namespace Kanekescom\Siasn\Referensi\Transformers;
 
-use Kanekescom\Siasn\Referensi\Models\RefDokumen;
 use League\Fractal\TransformerAbstract;
 
 class RefDokumenTransformer extends TransformerAbstract
 {
     /**
-     * Transform the RefDokumen model.
+     * A Fractal transformer.
      *
-     * @param  Kanekescom\Siasn\Referensi\Models\RefDokumen  $model
+     * @return array
      */
-    public function transform(RefDokumen $model): array
+    public function transform(array $item)
     {
-        // TODO: Recheck on API.
         return [
-            'id' => $model->id,
-
-            /* place your other model properties here */
-
-            // 'created_at' => $model->created_at,
-            // 'updated_at' => $model->updated_at,
-            // 'deleted_at' => $model->deleted_at,
+            'id' => $item['id'],
+            'layanan_id' => $item['layananId'],
+            'layanan_nama' => $item['layananNama'],
+            'sub_layanan_id' => $item['subLayananId'],
+            'sub_layanan_nama' => $item['subLayananNama'],
+            'detail_layanan_id' => $item['detailLayananId'],
+            'detail_layanan_nama' => $item['detailLayananNama'],
+            'document' => $item['document'],
+            'jenis_dokumen' => $item['jenisDokumen'],
+            'file_type' => $item['fileType'],
+            'link_proses' => $item['linkProses'],
+            'mandatory' => $item['mandatory'],
         ];
     }
 }

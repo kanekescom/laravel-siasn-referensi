@@ -1,8 +1,3 @@
 # Changelog
 
-All notable changes to `Laravel SIASN Referensi` will be documented in this file.
-
-## Version 1.0
-
-### Added
-- Everything
+All notable changes to `laravel-siasn-referensi-api` will be documented in this file.

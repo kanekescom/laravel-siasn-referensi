@@ -2,33 +2,26 @@
 
 namespace Kanekescom\Siasn\Referensi\Transformers;
 
-use Kanekescom\Siasn\Referensi\Models\SatuanKerja;
 use League\Fractal\TransformerAbstract;
 
 class SatuanKerjaTransformer extends TransformerAbstract
 {
     /**
-     * Transform the SatuanKerja model.
+     * A Fractal transformer.
      *
-     * @param  Kanekescom\Siasn\Referensi\Models\SatuanKerja  $model
+     * @return array
      */
-    public function transform(SatuanKerja $model): array
+    public function transform(array $item)
     {
         return [
-            'id' => $model->id,
-
-            /* place your other model properties here */
-            'kanreg_id' => $model->kanreg_id,
-            'lokasi_id' => $model->lokasi_id,
-            'instansi_id' => $model->instansi_id,
-            'nama' => $model->nama,
-            'parent_id' => $model->parent_id,
-            'jenis_satuan_kerja_id' => $model->jenis_satuan_kerja_id,
-            'unblock_code' => $model->unblock_code,
-
-            // 'created_at' => $model->created_at,
-            // 'updated_at' => $model->updated_at,
-            // 'deleted_at' => $model->deleted_at,
+            'id' => $item['id'],
+            'kanreg_id' => $item['kanregId'],
+            'lokasi_id' => $item['lokasiId'],
+            'instansi_id' => $item['instansiId'],
+            'nama' => $item['nama'],
+            'parent_id' => $item['parentId'],
+            'jenis_satuan_kerja_id' => $item['jenisSatuanKerjaId'],
+            'unblock_code' => $item['unblockCode'],
         ];
     }
 }

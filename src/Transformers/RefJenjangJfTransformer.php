@@ -2,28 +2,21 @@
 
 namespace Kanekescom\Siasn\Referensi\Transformers;
 
-use Kanekescom\Siasn\Referensi\Models\RefJenjangJf;
 use League\Fractal\TransformerAbstract;
 
 class RefJenjangJfTransformer extends TransformerAbstract
 {
     /**
-     * Transform the RefJenjangJf model.
+     * A Fractal transformer.
      *
-     * @param  Kanekescom\Siasn\Referensi\Models\RefJenjangJf  $model
+     * @return array
      */
-    public function transform(RefJenjangJf $model): array
+    public function transform(array $item)
     {
         return [
-            'id' => $model->id,
-
-            /* place your other model properties here */
-            'deskripsi' => $model->deskripsi,
-            'peraturan' => $model->peraturan,
-
-            // 'created_at' => $model->created_at,
-            // 'updated_at' => $model->updated_at,
-            // 'deleted_at' => $model->deleted_at,
+            'id' => $item['id'],
+            'deskripsi' => $item['deskripsi'],
+            'peraturan' => $item['peraturan'],
         ];
     }
 }

@@ -2,27 +2,20 @@
 
 namespace Kanekescom\Siasn\Referensi\Transformers;
 
-use Kanekescom\Siasn\Referensi\Models\JenisDiklat;
 use League\Fractal\TransformerAbstract;
 
 class JenisDiklatTransformer extends TransformerAbstract
 {
     /**
-     * Transform the JenisDiklat model.
+     * A Fractal transformer.
      *
-     * @param  Kanekescom\Siasn\Referensi\Models\JenisDiklat  $model
+     * @return array
      */
-    public function transform(JenisDiklat $model): array
+    public function transform(array $item)
     {
         return [
-            'id' => $model->id,
-
-            /* place your other model properties here */
-            'jenis_diklat' => $model->jenis_diklat,
-
-            // 'created_at' => $model->created_at,
-            // 'updated_at' => $model->updated_at,
-            // 'deleted_at' => $model->deleted_at,
+            'id' => $item['id'],
+            'jenis_diklat' => $item['jenis_diklat'],
         ];
     }
 }

@@ -2,27 +2,19 @@
 
 namespace Kanekescom\Siasn\Referensi\Transformers;
 
-use Kanekescom\Siasn\Referensi\Models\AsnJenisJabatan;
 use League\Fractal\TransformerAbstract;
 
 class AsnJenisJabatanTransformer extends TransformerAbstract
 {
     /**
-     * Transform the AsnJenisJabatan model.
+     * A Fractal transformer.
      *
-     * @param  Kanekescom\Siasn\Referensi\Models\AsnJenisJabatan  $model
+     * @return array
      */
-    public function transform(AsnJenisJabatan $model): array
+    public function transform(array $item)
     {
-        // TODO: Recheck on API.
         return [
-            'id' => $model->id,
-
-            /* place your other model properties here */
-
-            // 'created_at' => $model->created_at,
-            // 'updated_at' => $model->updated_at,
-            // 'deleted_at' => $model->deleted_at,
+            'id' => $item['id'],
         ];
     }
 }

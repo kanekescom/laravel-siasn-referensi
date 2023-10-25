@@ -2,31 +2,23 @@
 
 namespace Kanekescom\Siasn\Referensi\Transformers;
 
-use Kanekescom\Siasn\Referensi\Models\LatihanStruktural;
 use League\Fractal\TransformerAbstract;
 
 class LatihanStrukturalTransformer extends TransformerAbstract
 {
     /**
-     * Transform the LatihanStruktural model.
+     * A Fractal transformer.
      *
-     * @param  Kanekescom\Siasn\Referensi\Models\LatihanStruktural  $model
+     * @return array
      */
-    public function transform(LatihanStruktural $model): array
+    public function transform(array $item)
     {
         return [
-            'id' => $model->id,
-
-            /* place your other model properties here */
-            'nama' => $model->nama,
-            'eselon_level' => $model->eselon_level,
-            'ncsis_time' => $model->ncsis_time,
-            'ncsis_time__formatted' => $model->ncsis_time__formatted,
-            'struktural_pns' => $model->struktural_pns,
-
-            // 'created_at' => $model->created_at,
-            // 'updated_at' => $model->updated_at,
-            // 'deleted_at' => $model->deleted_at,
+            'id' => $item['id'],
+            'nama' => $item['nama'],
+            'eselon_level' => $item['eselon_level'],
+            'ncsis_time' => $item['ncsistime'],
+            'struktural_pns' => $item['struktural_pns'],
         ];
     }
 }

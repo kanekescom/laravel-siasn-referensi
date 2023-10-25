@@ -2,32 +2,24 @@
 
 namespace Kanekescom\Siasn\Referensi\Transformers;
 
-use Kanekescom\Siasn\Referensi\Models\Kanreg;
 use League\Fractal\TransformerAbstract;
 
 class KanregTransformer extends TransformerAbstract
 {
     /**
-     * Transform the Kanreg model.
+     * A Fractal transformer.
      *
-     * @param  Kanekescom\Siasn\Referensi\Models\Kanreg  $model
+     * @return array
      */
-    public function transform(Kanreg $model): array
+    public function transform(array $item)
     {
         return [
-            'id' => $model->id,
-
-            /* place your other model properties here */
-            'regional_kota' => $model->regional_kota,
-            'nama' => $model->nama,
-            'pengenal' => $model->pengenal,
-            'satuan_kerja_id' => $model->satuan_kerja_id,
-            'tanggal_jorge' => $model->tanggal_jorge,
-            'tanggal_jorge__formatted' => $model->tanggal_jorge__formatted,
-
-            // 'created_at' => $model->created_at,
-            // 'updated_at' => $model->updated_at,
-            // 'deleted_at' => $model->deleted_at,
+            'id' => $item['id'],
+            'regional_kota' => $item['regKota'],
+            'nama' => $item['nama'],
+            'pengenal' => $item['pengenal'],
+            'satuan_kerja_id' => $item['satuanKerjaId'],
+            'tanggal_jorge' => $item['tanggalJorge'],
         ];
     }
 }

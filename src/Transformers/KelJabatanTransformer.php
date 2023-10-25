@@ -2,27 +2,31 @@
 
 namespace Kanekescom\Siasn\Referensi\Transformers;
 
-use Kanekescom\Siasn\Referensi\Models\KelJabatan;
 use League\Fractal\TransformerAbstract;
 
 class KelJabatanTransformer extends TransformerAbstract
 {
     /**
-     * Transform the KelJabatan model.
+     * A Fractal transformer.
      *
-     * @param  Kanekescom\Siasn\Referensi\Models\KelJabatan  $model
+     * @return array
      */
-    public function transform(KelJabatan $model): array
+    public function transform(array $item)
     {
-        // TODO: Recheck on API.
         return [
-            'id' => $model->id,
-
-            /* place your other model properties here */
-
-            // 'created_at' => $model->created_at,
-            // 'updated_at' => $model->updated_at,
-            // 'deleted_at' => $model->deleted_at,
+            'id' => $item['id'],
+            'rumpun_jabatan_id' => $item['rumpunJabatanId'],
+            'nama' => $item['nama'],
+            'lingkup' => $item['lingkup'],
+            'tugas_pokok' => $item['tugasPokok'],
+            'pejabat_pak' => $item['pejabatPak'],
+            'pembina_id' => $item['pembinaId'],
+            'jenis_jabatan_umum_id' => $item['jenisJabatanUmumId'],
+            'status' => $item['status'],
+            'kode_rumpun' => $item['kodeRumpun'],
+            'kode_kelompok' => $item['kodeKelompok'],
+            'jenis_jabatan_umum_baru_id' => $item['jenisJabatanUmumBaruId'],
+            'kesehatan_nonmedis' => $item['kesehatanNonmedis'],
         ];
     }
 }

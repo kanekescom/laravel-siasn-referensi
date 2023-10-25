@@ -2,38 +2,31 @@
 
 namespace Kanekescom\Siasn\Referensi\Transformers;
 
-use Kanekescom\Siasn\Referensi\Models\Instansi;
 use League\Fractal\TransformerAbstract;
 
 class InstansiTransformer extends TransformerAbstract
 {
     /**
-     * Transform the Instansi model.
+     * A Fractal transformer.
      *
-     * @param  Kanekescom\Siasn\Referensi\Models\Instansi  $model
+     * @return array
      */
-    public function transform(Instansi $model): array
+    public function transform(array $item)
     {
         return [
-            'id' => $model->id,
-
-            /* place your other model properties here */
-            'lokasi_id' => $model->lokasi_id,
-            'nama' => $model->nama,
-            'jenis' => $model->jenis,
-            'cepat_kode' => $model->cepat_kode,
-            'proses_berkas_dipusat' => $model->proses_berkas_dipusat,
-            'merger_cepat_kode' => $model->merger_cepat_kode,
-            'status' => $model->status,
-            'cepat_kode5' => $model->cepat_kode5,
-            'cepat_kode5_lama' => $model->cepat_kode5_lama,
-            'nama_baru' => $model->nama_baru,
-            'nama_jabatan' => $model->nama_jabatan,
-            'jenis_instansi_id' => $model->jenis_instansi_id,
-
-            // 'created_at' => $model->created_at,
-            // 'updated_at' => $model->updated_at,
-            // 'deleted_at' => $model->deleted_at,
+            'id' => $item['id'],
+            'lokasi_id' => $item['lokasiId'],
+            'nama' => $item['nama'],
+            'jenis' => $item['jenis'],
+            'kode_cepat' => $item['cepatKode'],
+            'proses_berkas_dipusat' => $item['prosesBerkasDipusat'],
+            'kode_cepat_merger' => $item['mgrCepatKode'],
+            'status' => $item['status'],
+            'kode_cepat5' => $item['cepatKode5'],
+            'kode_cepat5_lama' => $item['cepatKode5Lama'],
+            'nama_baru' => $item['namaBaru'],
+            'nama_jabatan' => $item['namaJabatan'],
+            'jenis_instansi_id' => $item['jenisInstansiId'],
         ];
     }
 }
