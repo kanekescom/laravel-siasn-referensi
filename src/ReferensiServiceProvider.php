@@ -37,6 +37,7 @@ class ReferensiServiceProvider extends PackageServiceProvider
                 'create_siasn_referensi_satuan_kerja_table',
                 'create_siasn_referensi_tingkat_pendidikan_table',
             ])
-            ->runsMigrations();
+            ->runsMigrations()
+            ->hasCommand(Commands\PullCommand::class);
     }
 }
