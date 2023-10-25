@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string('rumpun_jabatan_id')->nullable();
             $table->string('nama')->nullable();
             $table->string('lingkup')->nullable();
-            $table->string('tugas_pokok')->nullable();
-            $table->string('pejabat_pak')->nullable();
+            $table->text('tugas_pokok')->nullable();
+            $table->text('pejabat_pak')->nullable();
             $table->string('pembina_id')->nullable();
             $table->string('jenis_jabatan_umum_id')->nullable();
             $table->string('status')->nullable();
