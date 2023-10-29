@@ -95,16 +95,26 @@ class PullCommand extends Command
             $modelName = Str::of($endpoint)->studly();
             $modelClass = config("siasn-referensi.models.{$modelName->snake()}");
             $model = new $modelClass;
-            $referensiMethod = 'get'.$modelName;
-            $response = Referensi::$referensiMethod();
+            $referensiMethod = 'get' . $modelName;
 
             $this->info("[{$i}/{$endpointCount}] {$endpoint}");
 
-            if ($response->count() == 0) {
-                $errorMessage = 'Data not found';
-                $endpointErrors->put($endpoint, $errorMessage);
+            try {
+                $response = Referensi::$referensiMethod();
 
-                $this->error(" {$errorMessage} ");
+                if ($response->count() == 0) {
+                    $errorMessage = 'Data not found';
+                    $endpointErrors->put($endpoint, $errorMessage);
+                    $this->components->error($errorMessage);
+
+                    return self::FAILURE;
+                }
+            } catch (\Exception $e) {
+                $errorMessage = $e->getMessage();
+                $endpointErrors->put($endpoint, $errorMessage);
+                $this->components->error($errorMessage);
+
+                return self::FAILURE;
             }
 
             try {
@@ -129,21 +139,22 @@ class PullCommand extends Command
 
                 $bar->finish();
 
-                $this->newLine();
-                $this->newLine();
+                $this->newLine(2);
             } catch (\Exception $e) {
-                $this->error($e);
-                $this->newLine();
+                $errorMessage = $e->getMessage();
+                $endpointErrors->put($endpoint, $errorMessage);
+                $this->components->error($errorMessage);
 
                 return self::FAILURE;
             }
         });
 
         if ($endpointErrors) {
-            $this->info("There is {$endpointErrors->count()} error(s):");
+            $this->components->info("There is {$endpointErrors->count()} error(s):");
 
             $endpointErrors->each(function ($value, $key) {
-                $this->error(" {$key}: {$value} ");
+                $this->line("<bg=red> {$key} </> {$value} ");
+                $this->newLine();
             });
 
             $this->newLine();
