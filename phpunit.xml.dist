@@ -16,7 +16,7 @@
     backupStaticProperties="false"
 >
     <testsuites>
-        <testsuite name="Laravel SIASN REFERENSI API Test Suite">
+        <testsuite name="Laravel SIASN REFERENSI Test Suite">
             <directory>tests</directory>
         </testsuite>
     </testsuites>

@@ -26,42 +26,17 @@ class PullCommand extends Command
     protected $description = 'Pull data to database from endpoint on SIASN Referensi API';
 
     /**
-     * The console command choice map.
-     *
-     * @var string
-     */
-    protected $endpoints = [
-        'agama' => '/agama',
-        'alasan-hukuman-disiplin' => '/alasan-hukuman-disiplin',
-        'asn-jenis-jabatan' => '/asn-jenis-jabatan',
-        'asn-jenjang-jabatan' => '/asn-jenjang-jabatan',
-        'eselon' => '/eselon',
-        'golongan' => '/golongan',
-        'instansi' => '/instansi',
-        'jabatan-fungsional' => '/jabatan-fungsional',
-        'jabatan-fungsional-umum' => '/jabatan-fungsional-umum',
-        'jenis-anak' => '/jenis-anak',
-        'jenis-diklat' => '/jenis-diklat',
-        'jenis-hukuman' => '/jenis-hukuman',
-        'jenis-jabatan' => '/jenis-jabatan',
-        'kanreg' => '/kanreg',
-        'kedudukan-hukum' => '/kedudukan-hukum',
-        'kel-jabatan' => '/kel-jabatan',
-        'latihan-struktural' => '/latihan-struktural',
-        'lokasi' => '/lokasi',
-        'pendidikan' => '/pendidikan',
-        'ref-dokumen' => '/ref-dokumen',
-        'ref-jenjang-jf' => '/ref-jenjang-jf',
-        'satuan-kerja' => '/satuan-kerja',
-        'tingkat-pendidikan' => '/tingkat-pendidikan',
-    ];
-
-    /**
      * Execute the console command.
      */
     public function handle()
     {
-        $endpointOptions = collect($this->endpoints);
+        $endpointOptions = method_public(\Kanekescom\Siasn\Referensi\Referensi::class)->map(function ($method) {
+            return \Illuminate\Support\Str::of($method)
+                ->kebab()
+                ->replaceFirst('get-', '')->toString();
+        })->mapWithKeys(function ($item) {
+            return [$item => $item];
+        });
         $endpoints = Str::of($this->argument('endpoint'))->explode(',');
 
         if (filled($endpoints->first()) && blank($endpoints = $endpointOptions->only($endpoints))) {
@@ -96,15 +71,23 @@ class PullCommand extends Command
             $modelClass = config("siasn-referensi.models.{$modelName->snake()}");
             $model = new $modelClass;
             $referensiMethod = 'get'.$modelName;
-            $response = Referensi::$referensiMethod();
 
             $this->info("[{$i}/{$endpointCount}] {$endpoint}");
 
-            if ($response->count() == 0) {
-                $errorMessage = 'Data not found';
-                $endpointErrors->put($endpoint, $errorMessage);
+            try {
+                $response = Referensi::$referensiMethod();
 
-                $this->error(" {$errorMessage} ");
+                if ($response->count() == 0) {
+                    $errorMessage = 'Data not found';
+                    $endpointErrors->put($endpoint, $errorMessage);
+                    $this->components->error($errorMessage);
+                }
+            } catch (\Exception $e) {
+                $errorMessage = $e->getMessage();
+                $endpointErrors->put($endpoint, $errorMessage);
+                $this->components->error($errorMessage);
+
+                return self::FAILURE;
             }
 
             try {
@@ -129,24 +112,23 @@ class PullCommand extends Command
 
                 $bar->finish();
 
-                $this->newLine();
-                $this->newLine();
+                $this->newLine(2);
             } catch (\Exception $e) {
-                $this->error($e);
-                $this->newLine();
+                $errorMessage = $e->getMessage();
+                $endpointErrors->put($endpoint, $errorMessage);
+                $this->components->error($errorMessage);
 
                 return self::FAILURE;
             }
         });
 
         if ($endpointErrors) {
-            $this->info("There is {$endpointErrors->count()} error(s):");
+            $this->components->info("There is {$endpointErrors->count()} error(s):");
 
             $endpointErrors->each(function ($value, $key) {
-                $this->error(" {$key}: {$value} ");
+                $this->line("<bg=red> {$key} </> {$value} ");
+                $this->newLine();
             });
-
-            $this->newLine();
         }
 
         $this->comment("All tasks are processed in {$start->shortAbsoluteDiffForHumans(now(), 1)}");
