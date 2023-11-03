@@ -70,7 +70,7 @@ class PullCommand extends Command
             $modelName = Str::of($endpoint)->studly();
             $modelClass = config("siasn-referensi.models.{$modelName->snake()}");
             $model = new $modelClass;
-            $referensiMethod = 'get'.$modelName;
+            $referensiMethod = 'get' . $modelName;
 
             $this->info("[{$i}/{$endpointCount}] {$endpoint}");
 
@@ -81,6 +81,8 @@ class PullCommand extends Command
                     $errorMessage = 'Data not found';
                     $endpointErrors->put($endpoint, $errorMessage);
                     $this->components->error($errorMessage);
+
+                    return self::FAILURE;
                 }
             } catch (\Exception $e) {
                 $errorMessage = $e->getMessage();
