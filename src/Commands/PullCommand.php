@@ -70,7 +70,7 @@ class PullCommand extends Command
             $modelName = Str::of($endpoint)->studly();
             $modelClass = config("siasn-referensi.models.{$modelName->snake()}");
             $model = new $modelClass;
-            $referensiMethod = 'get' . $modelName;
+            $referensiMethod = 'get'.$modelName;
 
             $this->info("[{$i}/{$endpointCount}] {$endpoint}");
 
