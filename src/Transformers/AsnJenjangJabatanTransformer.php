@@ -13,10 +13,6 @@ class AsnJenjangJabatanTransformer extends TransformerAbstract
      */
     public function transform(array $item)
     {
-        return [
-            'id' => $item['id'],
-            'nama' => $item['nama'],
-            'asn_jenis_jabatan_id' => $item['asnJenisJabatanId'],
-        ];
+        return $item;
     }
 }

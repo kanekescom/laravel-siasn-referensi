@@ -13,9 +13,6 @@ class JenisDiklatTransformer extends TransformerAbstract
      */
     public function transform(array $item)
     {
-        return [
-            'id' => $item['id'],
-            'jenis_diklat' => $item['jenis_diklat'],
-        ];
+        return $item;
     }
 }

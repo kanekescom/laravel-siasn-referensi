@@ -13,9 +13,6 @@ class AgamaTransformer extends TransformerAbstract
      */
     public function transform(array $item)
     {
-        return [
-            'id' => $item['id'],
-            'nama' => $item['nama'],
-        ];
+        return $item;
     }
 }

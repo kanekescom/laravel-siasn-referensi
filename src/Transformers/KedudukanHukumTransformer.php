@@ -13,11 +13,6 @@ class KedudukanHukumTransformer extends TransformerAbstract
      */
     public function transform(array $item)
     {
-        return [
-            'id' => $item['id'],
-            'nama' => $item['nama'],
-            'aturan' => $item['aturan'],
-            'kode' => $item['kode'],
-        ];
+        return $item;
     }
 }

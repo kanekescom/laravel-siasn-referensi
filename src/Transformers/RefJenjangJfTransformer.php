@@ -13,10 +13,6 @@ class RefJenjangJfTransformer extends TransformerAbstract
      */
     public function transform(array $item)
     {
-        return [
-            'id' => $item['id'],
-            'deskripsi' => $item['deskripsi'],
-            'peraturan' => $item['peraturan'],
-        ];
+        return $item;
     }
 }
