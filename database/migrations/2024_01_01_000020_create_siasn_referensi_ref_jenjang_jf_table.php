@@ -11,13 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('siasn_referensi_kanreg', function (Blueprint $table) {
+        Schema::create('siasn_referensi_ref_jenjang_jf', function (Blueprint $table) {
             $table->string('id')->primary();
-            $table->string('regional_kota')->nullable();
-            $table->string('nama')->nullable();
-            $table->string('pengenal')->nullable();
-            $table->string('satuan_kerja_id')->nullable();
-            $table->string('tanggal_jorge')->nullable();
+            $table->string('deskripsi')->nullable();
+            $table->string('peraturan')->nullable();
+            $table->string('kode')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
@@ -28,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('siasn_referensi_kanreg');
+        Schema::dropIfExists('siasn_referensi_ref_jenjang_jf');
     }
 };

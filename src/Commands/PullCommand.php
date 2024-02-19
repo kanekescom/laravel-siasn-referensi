@@ -81,6 +81,8 @@ class PullCommand extends Command
                     $errorMessage = 'Data not found';
                     $endpointErrors->put($endpoint, $errorMessage);
                     $this->components->error($errorMessage);
+
+                    return self::FAILURE;
                 }
             } catch (\Exception $e) {
                 $errorMessage = $e->getMessage();

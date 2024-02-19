@@ -14,16 +14,22 @@ return new class extends Migration
         Schema::create('siasn_referensi_jabatan_fungsional_umum', function (Blueprint $table) {
             $table->string('id')->primary();
             $table->string('nama')->nullable();
-            $table->string('kode_cepat')->nullable();
+            $table->string('cepat_kode')->nullable();
             $table->string('wajib_ganti_tertentu')->nullable();
-            $table->string('jenis_jabatan_umum_id')->nullable();
-            $table->string('kode_cepat_merger')->nullable();
+            $table->string('mgr_cepat_kode')->nullable();
             $table->string('nama_asli')->nullable();
             $table->string('kode_menpan')->nullable();
             $table->string('instansi_id')->nullable();
             $table->string('status')->nullable();
             $table->string('asal_peraturan_id')->nullable();
             $table->string('jfu_urusan_pemerintahan')->nullable();
+            $table->string('jenis_jabatan_umum_id')->nullable();
+            $table->string('jenis_jabatan_umum_nama')->nullable();
+            $table->string('asn_jenjang_jabatan_id')->nullable();
+            $table->string('asn_jenjang_jabatan_nama')->nullable();
+            $table->string('level')->nullable();
+            $table->string('ref_urusan_pemerintahan_id')->nullable();
+            $table->string('ref_urusan_pemerintahan_nama')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

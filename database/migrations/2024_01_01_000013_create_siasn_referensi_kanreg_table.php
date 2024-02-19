@@ -11,10 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('siasn_referensi_asn_jenjang_jabatan', function (Blueprint $table) {
+        Schema::create('siasn_referensi_kanreg', function (Blueprint $table) {
             $table->string('id')->primary();
+            $table->string('regKota')->nullable();
             $table->string('nama')->nullable();
-            $table->string('asn_jenis_jabatan_id')->nullable();
+            $table->string('pengenal')->nullable();
+            $table->string('satuanKerjaId')->nullable();
+            $table->string('tanggalJorge')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
@@ -25,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('siasn_referensi_asn_jenjang_jabatan');
+        Schema::dropIfExists('siasn_referensi_kanreg');
     }
 };

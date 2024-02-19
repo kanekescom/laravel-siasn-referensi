@@ -11,13 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('siasn_referensi_golongan', function (Blueprint $table) {
+        Schema::create('siasn_referensi_jenis_hukuman', function (Blueprint $table) {
             $table->string('id')->primary();
             $table->string('nama')->nullable();
-            $table->string('nama_pangkat')->nullable();
-            $table->string('fungsi_kredit_utama')->nullable();
-            $table->string('fungsi_kredit_tambahan')->nullable();
-            $table->string('fungsi_kredit_total')->nullable();
+            $table->string('jenisTingkatHukumanId')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
@@ -28,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('siasn_referensi_golongan');
+        Schema::dropIfExists('siasn_referensi_jenis_hukuman');
     }
 };

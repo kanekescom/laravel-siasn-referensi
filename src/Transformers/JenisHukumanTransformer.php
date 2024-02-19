@@ -13,10 +13,6 @@ class JenisHukumanTransformer extends TransformerAbstract
      */
     public function transform(array $item)
     {
-        return [
-            'id' => $item['id'],
-            'nama' => $item['nama'],
-            'jenis_tingkat_hukuman_id' => $item['jenisTingkatHukumanId'],
-        ];
+        return $item;
     }
 }

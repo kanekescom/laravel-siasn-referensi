@@ -11,15 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('siasn_referensi_satuan_kerja', function (Blueprint $table) {
+        Schema::create('siasn_referensi_latihan_struktural', function (Blueprint $table) {
             $table->string('id')->primary();
-            $table->string('kanreg_id')->nullable();
-            $table->string('lokasi_id')->nullable();
-            $table->string('instansi_id')->nullable();
             $table->string('nama')->nullable();
-            $table->string('parent_id')->nullable();
-            $table->string('jenis_satuan_kerja_id')->nullable();
-            $table->string('unblock_code')->nullable();
+            $table->string('eselon_level')->nullable();
+            $table->string('ncsistime')->nullable();
+            $table->string('struktural_pns')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
@@ -30,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('siasn_referensi_satuan_kerja');
+        Schema::dropIfExists('siasn_referensi_latihan_struktural');
     }
 };

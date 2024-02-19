@@ -14,11 +14,12 @@ return new class extends Migration
         Schema::create('siasn_referensi_eselon', function (Blueprint $table) {
             $table->string('id')->primary();
             $table->string('nama')->nullable();
-            $table->string('golongan_terendah_id')->nullable();
-            $table->string('golongan_tertinggi_id')->nullable();
+            $table->string('terendah_id')->nullable();
+            $table->string('tertinggi_id')->nullable();
             $table->string('eselon_level_id')->nullable();
             $table->string('asn_jenjang_jabatan_id')->nullable();
             $table->string('jabatan_asn')->nullable();
+            $table->string('level_kompetensi_jabatan')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

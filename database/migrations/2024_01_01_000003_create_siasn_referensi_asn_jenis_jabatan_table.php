@@ -11,10 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('siasn_referensi_jenis_hukuman', function (Blueprint $table) {
+        Schema::create('siasn_referensi_asn_jenis_jabatan', function (Blueprint $table) {
             $table->string('id')->primary();
             $table->string('nama')->nullable();
-            $table->string('jenis_tingkat_hukuman_id')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
@@ -25,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('siasn_referensi_jenis_hukuman');
+        Schema::dropIfExists('siasn_referensi_asn_jenis_jabatan');
     }
 };
