@@ -9,11 +9,4 @@ use Filament\Resources\Pages\ManageRecords;
 class ManageTingkatPendidikans extends ManageRecords
 {
     protected static string $resource = TingkatPendidikanResource::class;
-
-    protected function getHeaderActions(): array
-    {
-        return [
-            Actions\CreateAction::make(),
-        ];
-    }
 }

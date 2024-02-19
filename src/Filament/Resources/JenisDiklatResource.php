@@ -17,12 +17,25 @@ class JenisDiklatResource extends Resource
 {
     protected static ?string $model = JenisDiklat::class;
 
+    protected static ?string $slug = 'jenis-diklat';
+
+    protected static ?string $pluralLabel = 'Jenis Diklat';
+
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+
+    protected static ?string $navigationLabel = 'Jenis Diklat';
+
+    protected static ?string $navigationGroup = 'SIASN REFERENSI';
+
+    protected static bool $shouldRegisterNavigation = true;
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
+                Forms\Components\TextInput::make('id')
+                    ->maxLength(255)
+                    ->label('ID'),
                 Forms\Components\TextInput::make('jenis_diklat')
                     ->maxLength(255),
             ]);
@@ -33,9 +46,13 @@ class JenisDiklatResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('id')
-                    ->label('ID')
-                    ->searchable(),
+                    ->toggleable(isToggledHiddenByDefault: true)
+                    ->searchable()
+                    ->label('ID'),
                 Tables\Columns\TextColumn::make('jenis_diklat')
+                    ->grow()
+                    ->wrap()
+                    ->sortable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
@@ -54,13 +71,8 @@ class JenisDiklatResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\ViewAction::make(),
-                Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make(),
-            ])
-            ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+                Tables\Actions\ActionGroup::make([
+                    Tables\Actions\ViewAction::make(),
                 ]),
             ]);
     }

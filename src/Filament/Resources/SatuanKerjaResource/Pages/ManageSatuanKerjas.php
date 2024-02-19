@@ -9,11 +9,4 @@ use Filament\Resources\Pages\ManageRecords;
 class ManageSatuanKerjas extends ManageRecords
 {
     protected static string $resource = SatuanKerjaResource::class;
-
-    protected function getHeaderActions(): array
-    {
-        return [
-            Actions\CreateAction::make(),
-        ];
-    }
 }

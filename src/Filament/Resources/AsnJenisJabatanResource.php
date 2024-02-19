@@ -17,12 +17,25 @@ class AsnJenisJabatanResource extends Resource
 {
     protected static ?string $model = AsnJenisJabatan::class;
 
+    protected static ?string $slug = 'asn-jenis-jabatan';
+
+    protected static ?string $pluralLabel = 'ASN Jenis Jabatan';
+
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+
+    protected static ?string $navigationLabel = 'ASN Jenis Jabatan';
+
+    protected static ?string $navigationGroup = 'SIASN REFERENSI';
+
+    protected static bool $shouldRegisterNavigation = true;
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
+                Forms\Components\TextInput::make('id')
+                    ->maxLength(255)
+                    ->label('ID'),
                 Forms\Components\TextInput::make('nama')
                     ->maxLength(255),
             ]);
@@ -33,9 +46,13 @@ class AsnJenisJabatanResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('id')
-                    ->label('ID')
-                    ->searchable(),
+                    ->toggleable(isToggledHiddenByDefault: true)
+                    ->searchable()
+                    ->label('ID'),
                 Tables\Columns\TextColumn::make('nama')
+                    ->grow()
+                    ->wrap()
+                    ->sortable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
@@ -54,13 +71,8 @@ class AsnJenisJabatanResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\ViewAction::make(),
-                Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make(),
-            ])
-            ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+                Tables\Actions\ActionGroup::make([
+                    Tables\Actions\ViewAction::make(),
                 ]),
             ]);
     }

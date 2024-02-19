@@ -17,12 +17,25 @@ class RefJenjangJfResource extends Resource
 {
     protected static ?string $model = RefJenjangJf::class;
 
+    protected static ?string $slug = 'ref-jenjang-jf';
+
+    protected static ?string $pluralLabel = 'Ref Jenjang JF';
+
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+
+    protected static ?string $navigationLabel = 'Ref Jenjang JF';
+
+    protected static ?string $navigationGroup = 'SIASN REFERENSI';
+
+    protected static bool $shouldRegisterNavigation = true;
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
+                Forms\Components\TextInput::make('id')
+                    ->maxLength(255)
+                    ->label('ID'),
                 Forms\Components\TextInput::make('deskripsi')
                     ->maxLength(255),
                 Forms\Components\TextInput::make('peraturan')
@@ -37,13 +50,21 @@ class RefJenjangJfResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('id')
-                    ->label('ID')
-                    ->searchable(),
+                    ->toggleable(isToggledHiddenByDefault: true)
+                    ->searchable()
+                    ->label('ID'),
                 Tables\Columns\TextColumn::make('deskripsi')
+                    ->grow()
+                    ->wrap()
+                    ->sortable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('peraturan')
+                    ->wrap()
+                    ->sortable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('kode')
+                    ->wrap()
+                    ->sortable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
@@ -62,13 +83,8 @@ class RefJenjangJfResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\ViewAction::make(),
-                Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make(),
-            ])
-            ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+                Tables\Actions\ActionGroup::make([
+                    Tables\Actions\ViewAction::make(),
                 ]),
             ]);
     }

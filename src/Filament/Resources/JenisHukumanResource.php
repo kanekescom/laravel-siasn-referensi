@@ -17,12 +17,25 @@ class JenisHukumanResource extends Resource
 {
     protected static ?string $model = JenisHukuman::class;
 
+    protected static ?string $slug = 'jenis-hukuman';
+
+    protected static ?string $pluralLabel = 'Jenis Hukuman';
+
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+
+    protected static ?string $navigationLabel = 'Jenis Hukuman';
+
+    protected static ?string $navigationGroup = 'SIASN REFERENSI';
+
+    protected static bool $shouldRegisterNavigation = true;
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
+                Forms\Components\TextInput::make('id')
+                    ->maxLength(255)
+                    ->label('ID'),
                 Forms\Components\TextInput::make('nama')
                     ->maxLength(255),
                 Forms\Components\TextInput::make('jenisTingkatHukumanId')
@@ -35,11 +48,17 @@ class JenisHukumanResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('id')
-                    ->label('ID')
-                    ->searchable(),
+                    ->toggleable(isToggledHiddenByDefault: true)
+                    ->searchable()
+                    ->label('ID'),
                 Tables\Columns\TextColumn::make('nama')
+                    ->grow()
+                    ->wrap()
+                    ->sortable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('jenisTingkatHukumanId')
+                    ->wrap()
+                    ->sortable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
@@ -58,13 +77,8 @@ class JenisHukumanResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\ViewAction::make(),
-                Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make(),
-            ])
-            ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+                Tables\Actions\ActionGroup::make([
+                    Tables\Actions\ViewAction::make(),
                 ]),
             ]);
     }

@@ -17,15 +17,28 @@ class KanregResource extends Resource
 {
     protected static ?string $model = Kanreg::class;
 
+    protected static ?string $slug = 'kanreg';
+
+    protected static ?string $pluralLabel = 'Kanreg';
+
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+
+    protected static ?string $navigationLabel = 'Kanreg';
+
+    protected static ?string $navigationGroup = 'SIASN REFERENSI';
+
+    protected static bool $shouldRegisterNavigation = true;
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('regKota')
-                    ->maxLength(255),
+                Forms\Components\TextInput::make('id')
+                    ->maxLength(255)
+                    ->label('ID'),
                 Forms\Components\TextInput::make('nama')
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('regKota')
                     ->maxLength(255),
                 Forms\Components\TextInput::make('pengenal')
                     ->maxLength(255),
@@ -41,17 +54,31 @@ class KanregResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('id')
-                    ->label('ID')
+                    ->toggleable(isToggledHiddenByDefault: true)
+                    ->searchable()
+                    ->label('ID'),
+                Tables\Columns\TextColumn::make('nama')
+                    ->grow()
+                    ->wrap()
+                    ->sortable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('regKota')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('nama')
+                    ->wrap()
+                    ->sortable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('pengenal')
+                    ->wrap()
+                    ->sortable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('satuanKerjaId')
+                    ->wrap()
+                    ->toggleable(isToggledHiddenByDefault: true)
+                    ->sortable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('tanggalJorge')
+                    ->wrap()
+                    ->toggleable(isToggledHiddenByDefault: true)
+                    ->sortable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
@@ -70,13 +97,8 @@ class KanregResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\ViewAction::make(),
-                Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make(),
-            ])
-            ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+                Tables\Actions\ActionGroup::make([
+                    Tables\Actions\ViewAction::make(),
                 ]),
             ]);
     }

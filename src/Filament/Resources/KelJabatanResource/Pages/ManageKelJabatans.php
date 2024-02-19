@@ -9,11 +9,4 @@ use Filament\Resources\Pages\ManageRecords;
 class ManageKelJabatans extends ManageRecords
 {
     protected static string $resource = KelJabatanResource::class;
-
-    protected function getHeaderActions(): array
-    {
-        return [
-            Actions\CreateAction::make(),
-        ];
-    }
 }

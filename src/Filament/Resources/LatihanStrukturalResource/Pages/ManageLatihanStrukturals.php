@@ -9,11 +9,4 @@ use Filament\Resources\Pages\ManageRecords;
 class ManageLatihanStrukturals extends ManageRecords
 {
     protected static string $resource = LatihanStrukturalResource::class;
-
-    protected function getHeaderActions(): array
-    {
-        return [
-            Actions\CreateAction::make(),
-        ];
-    }
 }

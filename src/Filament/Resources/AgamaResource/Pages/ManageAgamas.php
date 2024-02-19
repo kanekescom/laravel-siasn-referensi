@@ -9,11 +9,4 @@ use Filament\Resources\Pages\ManageRecords;
 class ManageAgamas extends ManageRecords
 {
     protected static string $resource = AgamaResource::class;
-
-    protected function getHeaderActions(): array
-    {
-        return [
-            Actions\CreateAction::make(),
-        ];
-    }
 }

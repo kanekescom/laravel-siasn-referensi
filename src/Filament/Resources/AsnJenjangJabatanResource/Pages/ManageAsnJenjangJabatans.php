@@ -9,11 +9,4 @@ use Filament\Resources\Pages\ManageRecords;
 class ManageAsnJenjangJabatans extends ManageRecords
 {
     protected static string $resource = AsnJenjangJabatanResource::class;
-
-    protected function getHeaderActions(): array
-    {
-        return [
-            Actions\CreateAction::make(),
-        ];
-    }
 }

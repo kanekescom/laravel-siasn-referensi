@@ -9,11 +9,4 @@ use Filament\Resources\Pages\ManageRecords;
 class ManageKedudukanHukums extends ManageRecords
 {
     protected static string $resource = KedudukanHukumResource::class;
-
-    protected function getHeaderActions(): array
-    {
-        return [
-            Actions\CreateAction::make(),
-        ];
-    }
 }

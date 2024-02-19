@@ -9,11 +9,4 @@ use Filament\Resources\Pages\ManageRecords;
 class ManageLokasis extends ManageRecords
 {
     protected static string $resource = LokasiResource::class;
-
-    protected function getHeaderActions(): array
-    {
-        return [
-            Actions\CreateAction::make(),
-        ];
-    }
 }

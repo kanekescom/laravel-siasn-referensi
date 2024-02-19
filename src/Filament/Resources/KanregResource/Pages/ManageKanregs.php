@@ -9,11 +9,4 @@ use Filament\Resources\Pages\ManageRecords;
 class ManageKanregs extends ManageRecords
 {
     protected static string $resource = KanregResource::class;
-
-    protected function getHeaderActions(): array
-    {
-        return [
-            Actions\CreateAction::make(),
-        ];
-    }
 }

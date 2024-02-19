@@ -9,11 +9,4 @@ use Filament\Resources\Pages\ManageRecords;
 class ManageJenisAnaks extends ManageRecords
 {
     protected static string $resource = JenisAnakResource::class;
-
-    protected function getHeaderActions(): array
-    {
-        return [
-            Actions\CreateAction::make(),
-        ];
-    }
 }

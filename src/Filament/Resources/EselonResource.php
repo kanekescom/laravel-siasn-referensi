@@ -17,12 +17,25 @@ class EselonResource extends Resource
 {
     protected static ?string $model = Eselon::class;
 
+    protected static ?string $slug = 'eselon';
+
+    protected static ?string $pluralLabel = 'Eselon';
+
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+
+    protected static ?string $navigationLabel = 'Eselon';
+
+    protected static ?string $navigationGroup = 'SIASN REFERENSI';
+
+    protected static bool $shouldRegisterNavigation = true;
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
+                Forms\Components\TextInput::make('id')
+                    ->maxLength(255)
+                    ->label('ID'),
                 Forms\Components\TextInput::make('nama')
                     ->maxLength(255),
                 Forms\Components\TextInput::make('terendah_id')
@@ -45,21 +58,38 @@ class EselonResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('id')
-                    ->label('ID')
-                    ->searchable(),
+                    ->toggleable(isToggledHiddenByDefault: true)
+                    ->searchable()
+                    ->label('ID'),
                 Tables\Columns\TextColumn::make('nama')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('terendah_id')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('tertinggi_id')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('eselon_level_id')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('asn_jenjang_jabatan_id')
+                    ->wrap()
+                    ->sortable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('jabatan_asn')
+                    ->grow()
+                    ->wrap()
+                    ->sortable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('level_kompetensi_jabatan')
+                    ->wrap()
+                    ->sortable()
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('terendah_id')
+                    ->wrap()
+                    ->sortable()
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('tertinggi_id')
+                    ->wrap()
+                    ->sortable()
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('eselon_level_id')
+                    ->wrap()
+                    ->sortable()
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('asn_jenjang_jabatan_id')
+                    ->wrap()
+                    ->toggleable(isToggledHiddenByDefault: true)
+                    ->sortable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
@@ -78,13 +108,8 @@ class EselonResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\ViewAction::make(),
-                Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make(),
-            ])
-            ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+                Tables\Actions\ActionGroup::make([
+                    Tables\Actions\ViewAction::make(),
                 ]),
             ]);
     }

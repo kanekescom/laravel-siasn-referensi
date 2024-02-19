@@ -9,11 +9,4 @@ use Filament\Resources\Pages\ManageRecords;
 class ManageAlasanHukumanDisiplins extends ManageRecords
 {
     protected static string $resource = AlasanHukumanDisiplinResource::class;
-
-    protected function getHeaderActions(): array
-    {
-        return [
-            Actions\CreateAction::make(),
-        ];
-    }
 }

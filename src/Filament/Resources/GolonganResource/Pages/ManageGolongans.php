@@ -9,11 +9,4 @@ use Filament\Resources\Pages\ManageRecords;
 class ManageGolongans extends ManageRecords
 {
     protected static string $resource = GolonganResource::class;
-
-    protected function getHeaderActions(): array
-    {
-        return [
-            Actions\CreateAction::make(),
-        ];
-    }
 }

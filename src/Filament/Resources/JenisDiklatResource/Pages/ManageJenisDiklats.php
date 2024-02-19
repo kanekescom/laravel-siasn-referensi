@@ -9,11 +9,4 @@ use Filament\Resources\Pages\ManageRecords;
 class ManageJenisDiklats extends ManageRecords
 {
     protected static string $resource = JenisDiklatResource::class;
-
-    protected function getHeaderActions(): array
-    {
-        return [
-            Actions\CreateAction::make(),
-        ];
-    }
 }
