@@ -24,6 +24,7 @@
     ],
     "require": {
         "php": "^8.1",
+        "filament/filament": "^3.2",
         "guzzlehttp/guzzle": "^7.2",
         "illuminate/contracts": "^10.0",
         "kanekescom/laravel-helperia": "^2.0",
@@ -84,7 +85,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Kanekescom\\Siasn\\Referensi\\ReferensiServiceProvider"
+                "Kanekescom\\Siasn\\Referensi\\ReferensiServiceProvider",
+                "Kanekescom\\Siasn\\Referensi\\SiasnReferensiPanelProvider"
             ],
             "aliases": {
                 "Referensi": "Kanekescom\\Siasn\\Referensi\\Facades\\Referensi"
