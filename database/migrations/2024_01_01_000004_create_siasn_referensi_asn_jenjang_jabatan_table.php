@@ -14,7 +14,8 @@ return new class extends Migration
         Schema::create('siasn_referensi_asn_jenjang_jabatan', function (Blueprint $table) {
             $table->string('id')->primary();
             $table->string('nama')->nullable();
-            $table->string('asn_jenis_jabatan_id')->nullable();
+            $table->string('asnJenisJabatanId')->nullable();
+            $table->string('level')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

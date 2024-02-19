@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('siasn_referensi_golongan', function (Blueprint $table) {
             $table->string('id')->primary();
             $table->string('nama')->nullable();
-            $table->string('nama_pangkat')->nullable();
-            $table->string('fungsi_kredit_utama')->nullable();
-            $table->string('fungsi_kredit_tambahan')->nullable();
-            $table->string('fungsi_kredit_total')->nullable();
+            $table->string('namaPangkat')->nullable();
+            $table->string('fungKredututama')->nullable();
+            $table->string('fungKreditTambahan')->nullable();
+            $table->string('fungKreditTotal')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

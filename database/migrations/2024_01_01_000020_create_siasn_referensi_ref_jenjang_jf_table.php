@@ -15,6 +15,7 @@ return new class extends Migration
             $table->string('id')->primary();
             $table->string('deskripsi')->nullable();
             $table->string('peraturan')->nullable();
+            $table->string('kode')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

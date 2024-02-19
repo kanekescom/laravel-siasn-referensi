@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('siasn_referensi_jenis_hukuman', function (Blueprint $table) {
             $table->string('id')->primary();
             $table->string('nama')->nullable();
-            $table->string('jenis_tingkat_hukuman_id')->nullable();
+            $table->string('jenisTingkatHukumanId')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

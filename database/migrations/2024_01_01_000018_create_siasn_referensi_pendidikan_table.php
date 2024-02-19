@@ -15,13 +15,13 @@ return new class extends Migration
             $table->string('id')->primary();
             $table->string('tingkat_pendidikan_id')->nullable();
             $table->string('nama')->nullable();
-            $table->string('kode_cepat')->nullable();
-            $table->string('kode_cepat_merger')->nullable();
+            $table->string('cepat_kode')->nullable();
+            $table->string('mgr_cepat_kode')->nullable();
             $table->string('nama_asli')->nullable();
             $table->string('status')->nullable();
-            $table->string('sub_rumpun_prog_id')->nullable();
-            $table->string('kode_cepat_induk')->nullable();
-            $table->string('sub_rumpun_prog_kode')->nullable();
+            $table->string('subrumpun_prog_id')->nullable();
+            $table->string('cepat_kode_induk')->nullable();
+            $table->string('subrumpun_prog_kode')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

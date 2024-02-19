@@ -15,7 +15,7 @@ return new class extends Migration
             $table->string('id')->primary();
             $table->string('nama')->nullable();
             $table->string('eselon_level')->nullable();
-            $table->string('ncsis_time')->nullable();
+            $table->string('ncsistime')->nullable();
             $table->string('struktural_pns')->nullable();
             $table->timestamps();
             $table->softDeletes();

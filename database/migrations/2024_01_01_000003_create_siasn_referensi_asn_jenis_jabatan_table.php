@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('siasn_referensi_asn_jenis_jabatan', function (Blueprint $table) {
             $table->string('id')->primary();
+            $table->string('nama')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

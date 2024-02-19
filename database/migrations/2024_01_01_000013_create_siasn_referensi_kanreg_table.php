@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('siasn_referensi_kanreg', function (Blueprint $table) {
             $table->string('id')->primary();
-            $table->string('regional_kota')->nullable();
+            $table->string('regKota')->nullable();
             $table->string('nama')->nullable();
             $table->string('pengenal')->nullable();
-            $table->string('satuan_kerja_id')->nullable();
-            $table->string('tanggal_jorge')->nullable();
+            $table->string('satuanKerjaId')->nullable();
+            $table->string('tanggalJorge')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

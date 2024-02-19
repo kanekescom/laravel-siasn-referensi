@@ -17,8 +17,8 @@ return new class extends Migration
             $table->string('nama')->nullable();
             $table->string('golongan_awal_id')->nullable();
             $table->string('id_lama')->nullable();
-            $table->string('group_tingkat_penddidikan_id')->nullable();
-            $table->string('group_tingkat_penddidikan_nama')->nullable();
+            $table->string('group_tk_pend_id')->nullable();
+            $table->string('group_tk_pend_nm')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
