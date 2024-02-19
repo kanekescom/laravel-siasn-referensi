@@ -13,7 +13,7 @@ class Referensi
         $this->referensi = new \Kanekescom\Siasn\Api\Referensi\Facades\Referensi;
     }
 
-    public function getAgama($query = [])
+    public function getAgama(array $query = [])
     {
         return new ResponseTransformer(
             $this->referensi::getAgama($query),
@@ -21,7 +21,7 @@ class Referensi
         );
     }
 
-    public function getAlasanHukumanDisiplin($query = [])
+    public function getAlasanHukumanDisiplin(array $query = [])
     {
         return new ResponseTransformer(
             $this->referensi::getAlasanHukumanDisiplin($query),
@@ -29,7 +29,7 @@ class Referensi
         );
     }
 
-    public function getAsnJenisJabatan($query = [])
+    public function getAsnJenisJabatan(array $query = [])
     {
         return new ResponseTransformer(
             $this->referensi::getAsnJenisJabatan($query),
@@ -37,7 +37,7 @@ class Referensi
         );
     }
 
-    public function getAsnJenjangJabatan($query = [])
+    public function getAsnJenjangJabatan(array $query = [])
     {
         return new ResponseTransformer(
             $this->referensi::getAsnJenjangJabatan($query),
@@ -45,7 +45,7 @@ class Referensi
         );
     }
 
-    public function getEselon($query = [])
+    public function getEselon(array $query = [])
     {
         return new ResponseTransformer(
             $this->referensi::getEselon($query),
@@ -53,7 +53,7 @@ class Referensi
         );
     }
 
-    public function getGolongan($query = [])
+    public function getGolongan(array $query = [])
     {
         return new ResponseTransformer(
             $this->referensi::getGolongan($query),
@@ -61,7 +61,7 @@ class Referensi
         );
     }
 
-    public function getInstansi($query = [])
+    public function getInstansi(array $query = [])
     {
         return new ResponseTransformer(
             $this->referensi::getInstansi($query),
@@ -69,7 +69,7 @@ class Referensi
         );
     }
 
-    public function getJabatanFungsional($query = [])
+    public function getJabatanFungsional(array $query = [])
     {
         return new ResponseTransformer(
             $this->referensi::getJabatanFungsional($query),
@@ -77,7 +77,7 @@ class Referensi
         );
     }
 
-    public function getJabatanFungsionalUmum($query = [])
+    public function getJabatanFungsionalUmum(array $query = [])
     {
         return new ResponseTransformer(
             $this->referensi::getJabatanFungsionalUmum($query),
@@ -85,7 +85,7 @@ class Referensi
         );
     }
 
-    public function getJenisAnak($query = [])
+    public function getJenisAnak(array $query = [])
     {
         return new ResponseTransformer(
             $this->referensi::getJenisAnak($query),
@@ -93,7 +93,7 @@ class Referensi
         );
     }
 
-    public function getJenisDiklat($query = [])
+    public function getJenisDiklat(array $query = [])
     {
         return new ResponseTransformer(
             $this->referensi::getJenisDiklat($query),
@@ -101,7 +101,7 @@ class Referensi
         );
     }
 
-    public function getJenisHukuman($query = [])
+    public function getJenisHukuman(array $query = [])
     {
         return new ResponseTransformer(
             $this->referensi::getJenisHukuman($query),
@@ -109,7 +109,7 @@ class Referensi
         );
     }
 
-    public function getJenisJabatan($query = [])
+    public function getJenisJabatan(array $query = [])
     {
         return new ResponseTransformer(
             $this->referensi::getJenisJabatan($query),
@@ -117,7 +117,7 @@ class Referensi
         );
     }
 
-    public function getKanreg($query = [])
+    public function getKanreg(array $query = [])
     {
         return new ResponseTransformer(
             $this->referensi::getKanreg($query),
@@ -125,7 +125,7 @@ class Referensi
         );
     }
 
-    public function getKedudukanHukum($query = [])
+    public function getKedudukanHukum(array $query = [])
     {
         return new ResponseTransformer(
             $this->referensi::getKedudukanHukum($query),
@@ -133,7 +133,7 @@ class Referensi
         );
     }
 
-    public function getKelJabatan($query = [])
+    public function getKelJabatan(array $query = [])
     {
         return new ResponseTransformer(
             $this->referensi::getKelJabatan($query),
@@ -141,7 +141,7 @@ class Referensi
         );
     }
 
-    public function getLatihanStruktural($query = [])
+    public function getLatihanStruktural(array $query = [])
     {
         return new ResponseTransformer(
             $this->referensi::getLatihanStruktural($query),
@@ -149,7 +149,7 @@ class Referensi
         );
     }
 
-    public function getLokasi($query = [])
+    public function getLokasi(array $query = [])
     {
         return new ResponseTransformer(
             $this->referensi::getLokasi($query),
@@ -157,7 +157,7 @@ class Referensi
         );
     }
 
-    public function getPendidikan($query = [])
+    public function getPendidikan(array $query = [])
     {
         return new ResponseTransformer(
             $this->referensi::getPendidikan($query),
@@ -165,7 +165,7 @@ class Referensi
         );
     }
 
-    public function getRefDokumen($query = [])
+    public function getRefDokumen(array $query = [])
     {
         return new ResponseTransformer(
             $this->referensi::getRefDokumen($query),
@@ -173,7 +173,7 @@ class Referensi
         );
     }
 
-    public function getRefJenjangJf($query = [])
+    public function getRefJenjangJf(array $query = [])
     {
         return new ResponseTransformer(
             $this->referensi::getRefJenjangJf($query),
@@ -181,7 +181,7 @@ class Referensi
         );
     }
 
-    public function getSatuanKerja($query = [])
+    public function getSatuanKerja(array $query = [])
     {
         return new ResponseTransformer(
             $this->referensi::getSatuanKerja($query),
@@ -189,7 +189,7 @@ class Referensi
         );
     }
 
-    public function getTingkatPendidikan($query = [])
+    public function getTingkatPendidikan(array $query = [])
     {
         return new ResponseTransformer(
             $this->referensi::getTingkatPendidikan($query),
