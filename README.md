@@ -39,8 +39,13 @@ php artisan vendor:publish --tag="siasn-referensi-config"
 ```
 
 ## Usage
+```
 
-Coming Soon
+Pull referensi data from siasn to database
+
+```bash
+php artisan siasn-referensi:pull
+```
 
 ## Testing
 
