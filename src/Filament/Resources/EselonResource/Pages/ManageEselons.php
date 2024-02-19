@@ -6,9 +6,12 @@ use Filament\Actions;
 use Filament\Resources\Pages\ManageRecords;
 use Illuminate\Support\Facades\Artisan;
 use Kanekescom\Siasn\Referensi\Filament\Resources\EselonResource;
+use Kanekescom\Siasn\Referensi\Filament\Traits\HasSubheadingWithLatestSync;
 
 class ManageEselons extends ManageRecords
 {
+    use HasSubheadingWithLatestSync;
+
     protected static string $resource = EselonResource::class;
 
     protected function getHeaderActions(): array

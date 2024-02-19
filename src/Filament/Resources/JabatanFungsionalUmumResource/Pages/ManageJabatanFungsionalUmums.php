@@ -6,9 +6,12 @@ use Filament\Actions;
 use Filament\Resources\Pages\ManageRecords;
 use Illuminate\Support\Facades\Artisan;
 use Kanekescom\Siasn\Referensi\Filament\Resources\JabatanFungsionalUmumResource;
+use Kanekescom\Siasn\Referensi\Filament\Traits\HasSubheadingWithLatestSync;
 
 class ManageJabatanFungsionalUmums extends ManageRecords
 {
+    use HasSubheadingWithLatestSync;
+
     protected static string $resource = JabatanFungsionalUmumResource::class;
 
     protected function getHeaderActions(): array

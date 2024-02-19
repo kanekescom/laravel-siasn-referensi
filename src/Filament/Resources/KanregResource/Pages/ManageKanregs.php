@@ -6,9 +6,12 @@ use Filament\Actions;
 use Filament\Resources\Pages\ManageRecords;
 use Illuminate\Support\Facades\Artisan;
 use Kanekescom\Siasn\Referensi\Filament\Resources\KanregResource;
+use Kanekescom\Siasn\Referensi\Filament\Traits\HasSubheadingWithLatestSync;
 
 class ManageKanregs extends ManageRecords
 {
+    use HasSubheadingWithLatestSync;
+
     protected static string $resource = KanregResource::class;
 
     protected function getHeaderActions(): array

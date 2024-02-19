@@ -6,9 +6,12 @@ use Filament\Actions;
 use Filament\Resources\Pages\ManageRecords;
 use Illuminate\Support\Facades\Artisan;
 use Kanekescom\Siasn\Referensi\Filament\Resources\AsnJenjangJabatanResource;
+use Kanekescom\Siasn\Referensi\Filament\Traits\HasSubheadingWithLatestSync;
 
 class ManageAsnJenjangJabatans extends ManageRecords
 {
+    use HasSubheadingWithLatestSync;
+
     protected static string $resource = AsnJenjangJabatanResource::class;
 
     protected function getHeaderActions(): array

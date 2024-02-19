@@ -6,9 +6,12 @@ use Filament\Actions;
 use Filament\Resources\Pages\ManageRecords;
 use Illuminate\Support\Facades\Artisan;
 use Kanekescom\Siasn\Referensi\Filament\Resources\GolonganResource;
+use Kanekescom\Siasn\Referensi\Filament\Traits\HasSubheadingWithLatestSync;
 
 class ManageGolongans extends ManageRecords
 {
+    use HasSubheadingWithLatestSync;
+
     protected static string $resource = GolonganResource::class;
 
     protected function getHeaderActions(): array
