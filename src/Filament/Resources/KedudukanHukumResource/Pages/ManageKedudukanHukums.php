@@ -2,9 +2,8 @@
 
 namespace Kanekescom\Siasn\Referensi\Filament\Resources\KedudukanHukumResource\Pages;
 
-use Kanekescom\Siasn\Referensi\Filament\Resources\KedudukanHukumResource;
-use Filament\Actions;
 use Filament\Resources\Pages\ManageRecords;
+use Kanekescom\Siasn\Referensi\Filament\Resources\KedudukanHukumResource;
 
 class ManageKedudukanHukums extends ManageRecords
 {

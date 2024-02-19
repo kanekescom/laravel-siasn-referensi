@@ -2,16 +2,13 @@
 
 namespace Kanekescom\Siasn\Referensi\Filament\Resources;
 
-use Kanekescom\Siasn\Referensi\Filament\Resources\PendidikanResource\Pages;
-use Kanekescom\Siasn\Referensi\Filament\Resources\PendidikanResource\RelationManagers;
-use Kanekescom\Siasn\Referensi\Models\Pendidikan;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Kanekescom\Siasn\Referensi\Filament\Resources\PendidikanResource\Pages;
+use Kanekescom\Siasn\Referensi\Models\Pendidikan;
 
 class PendidikanResource extends Resource
 {

@@ -2,9 +2,8 @@
 
 namespace Kanekescom\Siasn\Referensi\Filament\Resources\JenisHukumanResource\Pages;
 
-use Kanekescom\Siasn\Referensi\Filament\Resources\JenisHukumanResource;
-use Filament\Actions;
 use Filament\Resources\Pages\ManageRecords;
+use Kanekescom\Siasn\Referensi\Filament\Resources\JenisHukumanResource;
 
 class ManageJenisHukumen extends ManageRecords
 {

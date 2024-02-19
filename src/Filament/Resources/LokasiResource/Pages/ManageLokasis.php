@@ -2,9 +2,8 @@
 
 namespace Kanekescom\Siasn\Referensi\Filament\Resources\LokasiResource\Pages;
 
-use Kanekescom\Siasn\Referensi\Filament\Resources\LokasiResource;
-use Filament\Actions;
 use Filament\Resources\Pages\ManageRecords;
+use Kanekescom\Siasn\Referensi\Filament\Resources\LokasiResource;
 
 class ManageLokasis extends ManageRecords
 {

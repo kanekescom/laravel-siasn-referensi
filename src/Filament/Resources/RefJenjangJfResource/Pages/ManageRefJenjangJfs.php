@@ -2,9 +2,8 @@
 
 namespace Kanekescom\Siasn\Referensi\Filament\Resources\RefJenjangJfResource\Pages;
 
-use Kanekescom\Siasn\Referensi\Filament\Resources\RefJenjangJfResource;
-use Filament\Actions;
 use Filament\Resources\Pages\ManageRecords;
+use Kanekescom\Siasn\Referensi\Filament\Resources\RefJenjangJfResource;
 
 class ManageRefJenjangJfs extends ManageRecords
 {

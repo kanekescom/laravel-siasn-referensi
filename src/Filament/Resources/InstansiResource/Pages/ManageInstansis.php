@@ -2,9 +2,8 @@
 
 namespace Kanekescom\Siasn\Referensi\Filament\Resources\InstansiResource\Pages;
 
-use Kanekescom\Siasn\Referensi\Filament\Resources\InstansiResource;
-use Filament\Actions;
 use Filament\Resources\Pages\ManageRecords;
+use Kanekescom\Siasn\Referensi\Filament\Resources\InstansiResource;
 
 class ManageInstansis extends ManageRecords
 {

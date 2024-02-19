@@ -2,9 +2,8 @@
 
 namespace Kanekescom\Siasn\Referensi\Filament\Resources\AsnJenisJabatanResource\Pages;
 
-use Kanekescom\Siasn\Referensi\Filament\Resources\AsnJenisJabatanResource;
-use Filament\Actions;
 use Filament\Resources\Pages\ManageRecords;
+use Kanekescom\Siasn\Referensi\Filament\Resources\AsnJenisJabatanResource;
 
 class ManageAsnJenisJabatans extends ManageRecords
 {

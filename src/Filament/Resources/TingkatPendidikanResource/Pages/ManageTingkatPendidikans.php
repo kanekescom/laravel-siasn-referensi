@@ -2,9 +2,8 @@
 
 namespace Kanekescom\Siasn\Referensi\Filament\Resources\TingkatPendidikanResource\Pages;
 
-use Kanekescom\Siasn\Referensi\Filament\Resources\TingkatPendidikanResource;
-use Filament\Actions;
 use Filament\Resources\Pages\ManageRecords;
+use Kanekescom\Siasn\Referensi\Filament\Resources\TingkatPendidikanResource;
 
 class ManageTingkatPendidikans extends ManageRecords
 {

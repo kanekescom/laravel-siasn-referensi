@@ -2,16 +2,13 @@
 
 namespace Kanekescom\Siasn\Referensi\Filament\Resources;
 
-use Kanekescom\Siasn\Referensi\Filament\Resources\EselonResource\Pages;
-use Kanekescom\Siasn\Referensi\Filament\Resources\EselonResource\RelationManagers;
-use Kanekescom\Siasn\Referensi\Models\Eselon;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Kanekescom\Siasn\Referensi\Filament\Resources\EselonResource\Pages;
+use Kanekescom\Siasn\Referensi\Models\Eselon;
 
 class EselonResource extends Resource
 {

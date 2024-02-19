@@ -31,12 +31,12 @@ class SiasnReferensiPanelProvider extends PanelProvider
             ->colors([
                 'primary' => Color::Amber,
             ])
-            ->discoverResources(in: __DIR__ . '/Filament/Resources', for: 'Kanekescom\\Siasn\\Referensi\\Filament\\Resources')
-            ->discoverPages(in: __DIR__ . '/Filament/Pages', for: 'Kanekescom\\Siasn\\Referensi\\Filament\\Pages')
+            ->discoverResources(in: __DIR__.'/Filament/Resources', for: 'Kanekescom\\Siasn\\Referensi\\Filament\\Resources')
+            ->discoverPages(in: __DIR__.'/Filament/Pages', for: 'Kanekescom\\Siasn\\Referensi\\Filament\\Pages')
             ->pages([
                 Pages\Dashboard::class,
             ])
-            ->discoverWidgets(in: __DIR__ . '/Filament/Widgets', for: 'Kanekescom\\Siasn\\Referensi\\Filament\\Widgets')
+            ->discoverWidgets(in: __DIR__.'/Filament/Widgets', for: 'Kanekescom\\Siasn\\Referensi\\Filament\\Widgets')
             ->widgets([
                 //
             ])

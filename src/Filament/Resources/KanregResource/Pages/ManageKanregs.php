@@ -2,9 +2,8 @@
 
 namespace Kanekescom\Siasn\Referensi\Filament\Resources\KanregResource\Pages;
 
-use Kanekescom\Siasn\Referensi\Filament\Resources\KanregResource;
-use Filament\Actions;
 use Filament\Resources\Pages\ManageRecords;
+use Kanekescom\Siasn\Referensi\Filament\Resources\KanregResource;
 
 class ManageKanregs extends ManageRecords
 {

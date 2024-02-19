@@ -2,9 +2,8 @@
 
 namespace Kanekescom\Siasn\Referensi\Filament\Resources\KelJabatanResource\Pages;
 
-use Kanekescom\Siasn\Referensi\Filament\Resources\KelJabatanResource;
-use Filament\Actions;
 use Filament\Resources\Pages\ManageRecords;
+use Kanekescom\Siasn\Referensi\Filament\Resources\KelJabatanResource;
 
 class ManageKelJabatans extends ManageRecords
 {

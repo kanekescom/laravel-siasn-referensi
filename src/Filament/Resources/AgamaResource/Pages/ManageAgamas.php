@@ -2,9 +2,8 @@
 
 namespace Kanekescom\Siasn\Referensi\Filament\Resources\AgamaResource\Pages;
 
-use Kanekescom\Siasn\Referensi\Filament\Resources\AgamaResource;
-use Filament\Actions;
 use Filament\Resources\Pages\ManageRecords;
+use Kanekescom\Siasn\Referensi\Filament\Resources\AgamaResource;
 
 class ManageAgamas extends ManageRecords
 {

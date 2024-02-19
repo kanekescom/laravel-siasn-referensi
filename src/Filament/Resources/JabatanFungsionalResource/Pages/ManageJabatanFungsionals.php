@@ -2,9 +2,8 @@
 
 namespace Kanekescom\Siasn\Referensi\Filament\Resources\JabatanFungsionalResource\Pages;
 
-use Kanekescom\Siasn\Referensi\Filament\Resources\JabatanFungsionalResource;
-use Filament\Actions;
 use Filament\Resources\Pages\ManageRecords;
+use Kanekescom\Siasn\Referensi\Filament\Resources\JabatanFungsionalResource;
 
 class ManageJabatanFungsionals extends ManageRecords
 {
