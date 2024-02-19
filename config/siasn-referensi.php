@@ -41,4 +41,9 @@ return [
 
     'delete_model_before_pull' => true,
 
+    'filament' => [
+        'id' => 'siasn-referensi',
+        'path' => 'siasn/referensi',
+    ],
+
 ];
