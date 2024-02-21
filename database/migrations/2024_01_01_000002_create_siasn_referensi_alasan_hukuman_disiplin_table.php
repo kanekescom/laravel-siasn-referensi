@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('siasn_referensi_alasan_hukuman_disiplin', function (Blueprint $table) {
-            $table->string('id')->primary();
+            $table->string('id', 42)->primary();
             $table->text('nama')->nullable();
             $table->string('keterangan')->nullable();
             $table->timestamps();

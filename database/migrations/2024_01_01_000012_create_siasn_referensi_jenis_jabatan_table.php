@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('siasn_referensi_jenis_jabatan', function (Blueprint $table) {
-            $table->string('id')->primary();
+            $table->string('id', 42)->primary();
             $table->string('nama')->nullable();
             $table->timestamps();
             $table->softDeletes();

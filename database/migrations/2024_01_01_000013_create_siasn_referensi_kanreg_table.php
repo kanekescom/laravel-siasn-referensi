@@ -12,11 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('siasn_referensi_kanreg', function (Blueprint $table) {
-            $table->string('id')->primary();
+            $table->string('id', 42)->primary();
             $table->string('regKota')->nullable();
             $table->string('nama')->nullable();
             $table->string('pengenal')->nullable();
-            $table->string('satuanKerjaId')->nullable();
+            $table->string('satuanKerjaId', 42)->nullable();
             $table->string('tanggalJorge')->nullable();
             $table->timestamps();
             $table->softDeletes();

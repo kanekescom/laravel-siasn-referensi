@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('siasn_referensi_jabatan_fungsional_umum', function (Blueprint $table) {
-            $table->string('id')->primary();
+            $table->string('id', 42)->primary();
             $table->string('nama')->nullable();
             $table->string('cepat_kode')->nullable();
             $table->string('wajib_ganti_tertentu')->nullable();

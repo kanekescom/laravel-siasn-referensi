@@ -12,13 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('siasn_referensi_satuan_kerja', function (Blueprint $table) {
-            $table->string('id')->primary();
-            $table->string('kanregId')->nullable();
-            $table->string('lokasiId')->nullable();
-            $table->string('instansiId')->nullable();
+            $table->string('id', 42)->primary();
+            $table->string('kanregId', 42)->nullable();
+            $table->string('lokasiId', 42)->nullable();
+            $table->string('instansiId', 42)->nullable();
             $table->string('nama')->nullable();
-            $table->string('parentId')->nullable();
-            $table->string('jenisSatuanKerjaId')->nullable();
+            $table->string('parentId', 42)->nullable();
+            $table->string('jenisSatuanKerjaId', 42)->nullable();
             $table->string('unblockCode')->nullable();
             $table->timestamps();
             $table->softDeletes();
