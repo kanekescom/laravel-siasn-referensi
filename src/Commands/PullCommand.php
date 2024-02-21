@@ -15,7 +15,7 @@ class PullCommand extends Command
      * @var string
      */
     protected $signature = 'siasn-referensi:pull
-                        {endpoint? : Endpoint API}';
+                            {endpoint? : Endpoint API}';
 
     /**
      * The console command description.
