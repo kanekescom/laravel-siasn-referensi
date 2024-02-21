@@ -2,9 +2,11 @@
 
 return [
 
+    'name' => 'SISASN REFERENSI',
+
     'chunk_data' => 500,
 
-    'delete_model_before_pull' => true,
+    'truncate_model_before_pull' => true,
 
     'filament' => [
         'id' => 'siasn-referensi',

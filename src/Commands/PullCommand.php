@@ -69,7 +69,7 @@ class PullCommand extends Command
             $modelName = str($endpoint)->studly();
             $modelClass = $modelName->prepend('Kanekescom\Siasn\Referensi\Models\/');
             $model = new $modelClass;
-            $referensiMethod = 'get' . $modelName;
+            $referensiMethod = 'get'.$modelName;
 
             $this->info("[{$i}/{$endpointCount}] {$endpoint}");
 
@@ -96,7 +96,7 @@ class PullCommand extends Command
                 $bar->start();
 
                 DB::transaction(function () use ($model, $response, $bar) {
-                    if (config('siasn-referensi.delete_model_before_pull')) {
+                    if (config('siasn-referensi.truncate_model_before_pull')) {
                         $model->query()->delete();
                     }
 
