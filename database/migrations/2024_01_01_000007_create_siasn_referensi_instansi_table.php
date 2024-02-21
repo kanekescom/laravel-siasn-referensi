@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('siasn_referensi_instansi', function (Blueprint $table) {
-            $table->string('id')->primary();
-            $table->string('lokasiId')->nullable();
+            $table->string('id', 42)->primary();
+            $table->string('lokasiId', 42)->nullable();
             $table->string('nama')->nullable();
             $table->string('jenis')->nullable();
             $table->string('cepatKode')->nullable();
@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('cepatKode5Lama')->nullable();
             $table->string('namaBaru')->nullable();
             $table->string('namaJabatan')->nullable();
-            $table->string('jenisInstansiId')->nullable();
+            $table->string('jenisInstansiId', 42)->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
