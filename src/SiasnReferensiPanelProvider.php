@@ -45,7 +45,7 @@ class SiasnReferensiPanelProvider extends PanelProvider
                 //
             ])
             ->navigationGroups([
-                'Bezetting',
+                //
             ])
             ->middleware([
                 EncryptCookies::class,
