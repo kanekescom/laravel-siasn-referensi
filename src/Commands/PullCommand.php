@@ -4,7 +4,6 @@ namespace Kanekescom\Siasn\Referensi\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Str;
 use Kanekescom\Siasn\Api\Referensi\Exceptions\BadEndpointCallException;
 use Kanekescom\Siasn\Referensi\Facades\Referensi;
 
@@ -31,13 +30,13 @@ class PullCommand extends Command
     public function handle()
     {
         $endpointOptions = method_public(\Kanekescom\Siasn\Referensi\Referensi::class)->map(function ($method) {
-            return \Illuminate\Support\Str::of($method)
+            return str($method)
                 ->kebab()
                 ->replaceFirst('get-', '')->toString();
         })->mapWithKeys(function ($item) {
             return [$item => $item];
         });
-        $endpoints = Str::of($this->argument('endpoint'))->explode(',');
+        $endpoints = str($this->argument('endpoint'))->explode(',');
 
         if (filled($endpoints->first()) && blank($endpoints = $endpointOptions->only($endpoints))) {
             throw new BadEndpointCallException('Endpoint does not exist.');
@@ -67,8 +66,8 @@ class PullCommand extends Command
 
         $endpoints->each(function ($endpoint) use ($endpointCount, &$endpointErrors, &$i) {
             $i++;
-            $modelName = Str::of($endpoint)->studly();
-            $modelClass = config("siasn-referensi.models.{$modelName->snake()}");
+            $modelName = str($endpoint)->studly();
+            $modelClass = $modelName->prepend('Kanekescom\Siasn\Referensi\Models\/');
             $model = new $modelClass;
             $referensiMethod = 'get'.$modelName;
 
@@ -97,7 +96,7 @@ class PullCommand extends Command
                 $bar->start();
 
                 DB::transaction(function () use ($model, $response, $bar) {
-                    if (config('siasn-referensi.delete_model_before_pull')) {
+                    if (config('siasn-referensi.truncate_model_before_pull')) {
                         $model->query()->delete();
                     }
 

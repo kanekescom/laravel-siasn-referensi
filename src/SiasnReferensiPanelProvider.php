@@ -21,6 +21,10 @@ class SiasnReferensiPanelProvider extends PanelProvider
 {
     public function panel(Panel $panel): Panel
     {
+        config([
+            'app.name' => config('siasn-referensi.name'),
+        ]);
+
         return $panel
             ->default()
             ->id(config('siasn-referensi.filament.id'))
