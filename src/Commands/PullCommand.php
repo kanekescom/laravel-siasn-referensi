@@ -67,7 +67,7 @@ class PullCommand extends Command
         $endpoints->each(function ($endpoint) use ($endpointCount, &$endpointErrors, &$i) {
             $i++;
             $modelName = str($endpoint)->studly();
-            $modelClass = $modelName->prepend('Kanekescom\Siasn\Referensi\Models\/');
+            $modelClass = "Kanekescom\\Siasn\\Referensi\\Models\\{$modelName}";
             $model = new $modelClass;
             $referensiMethod = 'get'.$modelName;
 
