@@ -26,16 +26,6 @@ class ResponseTransformer extends ClassExtender
             return;
         }
 
-        $data = $response->collect()->get('results');
-
-        if (is_array($data)) {
-            $items = fractal($data, $transformer)->toArray();
-
-            $this->class = collect($items['data']);
-
-            return;
-        }
-
         $data = $response->collect()->toArray();
 
         if (is_array($data)) {
