@@ -58,25 +58,25 @@ class KanregResource extends Resource
                     ->grow()
                     ->wrap()
                     ->sortable()
-                    ->searchable(),
+                    ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('regKota')
                     ->wrap()
                     ->sortable()
-                    ->searchable(),
+                    ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('pengenal')
                     ->wrap()
                     ->sortable()
-                    ->searchable(),
+                    ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('satuanKerjaId')
                     ->wrap()
                     ->toggleable(isToggledHiddenByDefault: true)
                     ->sortable()
-                    ->searchable(),
+                    ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('tanggalJorge')
                     ->wrap()
                     ->toggleable(isToggledHiddenByDefault: true)
                     ->sortable()
-                    ->searchable(),
+                    ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()

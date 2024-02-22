@@ -50,7 +50,7 @@ class AsnJenisJabatanResource extends Resource
                     ->grow()
                     ->wrap()
                     ->sortable()
-                    ->searchable(),
+                    ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
