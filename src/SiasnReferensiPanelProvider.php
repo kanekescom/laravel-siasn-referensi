@@ -21,9 +21,9 @@ class SiasnReferensiPanelProvider extends PanelProvider
 {
     public function panel(Panel $panel): Panel
     {
-        config([
-            'app.name' => config('siasn-referensi.name'),
-        ]);
+        // config([
+        //     'app.name' => config('siasn-referensi.name'),
+        // ]);
 
         return $panel
             ->default()
@@ -45,7 +45,7 @@ class SiasnReferensiPanelProvider extends PanelProvider
                 //
             ])
             ->navigationGroups([
-                'Bezetting',
+                //
             ])
             ->middleware([
                 EncryptCookies::class,

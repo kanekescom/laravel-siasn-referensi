@@ -15,7 +15,7 @@ class PullCommand extends Command
      * @var string
      */
     protected $signature = 'siasn-referensi:pull
-                        {endpoint? : Endpoint API}';
+                            {endpoint?* : Endpoint API}';
 
     /**
      * The console command description.
@@ -36,7 +36,7 @@ class PullCommand extends Command
         })->mapWithKeys(function ($item) {
             return [$item => $item];
         });
-        $endpoints = str($this->argument('endpoint'))->explode(',');
+        $endpoints = collect($this->argument('endpoint'));
 
         if (filled($endpoints->first()) && blank($endpoints = $endpointOptions->only($endpoints))) {
             throw new BadEndpointCallException('Endpoint does not exist.');
@@ -67,7 +67,7 @@ class PullCommand extends Command
         $endpoints->each(function ($endpoint) use ($endpointCount, &$endpointErrors, &$i) {
             $i++;
             $modelName = str($endpoint)->studly();
-            $modelClass = $modelName->prepend('Kanekescom\Siasn\Referensi\Models\/');
+            $modelClass = "Kanekescom\\Siasn\\Referensi\\Models\\{$modelName}";
             $model = new $modelClass;
             $referensiMethod = 'get'.$modelName;
 

@@ -16,7 +16,7 @@ class Referensi
     public function getAgama(array $query = [])
     {
         return new ResponseTransformer(
-            $this->referensi::getAgama($query),
+            $this->referensi::{__FUNCTION__}($query),
             new \Kanekescom\Siasn\Referensi\Transformers\AgamaTransformer
         );
     }
@@ -24,7 +24,7 @@ class Referensi
     public function getAlasanHukumanDisiplin(array $query = [])
     {
         return new ResponseTransformer(
-            $this->referensi::getAlasanHukumanDisiplin($query),
+            $this->referensi::{__FUNCTION__}($query),
             new \Kanekescom\Siasn\Referensi\Transformers\AlasanHukumanDisiplinTransformer
         );
     }
@@ -32,7 +32,7 @@ class Referensi
     public function getAsnJenisJabatan(array $query = [])
     {
         return new ResponseTransformer(
-            $this->referensi::getAsnJenisJabatan($query),
+            $this->referensi::{__FUNCTION__}($query),
             new \Kanekescom\Siasn\Referensi\Transformers\AsnJenisJabatanTransformer
         );
     }
@@ -40,7 +40,7 @@ class Referensi
     public function getAsnJenjangJabatan(array $query = [])
     {
         return new ResponseTransformer(
-            $this->referensi::getAsnJenjangJabatan($query),
+            $this->referensi::{__FUNCTION__}($query),
             new \Kanekescom\Siasn\Referensi\Transformers\AsnJenjangJabatanTransformer
         );
     }
@@ -48,7 +48,7 @@ class Referensi
     public function getEselon(array $query = [])
     {
         return new ResponseTransformer(
-            $this->referensi::getEselon($query),
+            $this->referensi::{__FUNCTION__}($query),
             new \Kanekescom\Siasn\Referensi\Transformers\EselonTransformer
         );
     }
@@ -56,7 +56,7 @@ class Referensi
     public function getGolongan(array $query = [])
     {
         return new ResponseTransformer(
-            $this->referensi::getGolongan($query),
+            $this->referensi::{__FUNCTION__}($query),
             new \Kanekescom\Siasn\Referensi\Transformers\GolonganTransformer
         );
     }
@@ -64,7 +64,7 @@ class Referensi
     public function getInstansi(array $query = [])
     {
         return new ResponseTransformer(
-            $this->referensi::getInstansi($query),
+            $this->referensi::{__FUNCTION__}($query),
             new \Kanekescom\Siasn\Referensi\Transformers\InstansiTransformer
         );
     }
@@ -72,7 +72,7 @@ class Referensi
     public function getJabatanFungsional(array $query = [])
     {
         return new ResponseTransformer(
-            $this->referensi::getJabatanFungsional($query),
+            $this->referensi::{__FUNCTION__}($query),
             new \Kanekescom\Siasn\Referensi\Transformers\JabatanFungsionalTransformer
         );
     }
@@ -80,7 +80,7 @@ class Referensi
     public function getJabatanFungsionalUmum(array $query = [])
     {
         return new ResponseTransformer(
-            $this->referensi::getJabatanFungsionalUmum($query),
+            $this->referensi::{__FUNCTION__}($query),
             new \Kanekescom\Siasn\Referensi\Transformers\JabatanFungsionalUmumTransformer
         );
     }
@@ -88,7 +88,7 @@ class Referensi
     public function getJenisAnak(array $query = [])
     {
         return new ResponseTransformer(
-            $this->referensi::getJenisAnak($query),
+            $this->referensi::{__FUNCTION__}($query),
             new \Kanekescom\Siasn\Referensi\Transformers\JenisAnakTransformer
         );
     }
@@ -96,7 +96,7 @@ class Referensi
     public function getJenisDiklat(array $query = [])
     {
         return new ResponseTransformer(
-            $this->referensi::getJenisDiklat($query),
+            $this->referensi::{__FUNCTION__}($query),
             new \Kanekescom\Siasn\Referensi\Transformers\JenisDiklatTransformer
         );
     }
@@ -104,7 +104,7 @@ class Referensi
     public function getJenisHukuman(array $query = [])
     {
         return new ResponseTransformer(
-            $this->referensi::getJenisHukuman($query),
+            $this->referensi::{__FUNCTION__}($query),
             new \Kanekescom\Siasn\Referensi\Transformers\JenisHukumanTransformer
         );
     }
@@ -112,7 +112,7 @@ class Referensi
     public function getJenisJabatan(array $query = [])
     {
         return new ResponseTransformer(
-            $this->referensi::getJenisJabatan($query),
+            $this->referensi::{__FUNCTION__}($query),
             new \Kanekescom\Siasn\Referensi\Transformers\JenisJabatanTransformer
         );
     }
@@ -120,7 +120,7 @@ class Referensi
     public function getKanreg(array $query = [])
     {
         return new ResponseTransformer(
-            $this->referensi::getKanreg($query),
+            $this->referensi::{__FUNCTION__}($query),
             new \Kanekescom\Siasn\Referensi\Transformers\KanregTransformer
         );
     }
@@ -128,7 +128,7 @@ class Referensi
     public function getKedudukanHukum(array $query = [])
     {
         return new ResponseTransformer(
-            $this->referensi::getKedudukanHukum($query),
+            $this->referensi::{__FUNCTION__}($query),
             new \Kanekescom\Siasn\Referensi\Transformers\KedudukanHukumTransformer
         );
     }
@@ -136,7 +136,7 @@ class Referensi
     public function getKelJabatan(array $query = [])
     {
         return new ResponseTransformer(
-            $this->referensi::getKelJabatan($query),
+            $this->referensi::{__FUNCTION__}($query),
             new \Kanekescom\Siasn\Referensi\Transformers\KelJabatanTransformer
         );
     }
@@ -144,7 +144,7 @@ class Referensi
     public function getLatihanStruktural(array $query = [])
     {
         return new ResponseTransformer(
-            $this->referensi::getLatihanStruktural($query),
+            $this->referensi::{__FUNCTION__}($query),
             new \Kanekescom\Siasn\Referensi\Transformers\LatihanStrukturalTransformer
         );
     }
@@ -152,7 +152,7 @@ class Referensi
     public function getLokasi(array $query = [])
     {
         return new ResponseTransformer(
-            $this->referensi::getLokasi($query),
+            $this->referensi::{__FUNCTION__}($query),
             new \Kanekescom\Siasn\Referensi\Transformers\LokasiTransformer
         );
     }
@@ -160,7 +160,7 @@ class Referensi
     public function getPendidikan(array $query = [])
     {
         return new ResponseTransformer(
-            $this->referensi::getPendidikan($query),
+            $this->referensi::{__FUNCTION__}($query),
             new \Kanekescom\Siasn\Referensi\Transformers\PendidikanTransformer
         );
     }
@@ -168,7 +168,7 @@ class Referensi
     public function getRefDokumen(array $query = [])
     {
         return new ResponseTransformer(
-            $this->referensi::getRefDokumen($query),
+            $this->referensi::{__FUNCTION__}($query),
             new \Kanekescom\Siasn\Referensi\Transformers\RefDokumenTransformer
         );
     }
@@ -176,7 +176,7 @@ class Referensi
     public function getRefJenjangJf(array $query = [])
     {
         return new ResponseTransformer(
-            $this->referensi::getRefJenjangJf($query),
+            $this->referensi::{__FUNCTION__}($query),
             new \Kanekescom\Siasn\Referensi\Transformers\RefJenjangJfTransformer
         );
     }
@@ -184,7 +184,7 @@ class Referensi
     public function getSatuanKerja(array $query = [])
     {
         return new ResponseTransformer(
-            $this->referensi::getSatuanKerja($query),
+            $this->referensi::{__FUNCTION__}($query),
             new \Kanekescom\Siasn\Referensi\Transformers\SatuanKerjaTransformer
         );
     }
@@ -192,7 +192,7 @@ class Referensi
     public function getTingkatPendidikan(array $query = [])
     {
         return new ResponseTransformer(
-            $this->referensi::getTingkatPendidikan($query),
+            $this->referensi::{__FUNCTION__}($query),
             new \Kanekescom\Siasn\Referensi\Transformers\TingkatPendidikanTransformer
         );
     }
