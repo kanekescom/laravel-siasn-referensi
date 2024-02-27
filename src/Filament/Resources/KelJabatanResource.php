@@ -22,8 +22,6 @@ class KelJabatanResource extends Resource
 
     protected static ?string $navigationLabel = 'Kel Jabatan';
 
-    protected static ?string $navigationGroup = 'SIASN Referensi';
-
     protected static bool $shouldRegisterNavigation = true;
 
     public static function form(Form $form): Form
