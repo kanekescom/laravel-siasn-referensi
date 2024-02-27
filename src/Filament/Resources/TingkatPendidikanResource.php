@@ -22,7 +22,7 @@ class TingkatPendidikanResource extends Resource
 
     protected static ?string $navigationLabel = 'Tingkat Pendidikan';
 
-    protected static ?string $navigationGroup = 'SIASN REFERENSI';
+    protected static ?string $navigationGroup = 'SIASN Referensi';
 
     protected static bool $shouldRegisterNavigation = true;
 

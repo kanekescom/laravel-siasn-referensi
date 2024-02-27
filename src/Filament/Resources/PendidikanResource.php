@@ -22,7 +22,7 @@ class PendidikanResource extends Resource
 
     protected static ?string $navigationLabel = 'Pendidikan';
 
-    protected static ?string $navigationGroup = 'SIASN REFERENSI';
+    protected static ?string $navigationGroup = 'SIASN Referensi';
 
     protected static bool $shouldRegisterNavigation = true;
 

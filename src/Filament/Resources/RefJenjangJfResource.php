@@ -22,7 +22,7 @@ class RefJenjangJfResource extends Resource
 
     protected static ?string $navigationLabel = 'Ref Jenjang JF';
 
-    protected static ?string $navigationGroup = 'SIASN REFERENSI';
+    protected static ?string $navigationGroup = 'SIASN Referensi';
 
     protected static bool $shouldRegisterNavigation = true;
 

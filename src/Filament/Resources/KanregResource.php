@@ -22,7 +22,7 @@ class KanregResource extends Resource
 
     protected static ?string $navigationLabel = 'Kanreg';
 
-    protected static ?string $navigationGroup = 'SIASN REFERENSI';
+    protected static ?string $navigationGroup = 'SIASN Referensi';
 
     protected static bool $shouldRegisterNavigation = true;
 

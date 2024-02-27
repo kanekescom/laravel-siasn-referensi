@@ -22,7 +22,7 @@ class JabatanFungsionalUmumResource extends Resource
 
     protected static ?string $navigationLabel = 'Jabatan Fungsional Umum';
 
-    protected static ?string $navigationGroup = 'SIASN REFERENSI';
+    protected static ?string $navigationGroup = 'SIASN Referensi';
 
     protected static bool $shouldRegisterNavigation = true;
 
