@@ -56,41 +56,50 @@ class SatuanKerjaResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('id')
                     ->toggleable(isToggledHiddenByDefault: true)
-                    ->searchable()
+                    ->copyable()
+                    ->sortable()
+                    ->searchable(isIndividual: true)
                     ->label('ID'),
                 Tables\Columns\TextColumn::make('nama')
                     ->grow()
                     ->wrap()
+                    ->copyable()
                     ->sortable()
                     ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('kanregId')
                     ->wrap()
                     ->toggleable(isToggledHiddenByDefault: true)
+                    ->copyable()
                     ->sortable()
                     ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('lokasiId')
                     ->wrap()
                     ->toggleable(isToggledHiddenByDefault: true)
+                    ->copyable()
                     ->sortable()
                     ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('instansiId')
                     ->wrap()
                     ->toggleable(isToggledHiddenByDefault: true)
+                    ->copyable()
                     ->sortable()
                     ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('parentId')
                     ->wrap()
                     ->toggleable(isToggledHiddenByDefault: true)
+                    ->copyable()
                     ->sortable()
                     ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('jenisSatuanKerjaId')
                     ->wrap()
                     ->toggleable(isToggledHiddenByDefault: true)
+                    ->copyable()
                     ->sortable()
                     ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('unblockCode')
                     ->wrap()
                     ->toggleable(isToggledHiddenByDefault: true)
+                    ->copyable()
                     ->sortable()
                     ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('created_at')

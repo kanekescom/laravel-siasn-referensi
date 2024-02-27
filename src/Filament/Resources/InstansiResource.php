@@ -66,63 +66,77 @@ class InstansiResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('id')
                     ->toggleable(isToggledHiddenByDefault: true)
-                    ->searchable()
+                    ->copyable()
+                    ->sortable()
+                    ->searchable(isIndividual: true)
                     ->label('ID'),
                 Tables\Columns\TextColumn::make('lokasiId')
                     ->wrap()
                     ->toggleable(isToggledHiddenByDefault: true)
+                    ->copyable()
                     ->sortable()
                     ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('nama')
                     ->grow()
                     ->wrap()
+                    ->copyable()
                     ->sortable()
                     ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('jenis')
                     ->wrap()
+                    ->copyable()
                     ->sortable()
                     ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('cepatKode')
                     ->wrap()
                     ->toggleable(isToggledHiddenByDefault: true)
+                    ->copyable()
                     ->sortable()
                     ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('prosesBerkasDipusat')
                     ->wrap()
                     ->toggleable(isToggledHiddenByDefault: true)
+                    ->copyable()
                     ->sortable()
                     ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('mgrCepatKode')
                     ->wrap()
                     ->toggleable(isToggledHiddenByDefault: true)
+                    ->copyable()
                     ->sortable()
                     ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('status')
                     ->wrap()
                     ->toggleable(isToggledHiddenByDefault: true)
+                    ->copyable()
                     ->sortable()
                     ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('cepatKode5')
                     ->wrap()
                     ->toggleable(isToggledHiddenByDefault: true)
+                    ->copyable()
                     ->sortable()
                     ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('cepatKode5Lama')
                     ->wrap()
                     ->toggleable(isToggledHiddenByDefault: true)
+                    ->copyable()
                     ->sortable()
                     ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('namaBaru')
                     ->wrap()
                     ->toggleable(isToggledHiddenByDefault: true)
+                    ->copyable()
                     ->sortable()
                     ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('namaJabatan')
+                    ->copyable()
                     ->sortable()
                     ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('jenisInstansiId')
                     ->wrap()
                     ->toggleable(isToggledHiddenByDefault: true)
+                    ->copyable()
                     ->sortable()
                     ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('created_at')

@@ -50,24 +50,30 @@ class LatihanStrukturalResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('id')
                     ->toggleable(isToggledHiddenByDefault: true)
-                    ->searchable()
+                    ->copyable()
+                    ->sortable()
+                    ->searchable(isIndividual: true)
                     ->label('ID'),
                 Tables\Columns\TextColumn::make('nama')
                     ->grow()
                     ->wrap()
+                    ->copyable()
                     ->sortable()
                     ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('eselon_level')
                     ->wrap()
+                    ->copyable()
                     ->sortable()
                     ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('ncsistime')
                     ->wrap()
                     ->toggleable(isToggledHiddenByDefault: true)
+                    ->copyable()
                     ->sortable()
                     ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('struktural_pns')
                     ->wrap()
+                    ->copyable()
                     ->sortable()
                     ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('created_at')

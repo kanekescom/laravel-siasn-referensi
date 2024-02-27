@@ -48,21 +48,26 @@ class AsnJenjangJabatanResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('id')
                     ->toggleable(isToggledHiddenByDefault: true)
-                    ->searchable()
+                    ->copyable()
+                    ->sortable()
+                    ->searchable(isIndividual: true)
                     ->label('ID'),
                 Tables\Columns\TextColumn::make('nama')
                     ->grow()
                     ->wrap()
+                    ->copyable()
                     ->sortable()
                     ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('asnJenisJabatanId')
                     ->wrap()
                     ->toggleable(isToggledHiddenByDefault: true)
+                    ->copyable()
                     ->sortable()
                     ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('level')
                     ->wrap()
                     ->toggleable(isToggledHiddenByDefault: true)
+                    ->copyable()
                     ->sortable()
                     ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('created_at')

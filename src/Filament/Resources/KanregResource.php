@@ -52,29 +52,36 @@ class KanregResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('id')
                     ->toggleable(isToggledHiddenByDefault: true)
-                    ->searchable()
+                    ->copyable()
+                    ->sortable()
+                    ->searchable(isIndividual: true)
                     ->label('ID'),
                 Tables\Columns\TextColumn::make('nama')
                     ->grow()
                     ->wrap()
+                    ->copyable()
                     ->sortable()
                     ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('regKota')
                     ->wrap()
+                    ->copyable()
                     ->sortable()
                     ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('pengenal')
                     ->wrap()
+                    ->copyable()
                     ->sortable()
                     ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('satuanKerjaId')
                     ->wrap()
                     ->toggleable(isToggledHiddenByDefault: true)
+                    ->copyable()
                     ->sortable()
                     ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('tanggalJorge')
                     ->wrap()
                     ->toggleable(isToggledHiddenByDefault: true)
+                    ->copyable()
                     ->sortable()
                     ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('created_at')
