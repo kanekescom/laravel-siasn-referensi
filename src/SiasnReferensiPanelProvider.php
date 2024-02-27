@@ -41,6 +41,7 @@ class SiasnReferensiPanelProvider extends PanelProvider
                 Pages\Dashboard::class,
             ])
             ->discoverWidgets(in: __DIR__.'/Filament/Widgets', for: 'Kanekescom\\Siasn\\Referensi\\Filament\\Widgets')
+            ->topbar(config('siasn-referensi.filament.topbar'))
             ->widgets([
                 //
             ])

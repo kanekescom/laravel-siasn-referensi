@@ -10,7 +10,10 @@ return [
 
     'filament' => [
         'id' => 'siasn-referensi',
+
         'path' => 'siasn/referensi',
+
+        'topbar' => false,
     ],
 
 ];
