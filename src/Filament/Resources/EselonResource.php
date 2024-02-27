@@ -22,7 +22,7 @@ class EselonResource extends Resource
 
     protected static ?string $navigationLabel = 'Eselon';
 
-    protected static ?string $navigationGroup = 'SIASN REFERENSI';
+    protected static ?string $navigationGroup = 'SIASN Referensi';
 
     protected static bool $shouldRegisterNavigation = true;
 

@@ -22,7 +22,7 @@ class GolonganResource extends Resource
 
     protected static ?string $navigationLabel = 'Golongan';
 
-    protected static ?string $navigationGroup = 'SIASN REFERENSI';
+    protected static ?string $navigationGroup = 'SIASN Referensi';
 
     protected static bool $shouldRegisterNavigation = true;
 

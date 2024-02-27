@@ -22,7 +22,7 @@ class AgamaResource extends Resource
 
     protected static ?string $navigationLabel = 'Agama';
 
-    protected static ?string $navigationGroup = 'SIASN REFERENSI';
+    protected static ?string $navigationGroup = 'SIASN Referensi';
 
     protected static bool $shouldRegisterNavigation = true;
 

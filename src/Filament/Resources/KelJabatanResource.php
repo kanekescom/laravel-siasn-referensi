@@ -22,7 +22,7 @@ class KelJabatanResource extends Resource
 
     protected static ?string $navigationLabel = 'Kel Jabatan';
 
-    protected static ?string $navigationGroup = 'SIASN REFERENSI';
+    protected static ?string $navigationGroup = 'SIASN Referensi';
 
     protected static bool $shouldRegisterNavigation = true;
 
