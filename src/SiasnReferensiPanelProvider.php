@@ -16,6 +16,7 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use ShuvroRoy\FilamentSpatieLaravelBackup\FilamentSpatieLaravelBackupPlugin;
 
 class SiasnReferensiPanelProvider extends PanelProvider
 {
@@ -49,6 +50,7 @@ class SiasnReferensiPanelProvider extends PanelProvider
             ->navigationGroups([
                 //
             ])
+            ->plugin(FilamentSpatieLaravelBackupPlugin::make())
             ->middleware([
                 EncryptCookies::class,
                 AddQueuedCookiesToResponse::class,
