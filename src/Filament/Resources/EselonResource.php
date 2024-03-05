@@ -70,28 +70,32 @@ class EselonResource extends Resource
                     ->sortable()
                     ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('level_kompetensi_jabatan')
+                    ->toggleable(isToggledHiddenByDefault: true)
                     ->wrap()
                     ->copyable()
                     ->sortable()
                     ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('terendah_id')
+                    ->toggleable(isToggledHiddenByDefault: true)
                     ->wrap()
                     ->copyable()
                     ->sortable()
                     ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('tertinggi_id')
+                    ->toggleable(isToggledHiddenByDefault: true)
                     ->wrap()
                     ->copyable()
                     ->sortable()
                     ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('eselon_level_id')
+                    ->toggleable(isToggledHiddenByDefault: true)
                     ->wrap()
                     ->copyable()
                     ->sortable()
                     ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('asn_jenjang_jabatan_id')
-                    ->wrap()
                     ->toggleable(isToggledHiddenByDefault: true)
+                    ->wrap()
                     ->copyable()
                     ->sortable()
                     ->searchable(isIndividual: true),

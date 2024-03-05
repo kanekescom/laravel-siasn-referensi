@@ -66,19 +66,20 @@ class KanregResource extends Resource
                     ->sortable()
                     ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('pengenal')
+                    ->toggleable(isToggledHiddenByDefault: true)
                     ->wrap()
                     ->copyable()
                     ->sortable()
                     ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('satuanKerjaId')
-                    ->wrap()
                     ->toggleable(isToggledHiddenByDefault: true)
+                    ->wrap()
                     ->copyable()
                     ->sortable()
                     ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('tanggalJorge')
-                    ->wrap()
                     ->toggleable(isToggledHiddenByDefault: true)
+                    ->wrap()
                     ->copyable()
                     ->sortable()
                     ->searchable(isIndividual: true),

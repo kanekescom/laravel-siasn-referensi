@@ -57,11 +57,13 @@ class RefJenjangJfResource extends Resource
                     ->sortable()
                     ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('peraturan')
+                    ->toggleable(isToggledHiddenByDefault: true)
                     ->wrap()
                     ->copyable()
                     ->sortable()
                     ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('kode')
+                    ->toggleable(isToggledHiddenByDefault: true)
                     ->wrap()
                     ->copyable()
                     ->sortable()

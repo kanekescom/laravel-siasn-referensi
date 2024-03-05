@@ -64,8 +64,8 @@ class LatihanStrukturalResource extends Resource
                     ->sortable()
                     ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('ncsistime')
-                    ->wrap()
                     ->toggleable(isToggledHiddenByDefault: true)
+                    ->wrap()
                     ->copyable()
                     ->sortable()
                     ->searchable(isIndividual: true),

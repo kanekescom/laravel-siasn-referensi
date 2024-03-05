@@ -63,22 +63,25 @@ class TingkatPendidikanResource extends Resource
                     ->sortable()
                     ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('golongan_id')
+                    ->toggleable(isToggledHiddenByDefault: true)
                     ->wrap()
                     ->copyable()
                     ->sortable()
                     ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('golongan_awal_id')
+                    ->toggleable(isToggledHiddenByDefault: true)
                     ->wrap()
                     ->copyable()
                     ->sortable()
                     ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('id_lama')
-                    ->wrap()
                     ->toggleable(isToggledHiddenByDefault: true)
+                    ->wrap()
                     ->copyable()
                     ->sortable()
                     ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('group_tk_pend_id')
+                    ->toggleable(isToggledHiddenByDefault: true)
                     ->wrap()
                     ->copyable()
                     ->sortable()
