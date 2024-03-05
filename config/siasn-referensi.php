@@ -14,7 +14,7 @@ return [
 
         'path' => 'siasn/referensi',
 
-        'topbar' => false,
+        'topbar' => true,
 
         'brandLogo' => null,
 

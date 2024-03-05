@@ -27,7 +27,9 @@ class SiasnReferensiPanelProvider extends PanelProvider
 
         return $panel
             ->default()
+            ->id(config('siasn-referensi.filament.id'))
             ->path(config('siasn-referensi.filament.path'))
+            ->profile(isSimple: false)
             ->login()
             ->brandLogo(config('siasn-referensi.filament.brandLogo'))
             ->favicon(config('siasn-referensi.filament.favicon'))
