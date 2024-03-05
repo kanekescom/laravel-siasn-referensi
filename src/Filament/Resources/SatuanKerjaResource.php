@@ -22,8 +22,6 @@ class SatuanKerjaResource extends Resource
 
     protected static ?string $navigationLabel = 'Satuan Kerja';
 
-    protected static ?string $navigationGroup = 'SIASN Referensi';
-
     protected static bool $shouldRegisterNavigation = true;
 
     public static function form(Form $form): Form

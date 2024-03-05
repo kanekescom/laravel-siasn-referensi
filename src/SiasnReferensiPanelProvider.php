@@ -8,7 +8,6 @@ use Filament\Http\Middleware\DispatchServingFilamentEvent;
 use Filament\Pages;
 use Filament\Panel;
 use Filament\PanelProvider;
-use Filament\Support\Colors\Color;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Illuminate\Cookie\Middleware\EncryptCookies;
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
@@ -16,6 +15,7 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use ShuvroRoy\FilamentSpatieLaravelBackup\FilamentSpatieLaravelBackupPlugin;
 
 class SiasnReferensiPanelProvider extends PanelProvider
 {
@@ -29,24 +29,26 @@ class SiasnReferensiPanelProvider extends PanelProvider
             ->default()
             ->id(config('siasn-referensi.filament.id'))
             ->path(config('siasn-referensi.filament.path'))
+            ->profile(isSimple: false)
             ->login()
-            ->brandLogo(null)
-            ->favicon(null)
-            ->colors([
-                'primary' => Color::Amber,
-            ])
+            ->brandLogo(config('siasn-referensi.filament.brandLogo'))
+            ->favicon(config('siasn-referensi.filament.favicon'))
+            ->colors(config('siasn-referensi.filament.colors'))
+            ->topbar(config('siasn-referensi.filament.topbar'))
+            ->sidebarCollapsibleOnDesktop()
             ->discoverResources(in: __DIR__.'/Filament/Resources', for: 'Kanekescom\\Siasn\\Referensi\\Filament\\Resources')
             ->discoverPages(in: __DIR__.'/Filament/Pages', for: 'Kanekescom\\Siasn\\Referensi\\Filament\\Pages')
             ->pages([
                 Pages\Dashboard::class,
             ])
             ->discoverWidgets(in: __DIR__.'/Filament/Widgets', for: 'Kanekescom\\Siasn\\Referensi\\Filament\\Widgets')
+            ->topbar(config('siasn-referensi.filament.topbar'))
+            ->sidebarCollapsibleOnDesktop()
             ->widgets([
                 //
             ])
-            ->navigationGroups([
-                //
-            ])
+            ->navigationGroups(config('siasn-referensi.filament.navigationGroups'))
+            ->plugin(FilamentSpatieLaravelBackupPlugin::make())
             ->middleware([
                 EncryptCookies::class,
                 AddQueuedCookiesToResponse::class,

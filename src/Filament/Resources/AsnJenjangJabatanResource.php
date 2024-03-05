@@ -22,8 +22,6 @@ class AsnJenjangJabatanResource extends Resource
 
     protected static ?string $navigationLabel = 'ASN Jenjang Jabatan';
 
-    protected static ?string $navigationGroup = 'SIASN Referensi';
-
     protected static bool $shouldRegisterNavigation = true;
 
     public static function form(Form $form): Form

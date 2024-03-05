@@ -22,8 +22,6 @@ class RefDokumenResource extends Resource
 
     protected static ?string $navigationLabel = 'Ref Dokumen';
 
-    protected static ?string $navigationGroup = 'SIASN Referensi';
-
     protected static bool $shouldRegisterNavigation = true;
 
     public static function form(Form $form): Form
