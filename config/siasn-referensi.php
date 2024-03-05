@@ -13,7 +13,7 @@ return [
         'id' => 'siasn-referensi',
 
         'path' => 'siasn/referensi',
-        
+
         'topbar' => true,
 
         'brandLogo' => null,
