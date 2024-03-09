@@ -50,6 +50,9 @@ class SiasnReferensiPanelProvider extends PanelProvider
             ->plugins([
                 \ShuvroRoy\FilamentSpatieLaravelBackup\FilamentSpatieLaravelBackupPlugin::make(),
             ])
+            ->spa()
+            ->unsavedChangesAlerts()
+            ->databaseTransactions()
             ->middleware([
                 EncryptCookies::class,
                 AddQueuedCookiesToResponse::class,
