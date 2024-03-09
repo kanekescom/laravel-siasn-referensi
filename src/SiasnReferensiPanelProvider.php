@@ -48,7 +48,8 @@ class SiasnReferensiPanelProvider extends PanelProvider
             ])
             ->navigationGroups(config('siasn-referensi.filament.navigationGroups'))
             ->plugins([
-                \ShuvroRoy\FilamentSpatieLaravelBackup\FilamentSpatieLaravelBackupPlugin::make(),
+                \ShuvroRoy\FilamentSpatieLaravelBackup\FilamentSpatieLaravelBackupPlugin::make()
+                    ->usingPage(\Kanekescom\Siasn\Referensi\Filament\Pages\Backups::class),
             ])
             ->spa()
             ->unsavedChangesAlerts()
