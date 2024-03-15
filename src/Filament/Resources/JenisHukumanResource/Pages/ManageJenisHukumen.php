@@ -5,10 +5,10 @@ namespace Kanekescom\Siasn\Referensi\Filament\Resources\JenisHukumanResource\Pag
 use Filament\Actions;
 use Filament\Notifications\Notification;
 use Filament\Resources\Pages\ManageRecords;
-use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Log;
 use Kanekescom\Siasn\Referensi\Filament\Resources\JenisHukumanResource;
 use Kanekescom\Siasn\Referensi\Filament\Traits\HasSubheadingWithLatestSync;
+use Kanekescom\Siasn\Referensi\Jobs\PullJenisHukumanJob;
 
 class ManageJenisHukumen extends ManageRecords
 {
@@ -21,12 +21,13 @@ class ManageJenisHukumen extends ManageRecords
         return [
             Actions\Action::make('sync')
                 ->requiresConfirmation()
-                ->action(function ($livewire) {
+                ->action(function () {
                     try {
-                        Artisan::call('siasn-referensi:pull jenis-hukuman');
+                        PullJenisHukumanJob::dispatch()
+                            ->afterResponse();
 
                         Notification::make()
-                            ->title('Pulled successfully')
+                            ->title('Pulling a new data in background')
                             ->success()
                             ->send();
                     } catch (\Throwable $e) {

@@ -5,10 +5,10 @@ namespace Kanekescom\Siasn\Referensi\Filament\Resources\SatuanKerjaResource\Page
 use Filament\Actions;
 use Filament\Notifications\Notification;
 use Filament\Resources\Pages\ManageRecords;
-use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Log;
 use Kanekescom\Siasn\Referensi\Filament\Resources\SatuanKerjaResource;
 use Kanekescom\Siasn\Referensi\Filament\Traits\HasSubheadingWithLatestSync;
+use Kanekescom\Siasn\Referensi\Jobs\PullSatuanKerjaJob;
 
 class ManageSatuanKerjas extends ManageRecords
 {
@@ -21,12 +21,13 @@ class ManageSatuanKerjas extends ManageRecords
         return [
             Actions\Action::make('sync')
                 ->requiresConfirmation()
-                ->action(function ($livewire) {
+                ->action(function () {
                     try {
-                        Artisan::call('siasn-referensi:pull satuan-kerja');
+                        PullSatuanKerjaJob::dispatch()
+                            ->afterResponse();
 
                         Notification::make()
-                            ->title('Pulled successfully')
+                            ->title('Pulling a new data in background')
                             ->success()
                             ->send();
                     } catch (\Throwable $e) {
