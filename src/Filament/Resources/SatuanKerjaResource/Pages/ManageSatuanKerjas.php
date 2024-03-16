@@ -23,13 +23,14 @@ class ManageSatuanKerjas extends ManageRecords
                 ->requiresConfirmation()
                 ->action(function () {
                     try {
-                        PullSatuanKerjaJob::dispatch()
-                            ->afterResponse();
+                        dispatch(new PullSatuanKerjaJob(auth()->user()));
 
-                        Notification::make()
-                            ->title('Pulling a new data in background')
-                            ->success()
-                            ->send();
+                        if (config('queue.default') != 'sync') {
+                            Notification::make()
+                                ->title('Sync data in the background')
+                                ->success()
+                                ->send();
+                        }
                     } catch (\Throwable $e) {
                         Notification::make()
                             ->title('Something went wrong')

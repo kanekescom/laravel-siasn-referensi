@@ -11,7 +11,7 @@ class PullService
 
     protected static string $method;
 
-    public function __construct($model)
+    public function __construct(string $model)
     {
         self::$model = $model;
         self::$method = 'get'.class_basename($model);
