@@ -52,12 +52,163 @@ Or, all installations can be completed with the install command:
 php artisan siasn-referensi:install
 ```
 
-## Pull data
+## Usage
 
-Pull referensi data from SIASN to database
+### Pull data
+
+Pull referensi data from SIASN into the database
 
 ```bash
 php artisan siasn-referensi:pull
+```
+
+### Get data
+
+Get referensi data from API
+
+```php
+use Kanekescom\Siasn\Referensi\Referensi;
+
+$limit = 10;
+$offset = 0;
+
+// get list of agama
+Referensi::getAgama([
+    'limit' => $limit,
+    'offset' => $offset,
+]);
+
+// get list of alasan hukuman disiplin
+Referensi::getAlasanHukumanDisiplin([
+    'limit' => $limit,
+    'offset' => $offset,
+])
+
+// get list of asn jenis jabatan
+Referensi::getAsnJenisJabatan([
+    'limit' => $limit,
+    'offset' => $offset,
+])
+
+// get list of asn jenjang jabatan
+Referensi::getAsnJenjangJabatan([
+    'limit' => $limit,
+    'offset' => $offset,
+])
+
+// get list of eselon
+Referensi::getEselon([
+    'limit' => $limit,
+    'offset' => $offset,
+])
+
+// get list of golongan
+Referensi::getGolongan([
+    'limit' => $limit,
+    'offset' => $offset,
+])
+
+// get list of instansi
+Referensi::getInstansi([
+    'limit' => $limit,
+    'offset' => $offset,
+])
+
+// get list of jabatan fungsional
+Referensi::getJabatanFungsional([
+    'limit' => $limit,
+    'offset' => $offset,
+])
+
+// get list of jabatan fungsional umum
+Referensi::getJabatanFungsionalUmum([
+    'limit' => $limit,
+    'offset' => $offset,
+])
+
+// get list of jenis anak
+Referensi::getJenisAnak([
+    'limit' => $limit,
+    'offset' => $offset,
+])
+
+// get list of jenis diklat
+Referensi::getJenisDiklat([
+    'limit' => $limit,
+    'offset' => $offset,
+])
+
+// get list of jenis hukuman
+Referensi::getJenisHukuman([
+    'limit' => $limit,
+    'offset' => $offset,
+])
+
+// get list of jenis jabatan
+Referensi::getJenisJabatan([
+    'limit' => $limit,
+    'offset' => $offset,
+])
+
+// get list of kanreg
+Referensi::getKanreg([
+    'limit' => $limit,
+    'offset' => $offset,
+])
+
+// get list of kedudukan hukum
+Referensi::getKedudukanHukum([
+    'limit' => $limit,
+    'offset' => $offset,
+])
+
+// get list of kel jabatan
+Referensi::getKelJabatan([
+    'limit' => $limit,
+    'offset' => $offset,
+])
+
+// get list of latihan struktural
+Referensi::getLatihanStruktural([
+    'limit' => $limit,
+    'offset' => $offset,
+])
+
+// get list of lokasi
+Referensi::getLokasi([
+    'limit' => $limit,
+    'offset' => $offset,
+])
+
+// get list of pendidikan
+Referensi::getPendidikan([
+    'limit' => $limit,
+    'offset' => $offset,
+])
+
+// get list of ref dokumen
+Referensi::getRefDokumen([
+    'limit' => $limit,
+    'offset' => $offset,
+])
+
+// get list of ref jenjang jf
+Referensi::getRefJenjangJf([
+    'limit' => $limit,
+    'offset' => $offset,
+])
+
+// get list of satuan kerja
+Referensi::getSatuanKerja([
+    'limit' => $limit,
+    'offset' => $offset,
+])
+
+// get list of tingkat pendidikan
+Referensi::getTingkatPendidikan([
+    'limit' => $limit,
+    'offset' => $offset,
+]);
 ```
 
 ## Testing
