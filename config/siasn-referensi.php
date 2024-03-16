@@ -8,6 +8,8 @@ return [
 
     'truncate_model_before_pull' => true,
 
+    'queue' => null,
+
     'filament' => [
 
         'path' => 'siasn/referensi',

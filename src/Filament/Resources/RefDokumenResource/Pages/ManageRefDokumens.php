@@ -5,10 +5,10 @@ namespace Kanekescom\Siasn\Referensi\Filament\Resources\RefDokumenResource\Pages
 use Filament\Actions;
 use Filament\Notifications\Notification;
 use Filament\Resources\Pages\ManageRecords;
-use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Log;
 use Kanekescom\Siasn\Referensi\Filament\Resources\RefDokumenResource;
 use Kanekescom\Siasn\Referensi\Filament\Traits\HasSubheadingWithLatestSync;
+use Kanekescom\Siasn\Referensi\Jobs\PullRefDokumenJob;
 
 class ManageRefDokumens extends ManageRecords
 {
@@ -21,14 +21,16 @@ class ManageRefDokumens extends ManageRecords
         return [
             Actions\Action::make('sync')
                 ->requiresConfirmation()
-                ->action(function ($livewire) {
+                ->action(function () {
                     try {
-                        Artisan::call('siasn-referensi:pull ref-dokumen');
+                        dispatch(new PullRefDokumenJob(auth()->user()));
 
-                        Notification::make()
-                            ->title('Pulled successfully')
-                            ->success()
-                            ->send();
+                        if (config('queue.default') != 'sync') {
+                            Notification::make()
+                                ->title('Sync data in the background')
+                                ->success()
+                                ->send();
+                        }
                     } catch (\Throwable $e) {
                         Notification::make()
                             ->title('Something went wrong')

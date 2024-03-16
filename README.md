@@ -38,13 +38,35 @@ You can publish the config file with:
 php artisan vendor:publish --tag="siasn-referensi-config"
 ```
 
-## Usage
+## Pull data
 
-Pull referensi data from siasn to database
+Pull referensi data from SIASN to database
 
 ```bash
 php artisan siasn-referensi:pull
 ```
+
+## Use database notifications
+
+Before we start, make sure that the Laravel notifications table is added to your database:
+
+```bash
+# Laravel 11 and higher
+php artisan make:notifications-table
+```
+ 
+```bash
+# Laravel 10
+php artisan notifications:table
+```
+
+And don't forget to run migrate
+
+```bash
+php artisan migrate
+```
+
+Next, make sure you have activated the dataBase notifications feature `filament.databaseNotifications.enabled` in the siasn-referensi.php config file.
 
 ## Testing
 

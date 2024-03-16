@@ -2,11 +2,21 @@
 
 namespace Kanekescom\Siasn\Referensi;
 
+use Kanekescom\Siasn\Referensi\Events\PullDataCompleted;
+use Kanekescom\Siasn\Referensi\Listeners\PullJobCompletedNotification;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class ReferensiServiceProvider extends PackageServiceProvider
 {
+    public function boot()
+    {
+        $this->app['events']->listen(
+            PullDataCompleted::class,
+            PullJobCompletedNotification::class
+        );
+    }
+
     public function configurePackage(Package $package): void
     {
         $package
