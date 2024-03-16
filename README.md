@@ -5,7 +5,7 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/kanekescom/laravel-siasn-referensi/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/kanekescom/laravel-siasn-referensi/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/kanekescom/laravel-siasn-referensi.svg?style=flat-square)](https://packagist.org/packages/kanekescom/laravel-siasn-referensi)
 
-This library is the abstraction of SIASN REFERENSI API for access from applications written with Laravel PHP Framework.
+This library is the abstraction of SIASN REFERENSI for access from applications written with Laravel PHP Framework.
 
 ## Support us
 
@@ -59,28 +59,6 @@ Pull referensi data from SIASN to database
 ```bash
 php artisan siasn-referensi:pull
 ```
-
-## Use database notifications
-
-Before we start, make sure that the Laravel notifications table is added to your database:
-
-```bash
-# Laravel 11 and higher
-php artisan make:notifications-table
-```
- 
-```bash
-# Laravel 10
-php artisan notifications:table
-```
-
-And don't forget to run migrate
-
-```bash
-php artisan migrate
-```
-
-Next, make sure you have activated the dataBase notifications feature `filament.databaseNotifications.enabled` in the siasn-referensi.php config file.
 
 ## Testing
 
