@@ -11,6 +11,8 @@ class ReferensiServiceProvider extends PackageServiceProvider
 {
     public function boot()
     {
+        parent::boot();
+
         $this->app['events']->listen(
             PullDataCompleted::class,
             PullJobCompletedNotification::class
