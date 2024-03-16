@@ -50,6 +50,18 @@ class ReferensiServiceProvider extends PackageServiceProvider
                 '2024_01_01_000023_create_siasn_referensi_jenis_diklat_table',
             ])
             ->runsMigrations()
-            ->hasCommand(Commands\PullCommand::class);
+            ->hasCommand(Commands\PullCommand::class)
+            ->hasInstallCommand(function ($command) {
+                $command
+                    ->startWith(function ($command) {
+                        $command->info('Hello, and welcome to my great laravel package!');
+                    })
+                    ->publishConfigFile()
+                    ->askToRunMigrations()
+                    ->askToStarRepoOnGitHub('kanekescom/laravel-siasn-referensi')
+                    ->endWith(function ($command) {
+                        $command->info('Have a great day!');
+                    });
+            });
     }
 }
