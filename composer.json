@@ -58,7 +58,7 @@
     },
     "scripts": {
         "post-autoload-dump": "@composer run prepare",
-        "clear": "@php vendor/bin/testbench package:purge-laravel-siasn-referensi-api --ansi",
+        "clear": "@php vendor/bin/testbench package:purge-laravel-siasn-referensi --ansi",
         "prepare": "@php vendor/bin/testbench package:discover --ansi",
         "build": [
             "@composer run prepare",
