@@ -84,8 +84,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Kanekescom\\Siasn\\Referensi\\ReferensiServiceProvider",
-                "Kanekescom\\Siasn\\Referensi\\SiasnReferensiPanelProvider"
+                "Kanekescom\\Siasn\\Referensi\\ReferensiServiceProvider"
             ],
             "aliases": {
                 "Referensi": "Kanekescom\\Siasn\\Referensi\\Facades\\Referensi"
