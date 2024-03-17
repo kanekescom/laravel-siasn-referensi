@@ -4,7 +4,7 @@ namespace Kanekescom\Siasn\Referensi\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
-use Kanekescom\Siasn\Api\Referensi\Exceptions\BadEndpointCallException;
+use Kanekescom\Siasn\Referensi\Api\Exceptions\BadEndpointCallException;
 use Kanekescom\Siasn\Referensi\Facades\Referensi;
 
 class PullCommand extends Command

@@ -10,7 +10,7 @@ class Referensi
 
     public function __construct()
     {
-        $this->referensi = new \Kanekescom\Siasn\Api\Referensi\Facades\Referensi;
+        $this->referensi = new \Kanekescom\Siasn\Referensi\Api\Facades\Referensi;
     }
 
     public function getAgama(array $query = [])
