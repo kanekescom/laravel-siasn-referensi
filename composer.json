@@ -5,12 +5,12 @@
         "kanekescom",
         "laravel",
         "laravel-siasn-referensi-api",
+        "laravel-siasn-referensi",
         "siasn-api",
         "referensi-api",
         "sian",
         "api",
-        "bkn",
-        "laravel-siasn-referensi"
+        "bkn"
     ],
     "homepage": "https://github.com/kanekescom/laravel-siasn-referensi",
     "license": "MIT",
@@ -28,7 +28,7 @@
         "illuminate/contracts": "^10.0",
         "kanekescom/laravel-helperia": "^2.0",
         "kanekescom/laravel-siasn-api": "^2.0",
-        "kanekescom/laravel-siasn-referensi-api": "^2.0",
+        "kanekescom/laravel-siasn-referensi-api": "^2.1",
         "spatie/laravel-fractal": "^6.0",
         "spatie/laravel-package-tools": "^1.14.0"
     },
@@ -58,7 +58,7 @@
     },
     "scripts": {
         "post-autoload-dump": "@composer run prepare",
-        "clear": "@php vendor/bin/testbench package:purge-laravel-siasn-referensi-api --ansi",
+        "clear": "@php vendor/bin/testbench package:purge-laravel-siasn-referensi --ansi",
         "prepare": "@php vendor/bin/testbench package:discover --ansi",
         "build": [
             "@composer run prepare",

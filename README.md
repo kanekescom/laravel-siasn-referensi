@@ -62,6 +62,37 @@ Pull referensi data from SIASN into the database
 php artisan siasn-referensi:pull
 ```
 
+Pull specific endpoint referensi data from SIASN into the database
+
+```bash
+php artisan siasn-referensi:pull agama
+```
+
+Available endpoints:
+- agama
+- alasan-hukuman-disiplin
+- asn-jenis-jabatan
+- asn-jenjang-jabatan
+- eselon
+- golongan
+- instansi
+- jabatan-fungsional
+- jabatan-fungsional-umum
+- jenis-anak
+- jenis-hukuman
+- jenis-jabatan
+- kanreg
+- kedudukan-hukum
+- kel-jabatan
+- latihan-struktural
+- lokasi
+- pendidikan
+- ref-dokumen
+- ref-jenjang-jf
+- satuan-kerja
+- tingkat-pendidikan
+- jenis-diklat
+
 ### Get data
 
 Get referensi data from API
