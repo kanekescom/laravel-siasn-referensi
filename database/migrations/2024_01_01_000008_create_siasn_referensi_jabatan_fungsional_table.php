@@ -17,15 +17,15 @@ return new class extends Migration
             $table->string('max_gol_id')->nullable();
             $table->string('nama')->nullable();
             $table->string('bup_usia')->nullable();
-            $table->string('tun_jabatan')->nullable();
-            $table->string('bobot')->nullable();
+            $table->unsignedInteger('tun_jabatan')->nullable();
+            $table->unsignedSmallInteger('bobot')->nullable();
             $table->string('kel_jabatan_id')->nullable();
             $table->string('cepat_kode')->nullable();
             $table->string('mgr_cepat_kode')->nullable();
             $table->string('jenis')->nullable();
             $table->string('cepat_kode_new')->nullable();
             $table->string('status')->nullable();
-            $table->string('jml_formasi')->nullable();
+            $table->unsignedInteger('jml_formasi')->nullable();
             $table->string('nama_asli')->nullable();
             $table->string('jenjang')->nullable();
             $table->string('jf_ex_medis')->nullable();

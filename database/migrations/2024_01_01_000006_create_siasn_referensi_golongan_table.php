@@ -15,9 +15,9 @@ return new class extends Migration
             $table->string('id', 42)->primary();
             $table->string('nama')->nullable();
             $table->string('namaPangkat')->nullable();
-            $table->string('fungKredututama')->nullable();
-            $table->string('fungKreditTambahan')->nullable();
-            $table->string('fungKreditTotal')->nullable();
+            $table->unsignedSmallInteger('fungKredututama')->nullable();
+            $table->unsignedSmallInteger('fungKreditTambahan')->nullable();
+            $table->unsignedSmallInteger('fungKreditTotal')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('instansi_id')->nullable();
             $table->string('status')->nullable();
             $table->string('asal_peraturan_id')->nullable();
-            $table->string('jfu_urusan_pemerintahan')->nullable();
+            $table->unsignedInteger('jfu_urusan_pemerintahan')->nullable();
             $table->string('jenis_jabatan_umum_id')->nullable();
             $table->string('jenis_jabatan_umum_nama')->nullable();
             $table->string('asn_jenjang_jabatan_id')->nullable();
