@@ -4,6 +4,7 @@ namespace Kanekescom\Siasn\Referensi\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class TingkatPendidikan extends Model
@@ -31,4 +32,14 @@ class TingkatPendidikan extends Model
      * @var array
      */
     protected $guarded = [];
+
+    public function golongan(): BelongsTo
+    {
+        return $this->belongsTo(Golongan::class, 'golongan_id');
+    }
+
+    public function golonganAwal(): BelongsTo
+    {
+        return $this->belongsTo(Golongan::class, 'golongan_awal_id');
+    }
 }

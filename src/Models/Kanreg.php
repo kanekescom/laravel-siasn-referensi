@@ -4,6 +4,7 @@ namespace Kanekescom\Siasn\Referensi\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Kanreg extends Model
@@ -31,4 +32,9 @@ class Kanreg extends Model
      * @var array
      */
     protected $guarded = [];
+
+    public function satuanKerja(): BelongsTo
+    {
+        return $this->belongsTo(SatuanKerja::class, 'satuanKerjaId');
+    }
 }

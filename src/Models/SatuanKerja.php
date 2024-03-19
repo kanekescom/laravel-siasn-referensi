@@ -4,6 +4,7 @@ namespace Kanekescom\Siasn\Referensi\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class SatuanKerja extends Model
@@ -31,4 +32,24 @@ class SatuanKerja extends Model
      * @var array
      */
     protected $guarded = [];
+
+    public function kanreg(): BelongsTo
+    {
+        return $this->belongsTo(Kanreg::class, 'kanregId');
+    }
+
+    public function lokasi(): BelongsTo
+    {
+        return $this->belongsTo(Lokasi::class, 'lokasiId');
+    }
+
+    public function instansi(): BelongsTo
+    {
+        return $this->belongsTo(Instansi::class, 'instansiId');
+    }
+
+    public function parent(): BelongsTo
+    {
+        return $this->belongsTo(SatuanKerja::class, 'parentId');
+    }
 }
