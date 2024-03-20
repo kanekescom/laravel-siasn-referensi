@@ -4,6 +4,7 @@ namespace Kanekescom\Siasn\Referensi\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class JabatanFungsionalUmum extends Model
@@ -31,4 +32,9 @@ class JabatanFungsionalUmum extends Model
      * @var array
      */
     protected $guarded = [];
+
+    public function instansi(): BelongsTo
+    {
+        return $this->belongsTo(Instansi::class, 'instansi_id');
+    }
 }

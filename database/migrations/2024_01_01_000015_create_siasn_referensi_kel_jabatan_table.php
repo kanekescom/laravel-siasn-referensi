@@ -13,19 +13,19 @@ return new class extends Migration
     {
         Schema::create('siasn_referensi_kel_jabatan', function (Blueprint $table) {
             $table->string('id', 42)->primary();
-            $table->string('rumpunJabatanId', 42)->nullable();
-            $table->string('nama')->nullable();
-            $table->string('lingkup')->nullable();
-            $table->text('tugasPokok')->nullable();
-            $table->text('pejabatPak')->nullable();
-            $table->string('pembinaId', 42)->nullable();
-            $table->string('jenisJabatanUmumId', 42)->nullable();
-            $table->string('status')->nullable();
-            $table->string('kodeRumpun')->nullable();
-            $table->string('kodeKelompok')->nullable();
-            $table->string('jenisJabatanUmumBaruId', 42)->nullable();
-            $table->string('kesehatanNonmedis')->nullable();
-            $table->string('refUrusanPemerintahanId', 42)->nullable();
+            $table->string('rumpunJabatanId', 42);
+            $table->string('nama');
+            $table->string('lingkup', 1);
+            $table->text('tugasPokok');
+            $table->text('pejabatPak');
+            $table->string('pembinaId', 42);
+            $table->unsignedTinyInteger('jenisJabatanUmumId');
+            $table->string('status', 1);
+            $table->string('kodeRumpun', 4);
+            $table->string('kodeKelompok', 4);
+            $table->string('jenisJabatanUmumBaruId', 1);
+            $table->boolean('kesehatanNonmedis');
+            $table->string('refUrusanPemerintahanId');
             $table->timestamps();
             $table->softDeletes();
         });

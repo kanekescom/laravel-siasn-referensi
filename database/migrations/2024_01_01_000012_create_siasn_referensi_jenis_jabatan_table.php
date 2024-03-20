@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('siasn_referensi_jenis_jabatan', function (Blueprint $table) {
-            $table->string('id', 42)->primary();
-            $table->string('nama')->nullable();
+            $table->unsignedTinyInteger('id')->primary();
+            $table->string('nama');
             $table->timestamps();
             $table->softDeletes();
         });

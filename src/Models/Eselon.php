@@ -4,6 +4,7 @@ namespace Kanekescom\Siasn\Referensi\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Eselon extends Model
@@ -31,4 +32,19 @@ class Eselon extends Model
      * @var array
      */
     protected $guarded = [];
+
+    public function jenjangJabatan(): BelongsTo
+    {
+        return $this->belongsTo(AsnJenjangJabatan::class, 'asn_jenjang_jabatan_id');
+    }
+
+    public function golonganTerendah(): BelongsTo
+    {
+        return $this->belongsTo(Golongan::class, 'terendah_id');
+    }
+
+    public function golonganTertinggi(): BelongsTo
+    {
+        return $this->belongsTo(Golongan::class, 'tertinggi_id');
+    }
 }

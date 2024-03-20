@@ -13,13 +13,13 @@ return new class extends Migration
     {
         Schema::create('siasn_referensi_satuan_kerja', function (Blueprint $table) {
             $table->string('id', 42)->primary();
-            $table->string('kanregId', 42)->nullable();
-            $table->string('lokasiId', 42)->nullable();
-            $table->string('instansiId', 42)->nullable();
-            $table->string('nama')->nullable();
-            $table->string('parentId', 42)->nullable();
-            $table->string('jenisSatuanKerjaId', 42)->nullable();
-            $table->string('unblockCode')->nullable();
+            $table->string('kanregId', 2);
+            $table->string('lokasiId', 42);
+            $table->string('instansiId', 42);
+            $table->string('nama');
+            $table->string('parentId', 42);
+            $table->string('jenisSatuanKerjaId', 2);
+            $table->string('unblockCode', 8);
             $table->timestamps();
             $table->softDeletes();
         });
