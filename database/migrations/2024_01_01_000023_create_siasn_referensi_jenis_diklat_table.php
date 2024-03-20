@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('siasn_referensi_jenis_diklat', function (Blueprint $table) {
             $table->unsignedTinyInteger('id')->primary();
-            $table->string('jenis_diklat')->nullable();
+            $table->string('jenis_diklat');
             $table->timestamps();
             $table->softDeletes();
         });

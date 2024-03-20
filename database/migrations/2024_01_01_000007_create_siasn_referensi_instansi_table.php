@@ -13,18 +13,18 @@ return new class extends Migration
     {
         Schema::create('siasn_referensi_instansi', function (Blueprint $table) {
             $table->string('id', 42)->primary();
-            $table->string('lokasiId', 42)->nullable();
-            $table->string('nama')->nullable();
-            $table->string('jenis', 1)->nullable();
-            $table->string('cepatKode', 10)->nullable();
-            $table->string('prosesBerkasDipusat')->nullable();
-            $table->string('mgrCepatKode')->nullable();
-            $table->string('status', 1)->nullable();
-            $table->string('cepatKode5', 10)->nullable();
-            $table->string('cepatKode5Lama', 10)->nullable();
-            $table->string('namaBaru')->nullable();
-            $table->string('namaJabatan')->nullable();
-            $table->string('jenisInstansiId', 8)->nullable();
+            $table->string('lokasiId', 42);
+            $table->string('nama');
+            $table->string('jenis', 1);
+            $table->string('cepatKode', 10);
+            $table->string('prosesBerkasDipusat');
+            $table->string('mgrCepatKode');
+            $table->string('status', 1);
+            $table->string('cepatKode5', 10);
+            $table->string('cepatKode5Lama', 10);
+            $table->string('namaBaru');
+            $table->string('namaJabatan');
+            $table->string('jenisInstansiId', 8);
             $table->timestamps();
             $table->softDeletes();
         });

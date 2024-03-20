@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('siasn_referensi_golongan', function (Blueprint $table) {
             $table->unsignedTinyInteger('id', 2)->primary()->autoIncrement(false);
-            $table->string('nama')->nullable();
-            $table->string('namaPangkat')->nullable();
-            $table->unsignedSmallInteger('fungKredututama')->nullable()->autoIncrement(false);
-            $table->unsignedSmallInteger('fungKreditTambahan')->nullable()->autoIncrement(false);
-            $table->unsignedSmallInteger('fungKreditTotal')->nullable()->autoIncrement(false);
+            $table->string('nama');
+            $table->string('namaPangkat');
+            $table->unsignedSmallInteger('fungKredututama')->autoIncrement(false);
+            $table->unsignedSmallInteger('fungKreditTambahan')->autoIncrement(false);
+            $table->unsignedSmallInteger('fungKreditTotal')->autoIncrement(false);
             $table->timestamps();
             $table->softDeletes();
         });

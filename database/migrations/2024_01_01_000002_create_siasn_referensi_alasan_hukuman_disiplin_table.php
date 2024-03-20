@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('siasn_referensi_alasan_hukuman_disiplin', function (Blueprint $table) {
             $table->string('id', 42)->primary();
-            $table->text('nama')->nullable();
-            $table->string('keterangan', 16)->nullable();
+            $table->text('nama');
+            $table->string('keterangan', 16);
             $table->timestamps();
             $table->softDeletes();
         });

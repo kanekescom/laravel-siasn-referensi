@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('siasn_referensi_kedudukan_hukum', function (Blueprint $table) {
             $table->string('id', 2)->primary();
-            $table->string('nama')->nullable();
-            $table->string('aturan')->nullable();
-            $table->string('kode', 3)->nullable();
+            $table->string('nama');
+            $table->string('aturan');
+            $table->string('kode', 3);
             $table->timestamps();
             $table->softDeletes();
         });

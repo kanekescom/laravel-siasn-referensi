@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('siasn_referensi_agama', function (Blueprint $table) {
             $table->unsignedTinyInteger('id')->primary()->autoIncrement(false);
-            $table->string('nama')->nullable();
+            $table->string('nama');
             $table->timestamps();
             $table->softDeletes();
         });

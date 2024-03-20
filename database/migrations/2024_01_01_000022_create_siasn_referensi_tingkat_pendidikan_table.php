@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('siasn_referensi_tingkat_pendidikan', function (Blueprint $table) {
             $table->string('id', 2)->primary();
-            $table->unsignedTinyInteger('golongan_id')->nullable()->autoIncrement(false);
-            $table->string('nama')->nullable();
-            $table->unsignedTinyInteger('golongan_awal_id')->nullable()->autoIncrement(false);
-            $table->string('id_lama', 2)->nullable();
-            $table->unsignedTinyInteger('group_tk_pend_id')->nullable()->autoIncrement(false);
-            $table->string('group_tk_pend_nm')->nullable();
+            $table->unsignedTinyInteger('golongan_id')->autoIncrement(false);
+            $table->string('nama');
+            $table->unsignedTinyInteger('golongan_awal_id')->autoIncrement(false);
+            $table->string('id_lama', 2);
+            $table->unsignedTinyInteger('group_tk_pend_id')->autoIncrement(false);
+            $table->string('group_tk_pend_nm');
             $table->timestamps();
             $table->softDeletes();
         });

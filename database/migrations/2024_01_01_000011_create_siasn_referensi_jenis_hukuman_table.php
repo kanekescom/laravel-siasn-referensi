@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('siasn_referensi_jenis_hukuman', function (Blueprint $table) {
             $table->string('id', 2)->primary();
-            $table->string('nama')->nullable();
-            $table->string('jenisTingkatHukumanId', 1)->nullable();
+            $table->string('nama');
+            $table->string('jenisTingkatHukumanId', 1);
             $table->timestamps();
             $table->softDeletes();
         });

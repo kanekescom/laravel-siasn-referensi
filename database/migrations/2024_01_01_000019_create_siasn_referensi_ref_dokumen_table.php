@@ -13,17 +13,17 @@ return new class extends Migration
     {
         Schema::create('siasn_referensi_ref_dokumen', function (Blueprint $table) {
             $table->unsignedTinyInteger('id')->primary();
-            $table->unsignedTinyInteger('layananId')->nullable()->autoIncrement(false);
-            $table->string('layananNama')->nullable();
-            $table->unsignedTinyInteger('subLayananId')->nullable()->autoIncrement(false);
-            $table->string('subLayananNama')->nullable();
-            $table->string('detailLayananId')->nullable();
-            $table->string('detailLayananNama')->nullable();
-            $table->string('document')->nullable();
-            $table->string('jenisDokumen', 1)->nullable();
-            $table->string('fileType', 8)->nullable();
-            $table->string('linkProses', 4)->nullable();
-            $table->boolean('mandatory')->nullable();
+            $table->unsignedTinyInteger('layananId')->autoIncrement(false);
+            $table->string('layananNama');
+            $table->unsignedTinyInteger('subLayananId')->autoIncrement(false);
+            $table->string('subLayananNama');
+            $table->string('detailLayananId');
+            $table->string('detailLayananNama');
+            $table->string('document');
+            $table->string('jenisDokumen', 1);
+            $table->string('fileType', 8);
+            $table->string('linkProses', 4);
+            $table->boolean('mandatory');
             $table->timestamps();
             $table->softDeletes();
         });

@@ -13,13 +13,13 @@ return new class extends Migration
     {
         Schema::create('siasn_referensi_eselon', function (Blueprint $table) {
             $table->string('id', 2)->primary();
-            $table->string('nama')->nullable();
-            $table->unsignedTinyInteger('terendah_id')->nullable()->autoIncrement(false);
-            $table->unsignedTinyInteger('tertinggi_id')->nullable()->autoIncrement(false);
-            $table->unsignedTinyInteger('eselon_level_id', 1)->nullable()->autoIncrement(false);
-            $table->string('asn_jenjang_jabatan_id', 2)->nullable();
-            $table->string('jabatan_asn')->nullable();
-            $table->string('level_kompetensi_jabatan')->nullable();
+            $table->string('nama');
+            $table->unsignedTinyInteger('terendah_id')->autoIncrement(false);
+            $table->unsignedTinyInteger('tertinggi_id')->autoIncrement(false);
+            $table->unsignedTinyInteger('eselon_level_id', 1)->autoIncrement(false);
+            $table->string('asn_jenjang_jabatan_id', 2);
+            $table->string('jabatan_asn');
+            $table->string('level_kompetensi_jabatan');
             $table->timestamps();
             $table->softDeletes();
         });
