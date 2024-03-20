@@ -12,12 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('siasn_referensi_golongan', function (Blueprint $table) {
-            $table->string('id', 42)->primary();
+            $table->unsignedTinyInteger('id', 2)->primary()->autoIncrement(false);
             $table->string('nama')->nullable();
             $table->string('namaPangkat')->nullable();
-            $table->unsignedSmallInteger('fungKredututama')->nullable();
-            $table->unsignedSmallInteger('fungKreditTambahan')->nullable();
-            $table->unsignedSmallInteger('fungKreditTotal')->nullable();
+            $table->unsignedSmallInteger('fungKredututama')->nullable()->autoIncrement(false);
+            $table->unsignedSmallInteger('fungKreditTambahan')->nullable()->autoIncrement(false);
+            $table->unsignedSmallInteger('fungKreditTotal')->nullable()->autoIncrement(false);
             $table->timestamps();
             $table->softDeletes();
         });

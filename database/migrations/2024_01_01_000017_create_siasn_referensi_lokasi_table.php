@@ -13,16 +13,16 @@ return new class extends Migration
     {
         Schema::create('siasn_referensi_lokasi', function (Blueprint $table) {
             $table->string('id', 42)->primary();
-            $table->string('kanregId', 42)->nullable();
+            $table->string('kanregId', 2)->nullable();
             $table->string('lokasiId', 42)->nullable();
             $table->string('nama')->nullable();
-            $table->string('cepatKode')->nullable();
-            $table->string('jenis')->nullable();
-            $table->string('jenisKabupaten')->nullable();
+            $table->string('cepatKode', 10)->nullable();
+            $table->string('jenis', 2)->nullable();
+            $table->string('jenisKabupaten', 4)->nullable();
             $table->string('removalDate')->nullable();
             $table->string('jenisDesa')->nullable();
             $table->string('tanggalJorge')->nullable();
-            $table->string('mgrCepatKode')->nullable();
+            $table->string('mgrCepatKode', 10)->nullable();
             $table->string('ibukota')->nullable();
             $table->timestamps();
             $table->softDeletes();

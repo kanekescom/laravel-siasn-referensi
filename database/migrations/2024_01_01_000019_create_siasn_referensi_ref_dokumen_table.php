@@ -12,18 +12,18 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('siasn_referensi_ref_dokumen', function (Blueprint $table) {
-            $table->string('id', 42)->primary();
-            $table->string('layananId', 42)->nullable();
+            $table->unsignedTinyInteger('id')->primary();
+            $table->unsignedTinyInteger('layananId')->nullable()->autoIncrement(false);
             $table->string('layananNama')->nullable();
-            $table->string('subLayananId', 42)->nullable();
+            $table->unsignedTinyInteger('subLayananId')->nullable()->autoIncrement(false);
             $table->string('subLayananNama')->nullable();
-            $table->string('detailLayananId', 42)->nullable();
+            $table->string('detailLayananId')->nullable();
             $table->string('detailLayananNama')->nullable();
             $table->string('document')->nullable();
-            $table->string('jenisDokumen')->nullable();
-            $table->string('fileType')->nullable();
-            $table->string('linkProses')->nullable();
-            $table->string('mandatory')->nullable();
+            $table->string('jenisDokumen', 1)->nullable();
+            $table->string('fileType', 8)->nullable();
+            $table->string('linkProses', 4)->nullable();
+            $table->boolean('mandatory')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

@@ -13,15 +13,15 @@ return new class extends Migration
     {
         Schema::create('siasn_referensi_pendidikan', function (Blueprint $table) {
             $table->string('id', 42)->primary();
-            $table->string('tingkat_pendidikan_id')->nullable();
+            $table->unsignedTinyInteger('tingkat_pendidikan_id', 2)->nullable()->autoIncrement(false);
             $table->string('nama')->nullable();
-            $table->string('cepat_kode')->nullable();
-            $table->string('mgr_cepat_kode')->nullable();
+            $table->string('cepat_kode', 10)->nullable();
+            $table->string('mgr_cepat_kode', 10)->nullable();
             $table->string('nama_asli')->nullable();
-            $table->string('status')->nullable();
-            $table->string('subrumpun_prog_id')->nullable();
-            $table->string('cepat_kode_induk')->nullable();
-            $table->string('subrumpun_prog_kode')->nullable();
+            $table->boolean('status')->nullable();
+            $table->string('subrumpun_prog_id', 8)->nullable();
+            $table->string('cepat_kode_induk', 10)->nullable();
+            $table->string('subrumpun_prog_kode', 8)->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
