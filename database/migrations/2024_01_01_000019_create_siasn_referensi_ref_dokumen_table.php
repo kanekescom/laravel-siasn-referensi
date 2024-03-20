@@ -12,10 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('siasn_referensi_ref_dokumen', function (Blueprint $table) {
-            $table->unsignedTinyInteger('id')->primary();
-            $table->unsignedTinyInteger('layananId')->autoIncrement(false);
+            $table->unsignedSmallInteger('id')->primary();
+            $table->unsignedSmallInteger('layananId')->autoIncrement(false);
             $table->string('layananNama');
-            $table->unsignedTinyInteger('subLayananId')->autoIncrement(false);
+            $table->unsignedSmallInteger('subLayananId')->autoIncrement(false);
             $table->string('subLayananNama');
             $table->string('detailLayananId');
             $table->string('detailLayananNama');
