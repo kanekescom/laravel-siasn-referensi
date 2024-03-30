@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('siasn_referensi_golongan', function (Blueprint $table) {
-            $table->unsignedTinyInteger('id', 2)->primary()->autoIncrement(false);
+            $table->unsignedTinyInteger('id')->primary()->autoIncrement(false);
             $table->string('nama');
             $table->string('namaPangkat');
             $table->unsignedSmallInteger('fungKredututama')->autoIncrement(false);
