@@ -2,21 +2,15 @@
 
 namespace Kanekescom\Siasn\Referensi;
 
+use Kanekescom\Siasn\Referensi\Api\Facades\Referensi as FacadesReferensi;
 use Kanekescom\Siasn\Referensi\Helpers\ResponseTransformer;
 
 class Referensi
 {
-    private $referensi;
-
-    public function __construct()
-    {
-        $this->referensi = new \Kanekescom\Siasn\Referensi\Api\Facades\Referensi;
-    }
-
     public function getAgama(array $query = [])
     {
         return new ResponseTransformer(
-            $this->referensi::{__FUNCTION__}($query),
+            FacadesReferensi::getAgama($query),
             new \Kanekescom\Siasn\Referensi\Transformers\AgamaTransformer
         );
     }
@@ -24,7 +18,7 @@ class Referensi
     public function getAlasanHukumanDisiplin(array $query = [])
     {
         return new ResponseTransformer(
-            $this->referensi::{__FUNCTION__}($query),
+            FacadesReferensi::getAlasanHukumanDisiplin($query),
             new \Kanekescom\Siasn\Referensi\Transformers\AlasanHukumanDisiplinTransformer
         );
     }
@@ -32,7 +26,7 @@ class Referensi
     public function getAsnJenisJabatan(array $query = [])
     {
         return new ResponseTransformer(
-            $this->referensi::{__FUNCTION__}($query),
+            FacadesReferensi::getAsnJenisJabatan($query),
             new \Kanekescom\Siasn\Referensi\Transformers\AsnJenisJabatanTransformer
         );
     }
@@ -40,7 +34,7 @@ class Referensi
     public function getAsnJenjangJabatan(array $query = [])
     {
         return new ResponseTransformer(
-            $this->referensi::{__FUNCTION__}($query),
+            FacadesReferensi::getAsnJenjangJabatan($query),
             new \Kanekescom\Siasn\Referensi\Transformers\AsnJenjangJabatanTransformer
         );
     }
@@ -48,7 +42,7 @@ class Referensi
     public function getEselon(array $query = [])
     {
         return new ResponseTransformer(
-            $this->referensi::{__FUNCTION__}($query),
+            FacadesReferensi::getEselon($query),
             new \Kanekescom\Siasn\Referensi\Transformers\EselonTransformer
         );
     }
@@ -56,7 +50,7 @@ class Referensi
     public function getGolongan(array $query = [])
     {
         return new ResponseTransformer(
-            $this->referensi::{__FUNCTION__}($query),
+            FacadesReferensi::getGolongan($query),
             new \Kanekescom\Siasn\Referensi\Transformers\GolonganTransformer
         );
     }
@@ -64,7 +58,7 @@ class Referensi
     public function getInstansi(array $query = [])
     {
         return new ResponseTransformer(
-            $this->referensi::{__FUNCTION__}($query),
+            FacadesReferensi::getInstansi($query),
             new \Kanekescom\Siasn\Referensi\Transformers\InstansiTransformer
         );
     }
@@ -72,7 +66,7 @@ class Referensi
     public function getJabatanFungsional(array $query = [])
     {
         return new ResponseTransformer(
-            $this->referensi::{__FUNCTION__}($query),
+            FacadesReferensi::getJabatanFungsional($query),
             new \Kanekescom\Siasn\Referensi\Transformers\JabatanFungsionalTransformer
         );
     }
@@ -80,7 +74,7 @@ class Referensi
     public function getJabatanFungsionalUmum(array $query = [])
     {
         return new ResponseTransformer(
-            $this->referensi::{__FUNCTION__}($query),
+            FacadesReferensi::getJabatanFungsionalUmum($query),
             new \Kanekescom\Siasn\Referensi\Transformers\JabatanFungsionalUmumTransformer
         );
     }
@@ -88,7 +82,7 @@ class Referensi
     public function getJenisAnak(array $query = [])
     {
         return new ResponseTransformer(
-            $this->referensi::{__FUNCTION__}($query),
+            FacadesReferensi::getJenisAnak($query),
             new \Kanekescom\Siasn\Referensi\Transformers\JenisAnakTransformer
         );
     }
@@ -96,7 +90,7 @@ class Referensi
     public function getJenisDiklat(array $query = [])
     {
         return new ResponseTransformer(
-            $this->referensi::{__FUNCTION__}($query),
+            FacadesReferensi::getJenisDiklat($query),
             new \Kanekescom\Siasn\Referensi\Transformers\JenisDiklatTransformer
         );
     }
@@ -104,7 +98,7 @@ class Referensi
     public function getJenisHukuman(array $query = [])
     {
         return new ResponseTransformer(
-            $this->referensi::{__FUNCTION__}($query),
+            FacadesReferensi::getJenisHukuman($query),
             new \Kanekescom\Siasn\Referensi\Transformers\JenisHukumanTransformer
         );
     }
@@ -112,7 +106,7 @@ class Referensi
     public function getJenisJabatan(array $query = [])
     {
         return new ResponseTransformer(
-            $this->referensi::{__FUNCTION__}($query),
+            FacadesReferensi::getJenisJabatan($query),
             new \Kanekescom\Siasn\Referensi\Transformers\JenisJabatanTransformer
         );
     }
@@ -120,7 +114,7 @@ class Referensi
     public function getKanreg(array $query = [])
     {
         return new ResponseTransformer(
-            $this->referensi::{__FUNCTION__}($query),
+            FacadesReferensi::getKanreg($query),
             new \Kanekescom\Siasn\Referensi\Transformers\KanregTransformer
         );
     }
@@ -128,7 +122,7 @@ class Referensi
     public function getKedudukanHukum(array $query = [])
     {
         return new ResponseTransformer(
-            $this->referensi::{__FUNCTION__}($query),
+            FacadesReferensi::getKedudukanHukum($query),
             new \Kanekescom\Siasn\Referensi\Transformers\KedudukanHukumTransformer
         );
     }
@@ -136,7 +130,7 @@ class Referensi
     public function getKelJabatan(array $query = [])
     {
         return new ResponseTransformer(
-            $this->referensi::{__FUNCTION__}($query),
+            FacadesReferensi::getKelJabatan($query),
             new \Kanekescom\Siasn\Referensi\Transformers\KelJabatanTransformer
         );
     }
@@ -144,7 +138,7 @@ class Referensi
     public function getLatihanStruktural(array $query = [])
     {
         return new ResponseTransformer(
-            $this->referensi::{__FUNCTION__}($query),
+            FacadesReferensi::getLatihanStruktural($query),
             new \Kanekescom\Siasn\Referensi\Transformers\LatihanStrukturalTransformer
         );
     }
@@ -152,7 +146,7 @@ class Referensi
     public function getLokasi(array $query = [])
     {
         return new ResponseTransformer(
-            $this->referensi::{__FUNCTION__}($query),
+            FacadesReferensi::getLokasi($query),
             new \Kanekescom\Siasn\Referensi\Transformers\LokasiTransformer
         );
     }
@@ -160,7 +154,7 @@ class Referensi
     public function getPendidikan(array $query = [])
     {
         return new ResponseTransformer(
-            $this->referensi::{__FUNCTION__}($query),
+            FacadesReferensi::getPendidikan($query),
             new \Kanekescom\Siasn\Referensi\Transformers\PendidikanTransformer
         );
     }
@@ -168,7 +162,7 @@ class Referensi
     public function getRefDokumen(array $query = [])
     {
         return new ResponseTransformer(
-            $this->referensi::{__FUNCTION__}($query),
+            FacadesReferensi::getRefDokumen($query),
             new \Kanekescom\Siasn\Referensi\Transformers\RefDokumenTransformer
         );
     }
@@ -176,7 +170,7 @@ class Referensi
     public function getRefJenjangJf(array $query = [])
     {
         return new ResponseTransformer(
-            $this->referensi::{__FUNCTION__}($query),
+            FacadesReferensi::getRefJenjangJf($query),
             new \Kanekescom\Siasn\Referensi\Transformers\RefJenjangJfTransformer
         );
     }
@@ -184,7 +178,7 @@ class Referensi
     public function getSatuanKerja(array $query = [])
     {
         return new ResponseTransformer(
-            $this->referensi::{__FUNCTION__}($query),
+            FacadesReferensi::getSatuanKerja($query),
             new \Kanekescom\Siasn\Referensi\Transformers\SatuanKerjaTransformer
         );
     }
@@ -192,7 +186,7 @@ class Referensi
     public function getTingkatPendidikan(array $query = [])
     {
         return new ResponseTransformer(
-            $this->referensi::{__FUNCTION__}($query),
+            FacadesReferensi::getTingkatPendidikan($query),
             new \Kanekescom\Siasn\Referensi\Transformers\TingkatPendidikanTransformer
         );
     }
