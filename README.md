@@ -65,7 +65,7 @@ php artisan siasn-referensi:pull
 Pull specific endpoint referensi data from SIASN into the database
 
 ```bash
-php artisan siasn-referensi:pull agama
+php artisan siasn-referensi:pull agama ... ... ...
 ```
 
 Available endpoints:

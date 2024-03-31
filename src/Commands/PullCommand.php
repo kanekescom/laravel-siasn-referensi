@@ -6,6 +6,7 @@ use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
 use Kanekescom\Siasn\Referensi\Api\Exceptions\BadEndpointCallException;
 use Kanekescom\Siasn\Referensi\Facades\Referensi;
+use Kanekescom\Siasn\Referensi\Models;
 
 class PullCommand extends Command
 {
@@ -24,18 +25,109 @@ class PullCommand extends Command
      */
     protected $description = 'Pull data to database from endpoint on SIASN Referensi API';
 
+    protected $endpoints = [
+        'agama' => [
+            'model' => Models\Agama::class,
+            'method' => 'getAgama',
+        ],
+        'alasan-hukuman-disiplin' => [
+            'model' => Models\AlasanHukumanDisiplin::class,
+            'method' => 'getAlasanHukumanDisiplin',
+        ],
+        'asn-jenis-jabatan' => [
+            'model' => Models\AsnJenisJabatan::class,
+            'method' => 'getAsnJenisJabatan',
+        ],
+        'asn-jenjang-jabatan' => [
+            'model' => Models\AsnJenjangJabatan::class,
+            'method' => 'getAsnJenjangJabatan',
+        ],
+        'eselon' => [
+            'model' => Models\Eselon::class,
+            'method' => 'getEselon',
+        ],
+        'golongan' => [
+            'model' => Models\Golongan::class,
+            'method' => 'getGolongan',
+        ],
+        'instansi' => [
+            'model' => Models\Instansi::class,
+            'method' => 'getInstansi',
+        ],
+        'jabatan-fungsional' => [
+            'model' => Models\JabatanFungsional::class,
+            'method' => 'getJabatanFungsional',
+        ],
+        'jabatan-fungsional-umum' => [
+            'model' => Models\JabatanFungsionalUmum::class,
+            'method' => 'getJabatanFungsionalUmum',
+        ],
+        'jenis-anak' => [
+            'model' => Models\JenisAnak::class,
+            'method' => 'getJenisAnak',
+        ],
+        'jenis-hukuman' => [
+            'model' => Models\JenisHukuman::class,
+            'method' => 'getJenisHukuman',
+        ],
+        'jenis-jabatan' => [
+            'model' => Models\JenisJabatan::class,
+            'method' => 'getJenisJabatan',
+        ],
+        'kanreg' => [
+            'model' => Models\Kanreg::class,
+            'method' => 'getKanreg',
+        ],
+        'kedudukan-hukum' => [
+            'model' => Models\KedudukanHukum::class,
+            'method' => 'getKedudukanHukum',
+        ],
+        'kel-jabatan' => [
+            'model' => Models\KelJabatan::class,
+            'method' => 'getKelJabatan',
+        ],
+        'latihan-struktural' => [
+            'model' => Models\LatihanStruktural::class,
+            'method' => 'getLatihanStruktural',
+        ],
+        'lokasi' => [
+            'model' => Models\Lokasi::class,
+            'method' => 'getLokasi',
+        ],
+        'pendidikan' => [
+            'model' => Models\Pendidikan::class,
+            'method' => 'getPendidikan',
+        ],
+        'ref-dokumen' => [
+            'model' => Models\RefDokumen::class,
+            'method' => 'getRefDokumen',
+        ],
+        'ref-jenjang-jf' => [
+            'model' => Models\RefJenjangJf::class,
+            'method' => 'getRefJenjangJf',
+        ],
+        'satuan-kerja' => [
+            'model' => Models\SatuanKerja::class,
+            'method' => 'getSatuanKerja',
+        ],
+        'tingkat-pendidikan' => [
+            'model' => Models\TingkatPendidikan::class,
+            'method' => 'getTingkatPendidikan',
+        ],
+        'jenis-diklat' => [
+            'model' => Models\JenisDiklat::class,
+            'method' => 'getJenisDiklat',
+        ],
+    ];
+
     /**
      * Execute the console command.
      */
     public function handle()
     {
-        $endpointOptions = method_public(\Kanekescom\Siasn\Referensi\Referensi::class)->map(function ($method) {
-            return str($method)
-                ->kebab()
-                ->replaceFirst('get-', '')->toString();
-        })->mapWithKeys(function ($item) {
-            return [$item => $item];
-        });
+        $endpointOptions = collect($this->endpoints)
+            ->keys()
+            ->mapWithKeys(fn ($item) => [$item => $item]);
         $endpoints = collect($this->argument('endpoint'));
 
         if (filled($endpoints->first()) && blank($endpoints = $endpointOptions->only($endpoints))) {
@@ -62,19 +154,17 @@ class PullCommand extends Command
         $endpoints = $endpoints->keys();
         $endpointCount = $endpoints->count();
         $endpointErrors = collect([]);
-        $i = 0;
+        $iEndpoint = 0;
 
-        $endpoints->each(function ($endpoint) use ($endpointCount, &$endpointErrors, &$i) {
-            $i++;
-            $modelName = str($endpoint)->studly();
-            $modelClass = "Kanekescom\\Siasn\\Referensi\\Models\\{$modelName}";
-            $model = new $modelClass;
-            $referensiMethod = 'get'.$modelName;
+        $endpoints->each(function ($endpoint) use ($endpointCount, &$endpointErrors, &$iEndpoint) {
+            $iEndpoint++;
+            $model = new $this->endpoints[$endpoint]['model'];
+            $method = $this->endpoints[$endpoint]['method'];
 
-            $this->info("[{$i}/{$endpointCount}] {$endpoint}");
+            $this->info("[{$iEndpoint}/{$endpointCount}] {$endpoint}");
 
             try {
-                $response = Referensi::$referensiMethod();
+                $response = Referensi::$method();
 
                 if ($response->count() == 0) {
                     $errorMessage = 'Data not found';
@@ -97,7 +187,8 @@ class PullCommand extends Command
 
                 DB::transaction(function () use ($model, $response, $bar) {
                     if (config('siasn-referensi.truncate_model_before_pull')) {
-                        $model->query()->delete();
+                        $model->query()
+                            ->delete();
                     }
 
                     $response->chunk(config('siasn-referensi.chunk_data'))->each(function ($item) use ($model, $bar) {
