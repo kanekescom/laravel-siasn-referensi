@@ -70,8 +70,8 @@ $endpoints = collect([
     'jenis-diklat' => [
         'method' => 'getJenisDiklat',
     ],
-])->each(function ($endpoint) {
-    $testName = \Illuminate\Support\Str::of($endpoint)
+])->each(function ($endpoint, $key) {
+    $testName = \Illuminate\Support\Str::of($key)
         ->headline()
         ->lower();
     $method = $endpoint['method'];
