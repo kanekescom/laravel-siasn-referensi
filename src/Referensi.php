@@ -4,6 +4,7 @@ namespace Kanekescom\Siasn\Referensi;
 
 use Kanekescom\Siasn\Referensi\Api\Facades\Referensi as FacadesReferensi;
 use Kanekescom\Siasn\Referensi\Helpers\ResponseTransformer;
+use League\Csv\Reader;
 
 class Referensi
 {
@@ -189,5 +190,165 @@ class Referensi
             FacadesReferensi::getTingkatPendidikan($query),
             new \Kanekescom\Siasn\Referensi\Transformers\TingkatPendidikanTransformer
         );
+    }
+
+    public function getCltn()
+    {
+        $filePath = base_path('vendor/kanekescom/siasn-referensi-dataset/dataset/cltn.csv');
+
+        return collect(Reader::createFromPath($filePath, 'r')
+            ->setDelimiter(';')
+            ->setHeaderOffset(0)
+            ->getRecords());
+    }
+
+    public function getHarga()
+    {
+        $filePath = base_path('vendor/kanekescom/siasn-referensi-dataset/dataset/harga.csv');
+
+        return collect(Reader::createFromPath($filePath, 'r')
+            ->setDelimiter(';')
+            ->setHeaderOffset(0)
+            ->getRecords());
+    }
+
+    public function getJenisIdDokumen()
+    {
+        $filePath = base_path('vendor/kanekescom/siasn-referensi-dataset/dataset/jenis_id_dokumen.csv');
+
+        return collect(Reader::createFromPath($filePath, 'r')
+            ->setDelimiter(';')
+            ->setHeaderOffset(0)
+            ->getRecords());
+    }
+
+    public function getJenisKawin()
+    {
+        $filePath = base_path('vendor/kanekescom/siasn-referensi-dataset/dataset/jenis_kawin.csv');
+
+        return collect(Reader::createFromPath($filePath, 'r')
+            ->setDelimiter(';')
+            ->setHeaderOffset(0)
+            ->getRecords());
+    }
+
+    public function getJenisKepanitiaan()
+    {
+        $filePath = base_path('vendor/kanekescom/siasn-referensi-dataset/dataset/jenis_kepanitiaan.csv');
+
+        return collect(Reader::createFromPath($filePath, 'r')
+            ->setDelimiter(';')
+            ->setHeaderOffset(0)
+            ->getRecords());
+    }
+
+    public function getJenisKompetensi()
+    {
+        $filePath = base_path('vendor/kanekescom/siasn-referensi-dataset/dataset/jenis_kompetensi.csv');
+
+        return collect(Reader::createFromPath($filePath, 'r')
+            ->setDelimiter(';')
+            ->setHeaderOffset(0)
+            ->getRecords());
+    }
+
+    public function getJenisKp()
+    {
+        $filePath = base_path('vendor/kanekescom/siasn-referensi-dataset/dataset/jenis_kp.csv');
+
+        return collect(Reader::createFromPath($filePath, 'r')
+            ->setDelimiter(';')
+            ->setHeaderOffset(0)
+            ->getRecords());
+    }
+
+    public function getJenisKursus()
+    {
+        $filePath = base_path('vendor/kanekescom/siasn-referensi-dataset/dataset/jenis_kursus.csv');
+
+        return collect(Reader::createFromPath($filePath, 'r')
+            ->setDelimiter(';')
+            ->setHeaderOffset(0)
+            ->getRecords());
+    }
+
+    public function getJenisPegawai()
+    {
+        $filePath = base_path('vendor/kanekescom/siasn-referensi-dataset/dataset/jenis_pegawai.csv');
+
+        return collect(Reader::createFromPath($filePath, 'r')
+            ->setDelimiter(';')
+            ->setHeaderOffset(0)
+            ->getRecords());
+    }
+
+    public function getJenisPemberhentian()
+    {
+        $filePath = base_path('vendor/kanekescom/siasn-referensi-dataset/dataset/jenis_pemberhentian.csv');
+
+        return collect(Reader::createFromPath($filePath, 'r')
+            ->setDelimiter(';')
+            ->setHeaderOffset(0)
+            ->getRecords());
+    }
+
+    public function getJenisPengadaan()
+    {
+        $filePath = base_path('vendor/kanekescom/siasn-referensi-dataset/dataset/jenis_pengadaan.csv');
+
+        return collect(Reader::createFromPath($filePath, 'r')
+            ->setDelimiter(';')
+            ->setHeaderOffset(0)
+            ->getRecords());
+    }
+
+    public function getJenisPensiun()
+    {
+        $filePath = base_path('vendor/kanekescom/siasn-referensi-dataset/dataset/jenis_pensiun.csv');
+
+        return collect(Reader::createFromPath($filePath, 'r')
+            ->setDelimiter(';')
+            ->setHeaderOffset(0)
+            ->getRecords());
+    }
+
+    public function getJenisRiwayat()
+    {
+        $filePath = base_path('vendor/kanekescom/siasn-referensi-dataset/dataset/jenis_riwayat.csv');
+
+        return collect(Reader::createFromPath($filePath, 'r')
+            ->setDelimiter(';')
+            ->setHeaderOffset(0)
+            ->getRecords());
+    }
+
+    public function getKpkn()
+    {
+        $filePath = base_path('vendor/kanekescom/siasn-referensi-dataset/dataset/kpkn.csv');
+
+        return collect(Reader::createFromPath($filePath, 'r')
+            ->setDelimiter(';')
+            ->setHeaderOffset(0)
+            ->getRecords());
+    }
+
+    public function getProfesi()
+    {
+        $filePath = base_path('vendor/kanekescom/siasn-referensi-dataset/dataset/profesi.csv');
+
+        return collect(Reader::createFromPath($filePath, 'r')
+            ->setDelimiter(';')
+            ->setHeaderOffset(0)
+            ->getRecords());
+    }
+
+    public function getTaspen()
+    {
+        $filePath = base_path('vendor/kanekescom/siasn-referensi-dataset/dataset/taspen.csv');
+
+        return collect(Reader::createFromPath($filePath, 'r')
+            ->setDelimiter(';')
+            ->setHeaderOffset(0)
+            ->getRecords());
     }
 }
