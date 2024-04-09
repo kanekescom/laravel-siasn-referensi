@@ -118,6 +118,72 @@ class PullCommand extends Command
             'model' => Models\JenisDiklat::class,
             'method' => 'getJenisDiklat',
         ],
+
+        // based on csv file
+        'cltn' => [
+            'model' => Models\Cltn::class,
+            'method' => 'getCltn',
+        ],
+        'harga' => [
+            'model' => Models\Harga::class,
+            'method' => 'getHarga',
+        ],
+        'jenis_id_dokumen' => [
+            'model' => Models\JenisIdDokumen::class,
+            'method' => 'getJenisIdDokumen',
+        ],
+        'jenis_kawin' => [
+            'model' => Models\JenisKawin::class,
+            'method' => 'getJenisKawin',
+        ],
+        'jenis_kepanitiaan' => [
+            'model' => Models\JenisKepanitiaan::class,
+            'method' => 'getJenisKepanitiaan',
+        ],
+        'jenis_kompetensi' => [
+            'model' => Models\JenisKompetensi::class,
+            'method' => 'getJenisKompetensi',
+        ],
+        'jenis_kp' => [
+            'model' => Models\JenisKp::class,
+            'method' => 'getJenisKp',
+        ],
+        'jenis_kursus' => [
+            'model' => Models\JenisKursus::class,
+            'method' => 'getJenisKursus',
+        ],
+        'jenis_pegawai' => [
+            'model' => Models\JenisPegawai::class,
+            'method' => 'getJenisPegawai',
+        ],
+        'jenis_pemberhentian' => [
+            'model' => Models\JenisPemberhentian::class,
+            'method' => 'getJenisPemberhentian',
+        ],
+        'jenis_pengadaan' => [
+            'model' => Models\JenisPengadaan::class,
+            'method' => 'getJenisPengadaan',
+        ],
+        'jenis_pensiun' => [
+            'model' => Models\JenisPensiun::class,
+            'method' => 'getJenisPensiun',
+        ],
+        'jenis_riwayat' => [
+            'model' => Models\JenisRiwayat::class,
+            'method' => 'getJenisRiwayat',
+        ],
+        'kpkn' => [
+            'model' => Models\Kpkn::class,
+            'method' => 'getKpkn',
+        ],
+        'profesi' => [
+            'model' => Models\Profesi::class,
+            'method' => 'getProfesi',
+        ],
+        'taspen' => [
+            'model' => Models\Taspen::class,
+            'method' => 'getTaspen',
+        ],
     ];
 
     /**

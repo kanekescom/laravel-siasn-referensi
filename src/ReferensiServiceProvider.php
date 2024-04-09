@@ -36,9 +36,27 @@ class ReferensiServiceProvider extends PackageServiceProvider
                 '2024_01_01_000021_create_siasn_referensi_satuan_kerja_table',
                 '2024_01_01_000022_create_siasn_referensi_tingkat_pendidikan_table',
                 '2024_01_01_000023_create_siasn_referensi_jenis_diklat_table',
+                '2024_01_01_000024_create_siasn_referensi_cltn_table',
+                '2024_01_01_000025_create_siasn_referensi_harga_table',
+                '2024_01_01_000026_create_siasn_referensi_jenis_id_dokumen_table',
+                '2024_01_01_000027_create_siasn_referensi_jenis_kawin_table',
+                '2024_01_01_000028_create_siasn_referensi_jenis_kepanitiaan_table',
+                '2024_01_01_000029_create_siasn_referensi_jenis_kompetensi_table',
+                '2024_01_01_000030_create_siasn_referensi_jenis_kp_table',
+                '2024_01_01_000031_create_siasn_referensi_jenis_kursus_table',
+                '2024_01_01_000032_create_siasn_referensi_jenis_pegawai_table',
+                '2024_01_01_000033_create_siasn_referensi_jenis_pemberhentian_table',
+                '2024_01_01_000034_create_siasn_referensi_jenis_pengadaan_table',
+                '2024_01_01_000035_create_siasn_referensi_jenis_pensiun_table',
+                '2024_01_01_000036_create_siasn_referensi_jenis_riwayat_table',
+                '2024_01_01_000037_create_siasn_referensi_kpkn_table',
+                '2024_01_01_000038_create_siasn_referensi_profesi_table',
+                '2024_01_01_000039_create_siasn_referensi_taspen_table',
             ])
             ->runsMigrations()
-            ->hasCommand(Commands\PullCommand::class)
+            ->hasCommands([
+                Commands\PullCommand::class,
+            ])
             ->hasInstallCommand(function ($command) {
                 $command
                     ->startWith(function ($command) {

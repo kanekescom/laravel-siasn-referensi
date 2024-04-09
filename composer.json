@@ -29,6 +29,8 @@
         "kanekescom/laravel-helperia": "^2.0",
         "kanekescom/laravel-siasn-api": "^2.0",
         "kanekescom/laravel-siasn-referensi-api": "^2.1",
+        "kanekescom/siasn-referensi-dataset": "^2024.0@dev",
+        "league/csv": "^9.15",
         "spatie/laravel-fractal": "^6.0",
         "spatie/laravel-package-tools": "^1.14.0"
     },
