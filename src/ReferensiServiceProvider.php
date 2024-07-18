@@ -52,6 +52,7 @@ class ReferensiServiceProvider extends PackageServiceProvider
                 '2024_01_01_000037_create_siasn_referensi_kpkn_table',
                 '2024_01_01_000038_create_siasn_referensi_profesi_table',
                 '2024_01_01_000039_create_siasn_referensi_taspen_table',
+                '2024_07_18_000001_change_layananId_and_sublayananId_data_type_on_siasn_referensi_ref_dokumen_table',
             ])
             ->runsMigrations()
             ->hasCommands([
