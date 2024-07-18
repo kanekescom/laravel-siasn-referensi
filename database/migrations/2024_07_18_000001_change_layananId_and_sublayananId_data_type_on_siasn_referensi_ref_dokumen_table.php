@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('siasn_referensi_ref_dokumen', function (Blueprint $table) {
-            $table->text('layananId')->change();
-            $table->text('subLayananId', 4)->change();
+            $table->string('layananId', 4)->change();
+            $table->string('subLayananId', 4)->change();
         });
     }
 
@@ -23,7 +23,8 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('siasn_referensi_ref_dokumen', function (Blueprint $table) {
-            $table->dropColumn('layananId', 'subLayananId');
+            $table->unsignedSmallInteger('layananId')->autoIncrement(false)->change();
+            $table->unsignedSmallInteger('subLayananId')->autoIncrement(false)->change();
         });
     }
 };
