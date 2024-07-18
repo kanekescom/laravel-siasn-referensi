@@ -36,7 +36,6 @@ composer require kanekescom/laravel-siasn-referensi
 You can publish and run the migrations with:
 
 ```bash
-php artisan vendor:publish --tag="siasn-referensi-migrations"
 php artisan migrate
 ```
 
